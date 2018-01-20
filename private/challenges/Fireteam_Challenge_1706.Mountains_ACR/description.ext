@@ -1,0 +1,11 @@
+class CfgFunctions {
+    class tft_challenge {
+        class functions {
+            file = "functions";
+            class init { postInit=1; };
+            class start;
+            class end;
+            class score;
+        }
+    };
+};

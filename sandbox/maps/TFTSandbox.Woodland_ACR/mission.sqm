@@ -1,25 +1,25 @@
 version=53;
 class EditorData
 {
-	moveGridStep=2;
+	moveGridStep=1;
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=641;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=156;
+		nextID=499;
 	};
 	class LayerIndexProvider
 	{
-		nextID=8;
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={3790.3408,29.897306,6911.2793};
-		dir[]={0.0075582825,-0.77310008,-0.63441944};
-		up[]={0.0092103342,0.63420647,-0.77310085};
-		aside[]={-0.99999928,-6.0028106e-007,-0.01191457};
+		pos[]={4480.0752,278.99692,4640.6187};
+		dir[]={0.34973571,-0.93608105,-0.039009336};
+		up[]={0.93032533,0.35174915,-0.10376856};
+		aside[]={-0.11085673,-3.1075615e-007,-0.99387002};
 	};
 };
 binarizationWanted=0;
@@ -29,12 +29,9 @@ addons[]=
 	"ace_cargo",
 	"A3_Structures_F_Mil_Cargo",
 	"A3_Characters_F",
-	"asr_ai3_cfgvehicles",
-	"asr_ai3_cfgcamouflage",
 	"ace_explosives",
 	"A3_Weapons_F_Rifles_MX",
 	"A3_Sounds_F",
-	"asr_ai3_cfgweapons",
 	"ace_realisticnames",
 	"ace_scopes",
 	"ace_ai",
@@ -210,32 +207,34 @@ class AddonsMetaData
 		};
 	};
 };
-randomSeed=3090463;
+randomSeed=3323449;
 class ScenarioData
 {
-	author="S3 @ TFT8";
+	author="S-3 @ TFT8";
+	overviewText="Generally empty map for missions, training excercises  etc.";
 	overViewPicture="intro.jpg";
+	overViewPictureLocked="intro.jpg";
+	onLoadMission="Generally empty map for missions, training excercises  etc.";
 	loadScreen="intro.jpg";
 	saving=0;
-	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
-	respawnDelay=8.2138119;
+	respawnDelay=5;
 	class Header
 	{
 		gameType="Coop";
 		minPlayers=1;
-		maxPlayers=41;
+		maxPlayers=45;
 	};
 	wreckManagerMode=1;
 	wreckLimit=10;
-	wreckRemovalMinTime=30.000002;
+	wreckRemovalMinTime=60.000004;
 	wreckRemovalMaxTime=1800;
 	corpseManagerMode=1;
 	corpseLimit=50;
-	corpseRemovalMinTime=30.000002;
+	corpseRemovalMinTime=60.000004;
 	corpseRemovalMaxTime=1800;
-	minPlayerDistance=200;
+	minPlayerDistance=250;
 };
 class CustomAttributes
 {
@@ -278,7 +277,197 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		class Attribute1
+		{
+			property="ReviveRequiredTrait";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute3
+		{
+			property="ReviveMedicSpeedMultiplier";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=2;
+				};
+			};
+		};
+		class Attribute4
+		{
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute5
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute6
+		{
+			property="ReviveForceRespawnDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=3;
+				};
+			};
+		};
+		class Attribute7
+		{
+			property="ReviveBleedOutDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=20;
+				};
+			};
+		};
+		class Attribute8
+		{
+			property="ReviveDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=6;
+				};
+			};
+		};
+		class Attribute9
+		{
+			property="ReviveUnconsciousStateMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute10
+		{
+			property="ReviveRequiredItems";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=11;
 	};
 	class Category1
 	{
@@ -309,20 +498,24 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="MISSION NAME";
-		timeOfChanges=1800.0002;
-		startWeather=0;
+		briefingName="TFT8 Sandbox";
+		overviewText="Generally empty map for missions, training excercises  etc.";
+		startWeather=0.13995266;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0;
+		forecastWeather=0.15000001;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2017;
 		month=6;
 		day=29;
-		hour=13;
-		minute=37;
+		hour=10;
+		minute=0;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
@@ -334,8 +527,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3802.2622,5.8924227,6907.9077};
-				angles[]={0,4.7386427,0};
+				position[]={4490.2188,254.97658,4644.6074};
+				angles[]={6.2352223,3.2844861,6.2818484};
 			};
 			side="Empty";
 			flags=4;
@@ -343,7 +536,7 @@ class Mission
 			{
 				init="call{[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions}";
 			};
-			id=112;
+			id=455;
 			type="B_supplyCrate_F";
 			class CustomAttributes
 			{
@@ -374,8 +567,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3804.1499,5.6999998,6903.4478};
-				angles[]={0,1.57283,0};
+				position[]={4496.1323,254.71988,4645.4912};
+				angles[]={0,0.11867308,0};
 			};
 			side="Empty";
 			flags=5;
@@ -383,7 +576,7 @@ class Mission
 			{
 				init="call{this setVariable[""ace_medical_isMedicalFacility"", true];}";
 			};
-			id=113;
+			id=456;
 			type="Land_Medevac_house_V1_F";
 		};
 		class Item2
@@ -398,8 +591,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3798.5315,5.0014391,6906.0073};
-						angles[]={0,1.5746361,0};
+						position[]={4491.7212,253.98491,4640.7241};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=7;
@@ -408,7 +601,7 @@ class Mission
 						isPlayer=1;
 						isPlayable=1;
 					};
-					id=115;
+					id=458;
 					type="B_Soldier_SL_F";
 					class CustomAttributes
 					{
@@ -439,8 +632,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3798.5234,5.0014391,6904.0078};
-						angles[]={0,1.5746361,0};
+						position[]={4493.7065,253.98579,4640.4834};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -448,7 +641,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=116;
+					id=459;
 					type="B_Soldier_SL_F";
 					class CustomAttributes
 					{
@@ -479,8 +672,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3798.5168,5.0014391,6902.0068};
-						angles[]={0,1.5746361,0};
+						position[]={4495.6929,253.98792,4640.2441};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -488,8 +681,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=117;
+					id=460;
 					type="B_Soldier_TL_F";
+					atlOffset=0.00033569336;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -519,8 +713,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3798.5088,5.0014391,6900.0073};
-						angles[]={0,1.5746361,0};
+						position[]={4497.6777,253.98856,4640.0034};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -528,8 +722,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=118;
+					id=461;
 					type="B_Soldier_TL_F";
+					atlOffset=0.00033569336;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -559,8 +754,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3796.5305,5.0014391,6906.0151};
-						angles[]={0,1.5746361,0};
+						position[]={4491.4805,253.98787,4638.7378};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -568,7 +763,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=119;
+					id=462;
 					type="B_soldier_AR_F";
 					class CustomAttributes
 					{
@@ -599,8 +794,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3796.5239,5.001441,6904.0142};
-						angles[]={0,1.5746361,0};
+						position[]={4493.4668,253.98811,4638.498};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -608,9 +803,8 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=120;
+					id=463;
 					type="B_soldier_AR_F";
-					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -640,8 +834,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3796.5159,5.001441,6902.0146};
-						angles[]={0,1.5746361,0};
+						position[]={4495.4521,253.99141,4638.2573};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -649,9 +843,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=121;
+					id=464;
 					type="B_medic_F";
-					atlOffset=1.9073486e-006;
+					atlOffset=0.00032043457;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -681,8 +875,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3796.5078,5.0014391,6900.0151};
-						angles[]={0,1.5746361,0};
+						position[]={4497.437,253.99384,4638.0166};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -690,8 +884,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=122;
+					id=465;
 					type="B_medic_F";
+					atlOffset=0.00032043457;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -721,8 +916,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3794.5317,5.001441,6906.0225};
-						angles[]={0,1.5746361,0};
+						position[]={4491.2402,253.99084,4636.7534};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -730,9 +925,8 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=123;
+					id=466;
 					type="B_Soldier_GL_F";
-					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -762,8 +956,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3794.5237,5.001441,6904.0229};
-						angles[]={0,1.5746361,0};
+						position[]={4493.2256,253.99045,4636.5127};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -771,9 +965,8 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=124;
+					id=467;
 					type="B_Soldier_GL_F";
-					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -803,8 +996,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3794.5171,5.001441,6902.022};
-						angles[]={0,1.5746361,0};
+						position[]={4495.2119,253.99342,4636.2729};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -812,9 +1005,8 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=125;
+					id=468;
 					type="B_soldier_M_F";
-					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -844,8 +1036,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3794.509,5.001441,6900.0225};
-						angles[]={0,1.5746361,0};
+						position[]={4497.1973,253.9967,4636.0322};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -853,9 +1045,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=126;
+					id=469;
 					type="B_soldier_M_F";
-					atlOffset=1.9073486e-006;
+					atlOffset=0.00032043457;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -885,8 +1077,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3792.5308,5.0014391,6906.0308};
-						angles[]={0,1.5746361,0};
+						position[]={4490.9995,253.99144,4634.7666};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -894,7 +1086,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=127;
+					id=470;
 					type="B_soldier_AT_F";
 					class CustomAttributes
 					{
@@ -925,8 +1117,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3792.5242,5.0014391,6904.0298};
-						angles[]={0,1.5746361,0};
+						position[]={4492.9863,253.99234,4634.5273};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -934,8 +1126,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=128;
+					id=471;
 					type="B_soldier_AT_F";
+					atlOffset=0.00025939941;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -965,8 +1158,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3792.5161,5.0014391,6902.0303};
-						angles[]={0,1.5746361,0};
+						position[]={4494.9712,253.99564,4634.2866};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -974,8 +1167,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=129;
+					id=472;
 					type="B_recon_JTAC_F";
+					atlOffset=0.00090026855;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1005,8 +1199,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3790.532,5.0014391,6906.0381};
-						angles[]={0,1.5746361,0};
+						position[]={4490.7598,253.99277,4632.7822};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -1014,8 +1208,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=130;
+					id=473;
 					type="B_Soldier_F";
+					atlOffset=0.0013275146;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1045,8 +1240,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3790.5239,5.0014391,6904.0386};
-						angles[]={0,1.5746361,0};
+						position[]={4492.7446,253.99307,4632.5415};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -1054,8 +1249,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=131;
+					id=474;
 					type="B_Soldier_F";
+					atlOffset=0.0013122559;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1085,8 +1281,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3790.5159,5.0014391,6902.0391};
-						angles[]={0,1.5746361,0};
+						position[]={4494.73,253.99574,4632.3008};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -1094,8 +1290,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=132;
+					id=475;
 					type="B_Soldier_F";
+					atlOffset=0.0013275146;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1125,8 +1322,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3788.531,5.0014391,6906.0459};
-						angles[]={0,1.5746361,0};
+						position[]={4490.519,253.99144,4630.7959};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -1134,7 +1331,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=133;
+					id=476;
 					type="B_Soldier_F";
 					class CustomAttributes
 					{
@@ -1165,8 +1362,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3788.5244,5.0014391,6904.0449};
-						angles[]={0,1.5746361,0};
+						position[]={4492.5054,253.99278,4630.5566};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -1174,8 +1371,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=134;
+					id=477;
 					type="B_Soldier_F";
+					atlOffset=0.0013427734;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1205,8 +1403,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3788.5164,5.0014391,6902.0454};
-						angles[]={0,1.5746361,0};
+						position[]={4494.4902,253.9953,4630.3159};
+						angles[]={0,0.12047856,0};
 					};
 					side="West";
 					flags=5;
@@ -1214,8 +1412,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=135;
+					id=478;
 					type="B_Soldier_F";
+					atlOffset=0.0012054443;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1244,49 +1443,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=114;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Spartan";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="acex_headless_blacklist";
-					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=457;
 		};
 		class Item3
 		{
@@ -1300,8 +1457,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3798.1077,5.0014391,6914.9624};
-						angles[]={0,1.5960512,0};
+						position[]={4482.7778,254.03571,4641.3452};
+						angles[]={0,0.14188635,0};
 					};
 					side="West";
 					flags=7;
@@ -1466,8 +1623,9 @@ class Mission
 							headgear="H_PilotHelmetHeli_B";
 						};
 					};
-					id=137;
+					id=480;
 					type="B_engineer_F";
+					atlOffset=0.011672974;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1497,8 +1655,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3798.0564,5.0014391,6912.9634};
-						angles[]={0,1.5960512,0};
+						position[]={4484.7573,253.99501,4641.0615};
+						angles[]={0,0.14188635,0};
 					};
 					side="West";
 					flags=5;
@@ -1663,8 +1821,9 @@ class Mission
 							headgear="H_PilotHelmetHeli_B";
 						};
 					};
-					id=138;
+					id=481;
 					type="B_engineer_F";
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1694,8 +1853,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3798.0068,5.0014391,6910.9629};
-						angles[]={0,1.5960512,0};
+						position[]={4486.7378,253.99144,4640.7798};
+						angles[]={0,0.14188635,0};
 					};
 					side="West";
 					flags=5;
@@ -1860,7 +2019,7 @@ class Mission
 							headgear="H_PilotHelmetHeli_B";
 						};
 					};
-					id=139;
+					id=482;
 					type="B_engineer_F";
 					class CustomAttributes
 					{
@@ -1891,8 +2050,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3797.9558,5.0014391,6908.9639};
-						angles[]={0,1.5960512,0};
+						position[]={4488.7173,253.98923,4640.4966};
+						angles[]={0,0.14188635,0};
 					};
 					side="West";
 					flags=5;
@@ -2057,7 +2216,7 @@ class Mission
 							headgear="H_PilotHelmetHeli_B";
 						};
 					};
-					id=140;
+					id=483;
 					type="B_engineer_F";
 					class CustomAttributes
 					{
@@ -2088,8 +2247,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3795.9575,5.0014391,6909.0146};
-						angles[]={0,1.5960512,0};
+						position[]={4488.4346,253.99144,4638.5176};
+						angles[]={0,0.14188635,0};
 					};
 					side="West";
 					flags=5;
@@ -2097,7 +2256,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=141;
+					id=484;
 					type="B_helicrew_F";
 					class CustomAttributes
 					{
@@ -2128,8 +2287,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3796.0066,5.0014391,6911.0142};
-						angles[]={0,1.5960512,0};
+						position[]={4486.4546,253.99144,4638.7988};
+						angles[]={0,0.14188635,0};
 					};
 					side="West";
 					flags=5;
@@ -2137,7 +2296,7 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=142;
+					id=485;
 					type="B_helicrew_F";
 					class CustomAttributes
 					{
@@ -2168,8 +2327,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3796.0576,5.0014391,6913.0132};
-						angles[]={0,1.5960512,0};
+						position[]={4484.4751,253.99915,4639.082};
+						angles[]={0,0.14188635,0};
 					};
 					side="West";
 					flags=5;
@@ -2177,8 +2336,9 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=143;
+					id=486;
 					type="B_helicrew_F";
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2208,8 +2368,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3796.1086,5.0014391,6915.0117};
-						angles[]={0,1.5960512,0};
+						position[]={4482.4956,254.02818,4639.3657};
+						angles[]={0,0.14188635,0};
 					};
 					side="West";
 					flags=5;
@@ -2217,194 +2377,8 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=144;
+					id=487;
 					type="B_helicrew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=136;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Razor";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="acex_headless_blacklist";
-					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item4
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={3791.5022,5,6913.6011};
-				angles[]={0,0.70334184,0};
-			};
-			id=145;
-			type="HeadlessClient_F";
-		};
-		class Item5
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=6;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3792.9612,5.0014391,6910.6724};
-						angles[]={0,0.70335025,0};
-					};
-					side="Civilian";
-					flags=7;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=147;
-					type="C_man_1";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3793.1304,5.0014391,6908.9663};
-						angles[]={0,0.70335025,0};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=148;
-					type="C_man_1";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3790.99,5.0014544,6908.979};
-						angles[]={0,0.70335025,0};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=149;
-					type="C_man_1";
 					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
@@ -2430,13 +2404,56 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item3
+			};
+			class Attributes
+			{
+			};
+			id=479;
+			atlOffset=0.011672974;
+		};
+		class Item4
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4483.3115,254.00015,4634.582};
+				angles[]={6.2805333,5.5323706,6.276526};
+			};
+			id=488;
+			type="HeadlessClient_F";
+			atlOffset=1.5258789e-005;
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=6;
+				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3790.9988,5.0014448,6910.6831};
-						angles[]={0,0.70335025,0};
+						position[]={4486.4399,253.99144,4635.7344};
+						angles[]={0,5.5323706,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=490;
+					type="C_man_1";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4488.1538,253.99144,4635.7041};
+						angles[]={0,5.5323706,0};
 					};
 					side="Civilian";
 					flags=5;
@@ -2444,40 +2461,51 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=150;
+					id=491;
 					type="C_man_1";
-					atlOffset=5.7220459e-006;
-					class CustomAttributes
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
 					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
+						position[]={4487.8921,253.99144,4633.5796};
+						angles[]={0,5.5323706,0};
 					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=492;
+					type="C_man_1";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4486.2002,253.99161,4633.7866};
+						angles[]={0,5.5323706,0};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=493;
+					type="C_man_1";
+					atlOffset=0.00033569336;
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3788.968,5.0014391,6908.9624};
-						angles[]={0,0.70335025,0};
+						position[]={4487.6733,253.98929,4631.5693};
+						angles[]={0,5.5323706,0};
 					};
 					side="Civilian";
 					flags=5;
@@ -2485,39 +2513,16 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=151;
+					id=494;
 					type="C_man_1";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
 				};
 				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3788.9199,5.0014448,6910.7686};
-						angles[]={0,0.70335025,0};
+						position[]={4485.8735,253.98492,4631.7319};
+						angles[]={0,5.5323706,0};
 					};
 					side="Civilian";
 					flags=5;
@@ -2525,109 +2530,43 @@ class Mission
 					{
 						isPlayable=1;
 					};
-					id=152;
+					id=495;
 					type="C_man_1";
-					atlOffset=5.7220459e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
 				};
 			};
 			class Attributes
 			{
 			};
-			id=146;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Civ";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="acex_headless_blacklist";
-					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=489;
 		};
 		class Item6
 		{
 			dataType="Marker";
-			position[]={3793.1909,-12.859833,6913.0679};
+			position[]={4484.0376,254.00414,4636.1973};
 			name="respawn_west";
 			type="Empty";
-			angle=40.298515;
-			id=153;
-			atlOffset=-17.859833;
+			angle=316.98148;
+			id=496;
+			atlOffset=1.5258789e-005;
 		};
 		class Item7
 		{
 			dataType="Marker";
-			position[]={3790.0608,-12.754547,6913.4443};
+			position[]={4483.2993,253.99638,4633.1323};
 			name="respawn_civilian";
 			type="Empty";
-			angle=40.298515;
-			id=154;
-			atlOffset=-17.754547;
+			angle=316.98148;
+			id=497;
+			atlOffset=1.5258789e-005;
 		};
 		class Item8
 		{
 			dataType="Marker";
-			position[]={3794.2119,0,6907.77};
+			position[]={4489.418,0,4636.5952};
 			name="marker_2";
 			type="b_hq";
-			id=155;
-			atlOffset=-5;
+			id=498;
+			atlOffset=-253.99001;
 		};
 	};
 };

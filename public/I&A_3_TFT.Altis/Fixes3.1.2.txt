@@ -1,0 +1,20 @@
+Updated  initiateZeusByUID.sqf
+Changed Version to 3.1.2
+Added
+derp_revive_maxSafeDamage = 0.95;
+derp_revive_downedDamageTreshold = 2; // Downed state can only be entered between 1 and this treshold, over it you die 
+To Description.ext
+
+Moved Vehicle pickup and Blackfish spawn added arsenal to vheicle lift
+Remved Deadlock near Molos Airfield Added more AO's for start off mission
+Added Prio AA mission
+Redone Runway light's 
+Added liftable refuel's for GH and LB 
+
+
+
+
+
+Still need doing 
+
+
