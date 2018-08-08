@@ -1,0 +1,8 @@
+Images needed:
+
+\Media\Billboards
+  report.paa
+  
+  
+initPlayerLocal.sqf, line 134-140
+Squad XML hints are currently disabled
