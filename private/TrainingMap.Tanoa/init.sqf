@@ -1,4 +1,5 @@
 call TFT_fnc_prepPhaseInit; // Preparation phase init
+0=[] execVM "defaultLoadouts.sqf";
 nopop = true; // Keeps targets from poping up on their own after hit
 
 // Destroy bushes on firing range
