@@ -1,1 +1,3 @@
-0 = [] execVM "log.sqf";
+if !hasInterface then{
+	0 = [] execVM "log.sqf";
+};

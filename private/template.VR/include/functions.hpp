@@ -8,5 +8,11 @@ class CfgFunctions
 				file  = "functions\drawBuildingMarker.sqf";
 			};
 		};
+		class Loadouts	//category
+		{
+			class defaultLoadouts {
+				file  = "functions\defaultLoadouts.sqf";
+			};
+		};
 	};
 };

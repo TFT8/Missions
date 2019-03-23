@@ -1,4 +1,6 @@
 call TFT_fnc_prepPhaseInit;
+call TFT_fnc_defaultLoadouts;
+
 
 // fix Zeus placing aircraft over water
 ["ModuleCurator_F", "init", {
@@ -19,7 +21,7 @@ call TFT_fnc_prepPhaseInit;
 	}];
 }] call CBA_fnc_addClassEventHandler;
 	
-if isServer then {
+if (isServer && !hasInterface) then {
 	_curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"]; 
 	_curator setVariable ["Addons", 3, true]; 
 	_curator setVariable ["Owner", "#adminLogged", true];
@@ -38,7 +40,7 @@ if isServer then {
 	} forEach _allHPs;
 
 	0 = [] execVM "log.sqf";
-}
+};
 
 // fix for units losing their loadout when switching to Headless Client
 ["CAManBase", "Local", {
