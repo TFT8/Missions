@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=43;
+		nextID=47;
 	};
 	class Camera
 	{
-		pos[]={7519.8569,15.380117,7432.5459};
-		dir[]={0.70790273,-0.70502341,-0.045604773};
-		up[]={0.70365626,0.70910424,-0.045332801};
-		aside[]={-0.064290889,9.399082e-007,-0.99795675};
+		pos[]={7506.833,20.493553,7421.3599};
+		dir[]={0.81704605,-0.54534352,0.18788601};
+		up[]={0.53161198,0.83812732,0.12224685};
+		aside[]={0.22411427,9.9482713e-007,-0.97458863};
 	};
 };
 binarizationWanted=0;
@@ -32,8 +32,7 @@ addons[]=
 	"ace_cargo",
 	"A3_Ui_F",
 	"A3_Modules_F",
-	"tft_cup",
-	"tft_misc",
+	"tft_supplies",
 	"A3_Characters_F",
 	"A3_Characters_F_Patrol",
 	"cfp_uniforms"
@@ -42,7 +41,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=11;
+		items=10;
 		class Item0
 		{
 			className="acex_headless";
@@ -87,31 +86,25 @@ class AddonsMetaData
 		};
 		class Item6
 		{
-			className="tft_cup";
-			name="tft_cup";
-			author="Ampersand, YoursTruly";
+			className="tft_supplies";
+			name="tft_supplies";
+			author="Ampersand";
 		};
 		class Item7
-		{
-			className="tft_misc";
-			name="tft_misc";
-			author="Ampersand, YoursTruly";
-		};
-		class Item8
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item8
 		{
 			className="A3_Characters_F_Patrol";
 			name="Arma 3 Patrol - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item9
 		{
 			className="cfp_uniforms";
 			name="cfp_uniforms";
@@ -4784,7 +4777,7 @@ class Mission
 				position[]={7532.5,5,7432.5};
 			};
 			name="hc_1";
-			isPlayer=1;
+			isPlayable=1;
 			id=603;
 			type="HeadlessClient_F";
 		};
@@ -4796,7 +4789,7 @@ class Mission
 				position[]={7533.5,5,7432.5};
 			};
 			name="hc_2";
-			isPlayer=1;
+			isPlayable=1;
 			id=604;
 			type="HeadlessClient_F";
 		};
@@ -4808,7 +4801,7 @@ class Mission
 				position[]={7534.5,5,7432.5};
 			};
 			name="hc_3";
-			isPlayer=1;
+			isPlayable=1;
 			id=605;
 			type="HeadlessClient_F";
 		};
