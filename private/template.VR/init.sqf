@@ -47,8 +47,10 @@ if (isServer && !hasInterface) then {
     params ["_entity", "_isLocal"];
 
     if (_isLocal) then {
-        if ((uniform _entity) isEqualTo "") then {
-            _entity setUnitLoadout (getUnitLoadout (typeOf _entity));
-        };
+		{
+			if ((uniform _x) isEqualTo "") then {
+				_x setUnitLoadout (getUnitLoadout (typeOf _x));
+			};
+		} forEach units group _entity;
     };
 }] call CBA_fnc_addClassEventHandler;

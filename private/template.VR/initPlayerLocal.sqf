@@ -25,4 +25,30 @@ if (hasInterface) then {
 		group _objectUnderCursor setVariable ["Vcm_Disable", false, true];
 		["Group Vcom Enabled: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
 	}] call Ares_fnc_RegisterCustomModule;
+	["AI Behaviour", "Dash to Waypoint", {
+		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+		private _g = group _objectUnderCursor;
+		[[], [_g]] call Achilles_fnc_transferOwnership;
+		waitUntil {local _g};
+		_g setVariable ["Vcm_Disable", true, true];
+		_g setVariable ["acex_headless_blacklist", true, true];
+		_g allowFleeing 0;
+		_g setCombatMode "BLUE";
+		{
+			_x disableAI "TARGET";
+			_x disableAI "AUTOTARGET";
+			_x disableAI "FSM";
+			_x disableAI "WEAPONAIM";
+			_x disableAI "SUPPRESSION";
+			_x disableAI "COVER";
+			_x disableAI "AUTOCOMBAT";
+			_x setSpeedMode "FULL";
+			_x setSkill ["courage", 1];
+		} forEach units _g;
+		
+		private _cwp = waypoints _g select (currentWaypoint _g);
+		_cwp setWaypointStatements ["true", "private _g = group this; _g setCombatMode 'YELLOW'; { _x enableAI 'TARGET'; _x enableAI 'AUTOTARGET'; _x enableAI 'FSM'; _x enableAI 'WEAPONAIM'; _x enableAI 'SUPPRESSION'; _x enableAI 'COVER'; _x enableAI 'AUTOCOMBAT'; _x setSpeedMode 'AUTO';} forEach units _g;"];
+
+		["Group Dashing: %1", _g] call Achilles_fnc_ShowZeusErrorMessage;
+	}] call Ares_fnc_RegisterCustomModule;
 };
