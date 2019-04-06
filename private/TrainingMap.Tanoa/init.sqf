@@ -47,6 +47,19 @@ if(isServer) then {
     };
 };
 
+// fix for units losing their loadout when switching to Headless Client
+["CAManBase", "Local", {
+    params ["_entity", "_isLocal"];
+
+    if (_isLocal) then {
+		{
+			if ((uniform _x) isEqualTo "") then {
+				_x setUnitLoadout (getUnitLoadout (typeOf _x));
+			};
+		} forEach units group _entity;
+    };
+}] call CBA_fnc_addClassEventHandler;
+
 // Hide old pier around Tempor Bridge
 {_x hideObject true} forEach (nearestTerrainObjects [[4227.9,11629.5,6.24811], [], 50]);
 

@@ -51,4 +51,22 @@ if (hasInterface) then {
 
 		["Group Dashing: %1", _g] call Achilles_fnc_ShowZeusErrorMessage;
 	}] call Ares_fnc_RegisterCustomModule;
+	["AI Behaviour", "Unpack Static Weapon", {
+		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+		private _g = group _objectUnderCursor;
+		_g allowFleeing 0;
+		[_g, getPos _objectUnderCursor, _objectUnderCursor getPos [500, getDir _objectUnderCursor]] call BIS_fnc_unpackStaticWeapon;
+		private _turrets = [];
+		["Unpacking Static: %1", _g] call Achilles_fnc_ShowZeusErrorMessage;
+		
+		waitUntil {
+			!(units _g select {_x != vehicle _x} isEqualTo [])
+		};
+		private _turret = vehicle ((units _g select {_x != vehicle _x}) select 0);
+		if (vectorUp _turret vectorDotProduct surfaceNormal getPos _turret < 0.99) then {
+			//hintSilent "Righting Turret";
+			_turret setPosASL ((getPosASL _turret) vectorAdd [0,0,0.1]);
+			_turret setVectorUp surfaceNormal getPos _turret;
+		};
+	}] call Ares_fnc_RegisterCustomModule;
 };
