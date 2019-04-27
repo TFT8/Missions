@@ -49,7 +49,7 @@ if (isServer && !hasInterface) then {
     if (_isLocal) then {
 		{
 			if ((uniform _x) isEqualTo "") then {
-				_x setUnitLoadout (getUnitLoadout (typeOf _x));
+				_x setUnitLoadout (typeOf _x);
 			};
 		} forEach units group _entity;
     };
