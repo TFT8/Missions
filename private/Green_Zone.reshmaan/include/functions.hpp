@@ -1,5 +1,6 @@
 class TFT	//tag
 {
+	tag = "TFT";
 	class Marker	//category
 	{
 		class drawBuildingMarker {
