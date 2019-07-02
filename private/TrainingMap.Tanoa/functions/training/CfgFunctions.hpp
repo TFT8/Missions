@@ -22,4 +22,8 @@ class TFT_training {
         class teleport;
         class toggleTargets;
     };
+	class soac {
+        file = "functions\training";
+        class addSOACActions;
+	};
 };
