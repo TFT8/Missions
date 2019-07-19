@@ -2,9 +2,10 @@ call TFT_fnc_prepPhaseInit;
 call TFT_fnc_defaultLoadouts;
 
 
-// fix Zeus placing aircraft over water
 ["ModuleCurator_F", "init", {
 	params ["_curator"];
+	
+	// fix Zeus placing aircraft over water
 	_curator addEventHandler ["CuratorObjectPlaced", {
 		params ["_curator", "_entity"];
 
@@ -19,6 +20,20 @@ call TFT_fnc_defaultLoadouts;
 			};
 		};
 	}];
+	
+	// add line of sight ACE Actions
+	_statement = {
+		[] call tft_fnc_toggleDoor
+	};
+	_action = ["ToggleDoor","Toggle Door","",_statement,{true}] call ace_interact_menu_fnc_createAction;
+	[["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
+
+	_statement = {
+		[] call tft_fnc_toggleLight
+	};
+	_action = ["ToggleLight","Toggle Light","",_statement,{true}] call ace_interact_menu_fnc_createAction;
+	[["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
+
 }] call CBA_fnc_addClassEventHandler;
 	
 if isServer then {

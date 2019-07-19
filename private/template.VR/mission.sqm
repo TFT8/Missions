@@ -5,27 +5,26 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=549;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=609;
+		nextID=615;
 	};
 	class LayerIndexProvider
 	{
-		nextID=53;
+		nextID=65;
 	};
 	class Camera
 	{
-		pos[]={7499.0337,20.174084,7415.6685};
-		dir[]={0.68290025,-0.60500854,0.40972713};
-		up[]={0.51890254,0.79613298,0.31133091};
-		aside[]={0.51449811,9.9930912e-007,-0.85752255};
+		pos[]={7520.5596,8.261343,7442.7363};
+		dir[]={0.64302051,-0.50766128,-0.5734266};
+		up[]={0.37889069,0.86155653,-0.33788228};
+		aside[]={-0.66556859,4.4913031e-007,-0.74634665};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
-	"acex_headless",
 	"A3_Structures_F_Mil_Cargo",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
@@ -34,8 +33,9 @@ addons[]=
 	"A3_Characters_F",
 	"A3_Characters_F_Patrol",
 	"cfp_uniforms",
-	"A3_Modules_F",
-	"tft_misc"
+	"CUP_CWA_Misc",
+	"tft_misc",
+	"A3_Modules_F"
 };
 class AddonsMetaData
 {
@@ -44,77 +44,75 @@ class AddonsMetaData
 		items=11;
 		class Item0
 		{
-			className="acex_headless";
-			name="ACEX - Headless";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item1
-		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item1
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
+		class Item2
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item4
+		class Item3
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="tft_supplies";
 			name="tft_supplies";
 			author="Ampersand";
 		};
-		class Item6
+		class Item5
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item6
 		{
 			className="A3_Characters_F_Patrol";
 			name="Arma 3 Patrol - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item7
 		{
 			className="cfp_uniforms";
 			name="cfp_uniforms";
 			author="CFP Team";
 		};
+		class Item8
+		{
+			className="CUP_CWA_Misc";
+			name="CUP_CWA_Misc";
+		};
 		class Item9
+		{
+			className="tft_misc";
+			name="tft_misc";
+			author="Ampersand, YoursTruly";
+		};
+		class Item10
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item10
-		{
-			className="tft_misc";
-			name="tft_misc";
-			author="Ampersand, YoursTruly";
 		};
 	};
 };
@@ -232,115 +230,49 @@ class Mission
 		forecastLightnings=0.1;
 		wavesForced=1;
 		windForced=1;
-		year=2017;
-		month=6;
-		day=29;
-		hour=13;
-		minute=37;
+		year=2019;
+		month=7;
+		day=19;
+		hour=14;
+		minute=-22;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
+		class CustomAttributes
+		{
+			name="Intel";
+			class Attribute0
+			{
+				property="Enh_disableGrass";
+				expression="if (((parseNumber _value) > 0) && !is3DEN && hasInterface) then {setTerrainGrid (parseNumber _value)}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="-1";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 	class Entities
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			dataType="Layer";
 			name="TFT8";
 			class Entities
 			{
-				items=23;
+				items=24;
 				class Item0
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7531.5,5,7432.5};
-					};
-					id=243;
-					type="acex_headless_module";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_module_delay";
-							expression="_this setVariable ['delay',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=15;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="acex_headless_module_log";
-							expression="_this setVariable ['log',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="acex_headless_module_enabled";
-							expression="_this setVariable ['enabled',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="acex_headless_module_endMission";
-							expression="_this setVariable ['endMission',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -380,7 +312,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -418,10 +350,29 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
-				class Item3
+				class Item2
 				{
 					dataType="Marker";
 					position[]={7520,5,7436};
@@ -429,7 +380,7 @@ class Mission
 					type="Empty";
 					id=153;
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Marker";
 					position[]={7530.0786,5,7440.0625};
@@ -437,7 +388,7 @@ class Mission
 					type="b_hq";
 					id=155;
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -453,7 +404,7 @@ class Mission
 					id=253;
 					type="TFT_supplyCrate_F";
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -469,7 +420,7 @@ class Mission
 					id=254;
 					type="TFT_supplyCrate_Adv_F";
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -485,7 +436,7 @@ class Mission
 					id=255;
 					type="Box_TFT8_Ammo_F";
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -501,7 +452,7 @@ class Mission
 					id=252;
 					type="TFT_B_Medical";
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Group";
 					side="West";
@@ -819,7 +770,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item10
+				class Item9
 				{
 					dataType="Group";
 					side="West";
@@ -1423,7 +1374,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item11
+				class Item10
 				{
 					dataType="Group";
 					side="West";
@@ -2027,7 +1978,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item12
+				class Item11
 				{
 					dataType="Group";
 					side="West";
@@ -2631,7 +2582,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item13
+				class Item12
 				{
 					dataType="Group";
 					side="West";
@@ -3216,7 +3167,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item14
+				class Item13
 				{
 					dataType="Group";
 					side="West";
@@ -3370,7 +3321,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item15
+				class Item14
 				{
 					dataType="Group";
 					side="West";
@@ -3524,7 +3475,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item16
+				class Item15
 				{
 					dataType="Group";
 					side="West";
@@ -3739,7 +3690,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item17
+				class Item16
 				{
 					dataType="Group";
 					side="West";
@@ -4011,7 +3962,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item18
+				class Item17
 				{
 					dataType="Group";
 					side="West";
@@ -4283,7 +4234,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item19
+				class Item18
 				{
 					dataType="Group";
 					side="West";
@@ -4536,7 +4487,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item20
+				class Item19
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4548,7 +4499,7 @@ class Mission
 					id=603;
 					type="HeadlessClient_F";
 				};
-				class Item21
+				class Item20
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4560,7 +4511,7 @@ class Mission
 					id=604;
 					type="HeadlessClient_F";
 				};
-				class Item22
+				class Item21
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4572,20 +4523,79 @@ class Mission
 					id=605;
 					type="HeadlessClient_F";
 				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7533.4409,6.3240519,7434.2202};
+						angles[]={0,3.1415927,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction [""<t color='#89f3ff'>Enable Camera</t>"", {[] call tft_fnc_enableCamera}, nil, 6, true, true, """", ""_target distance _this < 5""];}";
+						name="S6_Camera";
+					};
+					id=613;
+					type="cwa_Kamera";
+					atlOffset=0.00015258789;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7530.0806,8.9768047,7432.4258};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=608;
+					type="Flag_TFT8_F";
+				};
 			};
 			id=242;
+			atlOffset=0.18225002;
 		};
 		class Item1
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7530.1035,5.5928116,7435.4126};
+				position[]={7529.6929,5.5929999,7434.9551};
+				angles[]={0,1.7448057,0};
 			};
 			name="lock_door_1";
-			init="call{ " \n "private _r = 2; " \n "private _vn = """"; " \n "private _c = getPos this; " \n "private _t = nearestObject [_c, ""HOUSE""]; " \n "{ " \n " _snsplit = _x splitString ""_""; " \n " if ( " \n "  (count _snsplit == 2) && " \n "  ((_snsplit select 0) isEqualTo ""door"") &&  " \n "  (0 < parseNumber (_snsplit select 1)) " \n " ) then { " \n "  if ((_c distance (_t modelToWorld (_t selectionPosition _x))) < _r) then { " \n "   _vn = ""bis_disabled_"" + _x; " \n "   _t setVariable [_vn, 1, true]; " \n "  }; " \n " }; " \n "} count selectionNames _t;}";
 			id=251;
 			type="Logic";
+			atlOffset=0.00018835068;
 		};
 		class Item2
 		{
@@ -6408,21 +6418,6 @@ class Mission
 				};
 			};
 			id=607;
-		};
-		class Item3
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7530.0806,8.9768047,7432.4258};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=608;
-			type="Flag_TFT8_F";
 		};
 	};
 };
