@@ -11,4 +11,4 @@ private _action = ["Camera","Camera","",_statement,{true}] call ace_interact_men
 
 player addAction ["Camera", {
 	["Exit"] call BIS_fnc_camera;
-}, nil, 0, false, false, "", "_target == _this", -1, true]
+}, nil, 0, false, false, "", "", -1, true]
