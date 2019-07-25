@@ -8,18 +8,18 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=615;
+		nextID=616;
 	};
 	class LayerIndexProvider
 	{
-		nextID=65;
+		nextID=73;
 	};
 	class Camera
 	{
-		pos[]={7520.5596,8.261343,7442.7363};
-		dir[]={0.64302051,-0.50766128,-0.5734266};
-		up[]={0.37889069,0.86155653,-0.33788228};
-		aside[]={-0.66556859,4.4913031e-007,-0.74634665};
+		pos[]={7488.3975,39.927155,7431.4648};
+		dir[]={0.78214079,-0.62309241,-0.0058067595};
+		up[]={0.62308139,0.78214318,-0.0046260813};
+		aside[]={-0.0074241101,4.8261427e-008,-0.99998105};
 	};
 };
 binarizationWanted=0;
@@ -35,13 +35,14 @@ addons[]=
 	"cfp_uniforms",
 	"CUP_CWA_Misc",
 	"tft_misc",
-	"A3_Modules_F"
+	"A3_Modules_F",
+	"uh60"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -113,6 +114,11 @@ class AddonsMetaData
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item11
+		{
+			className="uh60";
+			name="uh60";
 		};
 	};
 };
@@ -264,7 +270,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			dataType="Layer";
@@ -441,8 +447,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7526,5,7446};
-						angles[]={0,1.5707964,0};
+						position[]={7527.978,5,7433.9922};
+						angles[]={-0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
@@ -3504,8 +3510,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="speaker";
-									expression="_this setspeaker _value;";
+									property="ace_isEngineer";
+									expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 									class Value
 									{
 										class data
@@ -3514,10 +3520,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="Male06ENG";
+											value=2;
 										};
 									};
 								};
@@ -3540,7 +3546,133 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								class Attribute2
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ace_isMedic";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="ace_advanced_fatigue_performanceFactor";
+									expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="Enh_ambientAnimParams";
+									expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if ((_value # 0 != '') && !isMultiplayer) then		{			[_unit,_value # 0,_value # 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="ASIS";
+													};
+												};
+											};
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="Enh_featureType";
+									expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="0";
+										};
+									};
+								};
+								nAttributes=7;
 							};
 						};
 						class Item1
@@ -3991,8 +4123,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+									property="ace_isEngineer";
+									expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 									class Value
 									{
 										class data
@@ -4010,8 +4142,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ace_isEngineer";
-									expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+									property="pitch";
+									expression="_this setpitch _value;";
 									class Value
 									{
 										class data
@@ -4023,7 +4155,7 @@ class Mission
 													"SCALAR"
 												};
 											};
-											value=2;
+											value=1.02;
 										};
 									};
 								};
@@ -4048,8 +4180,8 @@ class Mission
 								};
 								class Attribute3
 								{
-									property="pitch";
-									expression="_this setpitch _value;";
+									property="ace_isMedic";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -4061,7 +4193,7 @@ class Mission
 													"SCALAR"
 												};
 											};
-											value=1.02;
+											value=2;
 										};
 									};
 								};
@@ -4084,7 +4216,76 @@ class Mission
 										};
 									};
 								};
-								nAttributes=5;
+								class Attribute5
+								{
+									property="Enh_ambientAnimParams";
+									expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if ((_value # 0 != '') && !isMultiplayer) then		{			[_unit,_value # 0,_value # 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="ASIS";
+													};
+												};
+											};
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="Enh_featureType";
+									expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="0";
+										};
+									};
+								};
+								nAttributes=7;
 							};
 						};
 						class Item1
@@ -6418,6 +6619,21 @@ class Mission
 				};
 			};
 			id=607;
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7525.6543,6.9256029,7422.8828};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=615;
+			type="B_MH60L_gray_F";
 		};
 	};
 };
