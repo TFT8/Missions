@@ -21,13 +21,12 @@ if isServer then {
 	tft_zeus addCuratorEditableObjects [allUnits + vehicles, true];
 	if (!hasInterface) then {
 		tft_zeus setVariable ["Owner", "#adminLogged", true];
+		call compile preprocessFileLineNumbers "tft_init.sqf";
 	} else {
 		//Editor play in Multiplayer
 		player assignCurator tft_zeus;
 	};
 	[tft_zeus, ["CuratorObjectPlaced", {_this call tft_fnc_zeusSpawnAir}]] remoteExec ["addEventHandler", 0, true];
-
-	call compile preprocessFileLineNumbers "tft_init.sqf";
 };
 
 // fix for units losing their loadout when switching to Headless Client
