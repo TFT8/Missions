@@ -8,18 +8,18 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=616;
+		nextID=624;
 	};
 	class LayerIndexProvider
 	{
-		nextID=73;
+		nextID=84;
 	};
 	class Camera
 	{
-		pos[]={7488.3975,39.927155,7431.4648};
-		dir[]={0.78214079,-0.62309241,-0.0058067595};
-		up[]={0.62308139,0.78214318,-0.0046260813};
-		aside[]={-0.0074241101,4.8261427e-008,-0.99998105};
+		pos[]={7503.2407,17.742279,7437.6558};
+		dir[]={0.85085505,-0.52542353,-0.010737026};
+		up[]={0.52542013,0.85080892,-0.0066305897};
+		aside[]={-0.012619426,2.7415808e-007,-0.99998152};
 	};
 };
 binarizationWanted=0;
@@ -35,14 +35,15 @@ addons[]=
 	"cfp_uniforms",
 	"CUP_CWA_Misc",
 	"tft_misc",
+	"A3_Modules_F_Curator_Curator",
 	"A3_Modules_F",
-	"uh60"
+	"A3_Structures_F_Civ_Lamps"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -110,15 +111,24 @@ class AddonsMetaData
 		};
 		class Item10
 		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item11
 		{
-			className="uh60";
-			name="uh60";
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -140,7 +150,7 @@ class ScenarioData
 	{
 		gameType="Coop";
 		minPlayers=1;
-		maxPlayers=40;
+		maxPlayers=50;
 	};
 	wreckManagerMode=1;
 	wreckLimit=10;
@@ -270,7 +280,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			dataType="Layer";
@@ -330,7 +340,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions;" \n "[this, true] call ace_arsenal_fnc_initBox;" \n "this addAction [""<t color='#89f3ff'>ACE Arsenal</t>"", {[player, player, true] call ace_arsenal_fnc_openBox}, nil, 51, true, true, """", ""_target distance _this < 8""];}";
+						init="call{[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions;" \n "[this, true] call ace_arsenal_fnc_initBox;" \n "this addAction [""<t color='#89f3ff'>ACE Arsenal</t>"", {[player, player, true] call ace_arsenal_fnc_openBox}, nil, 51, true, true, """", ""_target distance _this < 8""];" \n "this addBackpackCargo [""TFT_B_Medical"", 4];}";
 						name="box";
 					};
 					id=112;
@@ -356,26 +366,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="Enh_featureType";
-							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=2;
+						nAttributes=1;
 					};
 				};
 				class Item2
@@ -444,22 +435,6 @@ class Mission
 				};
 				class Item7
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7527.978,5,7433.9922};
-						angles[]={-0,1.5707964,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=252;
-					type="TFT_B_Medical";
-				};
-				class Item8
-				{
 					dataType="Group";
 					side="West";
 					class Entities
@@ -479,6 +454,7 @@ class Mission
 							{
 								name="pl";
 								description="Platoon Leader@Spartan 1-6";
+								isPlayer=1;
 								isPlayable=1;
 							};
 							id=443;
@@ -776,7 +752,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Group";
 					side="West";
@@ -1380,7 +1356,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item10
+				class Item9
 				{
 					dataType="Group";
 					side="West";
@@ -1984,7 +1960,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item11
+				class Item10
 				{
 					dataType="Group";
 					side="West";
@@ -2588,7 +2564,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item12
+				class Item11
 				{
 					dataType="Group";
 					side="West";
@@ -3173,7 +3149,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item13
+				class Item12
 				{
 					dataType="Group";
 					side="West";
@@ -3327,7 +3303,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item14
+				class Item13
 				{
 					dataType="Group";
 					side="West";
@@ -3481,7 +3457,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item15
+				class Item14
 				{
 					dataType="Group";
 					side="West";
@@ -3510,8 +3486,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="ace_isEngineer";
-									expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+									property="ace_isMedic";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -3529,8 +3505,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="pitch";
-									expression="_this setpitch _value;";
+									property="ace_isEngineer";
+									expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 									class Value
 									{
 										class data
@@ -3542,7 +3518,7 @@ class Mission
 													"SCALAR"
 												};
 											};
-											value=0.98000002;
+											value=2;
 										};
 									};
 								};
@@ -3567,8 +3543,8 @@ class Mission
 								};
 								class Attribute3
 								{
-									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+									property="pitch";
+									expression="_this setpitch _value;";
 									class Value
 									{
 										class data
@@ -3580,7 +3556,7 @@ class Mission
 													"SCALAR"
 												};
 											};
-											value=2;
+											value=0.98000002;
 										};
 									};
 								};
@@ -3603,76 +3579,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute5
-								{
-									property="Enh_ambientAnimParams";
-									expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if ((_value # 0 != '') && !isMultiplayer) then		{			[_unit,_value # 0,_value # 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"ARRAY"
-												};
-											};
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														class type
-														{
-															type[]=
-															{
-																"STRING"
-															};
-														};
-														value="";
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														class type
-														{
-															type[]=
-															{
-																"STRING"
-															};
-														};
-														value="ASIS";
-													};
-												};
-											};
-										};
-									};
-								};
-								class Attribute6
-								{
-									property="Enh_featureType";
-									expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="0";
-										};
-									};
-								};
-								nAttributes=7;
+								nAttributes=5;
 							};
 						};
 						class Item1
@@ -3822,7 +3729,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item16
+				class Item15
 				{
 					dataType="Group";
 					side="West";
@@ -4094,7 +4001,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item17
+				class Item16
 				{
 					dataType="Group";
 					side="West";
@@ -4123,8 +4030,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="ace_isEngineer";
-									expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+									property="ace_isMedic";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -4142,8 +4049,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="pitch";
-									expression="_this setpitch _value;";
+									property="ace_isEngineer";
+									expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 									class Value
 									{
 										class data
@@ -4155,7 +4062,7 @@ class Mission
 													"SCALAR"
 												};
 											};
-											value=1.02;
+											value=2;
 										};
 									};
 								};
@@ -4180,8 +4087,8 @@ class Mission
 								};
 								class Attribute3
 								{
-									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+									property="pitch";
+									expression="_this setpitch _value;";
 									class Value
 									{
 										class data
@@ -4193,7 +4100,7 @@ class Mission
 													"SCALAR"
 												};
 											};
-											value=2;
+											value=1.02;
 										};
 									};
 								};
@@ -4216,76 +4123,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute5
-								{
-									property="Enh_ambientAnimParams";
-									expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if ((_value # 0 != '') && !isMultiplayer) then		{			[_unit,_value # 0,_value # 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"ARRAY"
-												};
-											};
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														class type
-														{
-															type[]=
-															{
-																"STRING"
-															};
-														};
-														value="";
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														class type
-														{
-															type[]=
-															{
-																"STRING"
-															};
-														};
-														value="ASIS";
-													};
-												};
-											};
-										};
-									};
-								};
-								class Attribute6
-								{
-									property="Enh_featureType";
-									expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="0";
-										};
-									};
-								};
-								nAttributes=7;
+								nAttributes=5;
 							};
 						};
 						class Item1
@@ -4435,7 +4273,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item18
+				class Item17
 				{
 					dataType="Group";
 					side="West";
@@ -4688,7 +4526,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item19
+				class Item18
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4700,7 +4538,7 @@ class Mission
 					id=603;
 					type="HeadlessClient_F";
 				};
-				class Item20
+				class Item19
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4712,7 +4550,7 @@ class Mission
 					id=604;
 					type="HeadlessClient_F";
 				};
-				class Item21
+				class Item20
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4724,7 +4562,7 @@ class Mission
 					id=605;
 					type="HeadlessClient_F";
 				};
-				class Item22
+				class Item21
 				{
 					dataType="Object";
 					class PositionInfo
@@ -4742,31 +4580,8 @@ class Mission
 					id=613;
 					type="cwa_Kamera";
 					atlOffset=0.00015258789;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_featureType";
-							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="0";
-								};
-							};
-						};
-						nAttributes=1;
-					};
 				};
-				class Item23
+				class Item22
 				{
 					dataType="Object";
 					class PositionInfo
@@ -4781,9 +4596,100 @@ class Mission
 					id=608;
 					type="Flag_TFT8_F";
 				};
+				class Item23
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={7535.8833,5,7432.4976};
+					};
+					name="tft_zeus";
+					id=620;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
 			};
 			id=242;
-			atlOffset=0.18225002;
+			atlOffset=0.091125011;
 		};
 		class Item1
 		{
@@ -4800,1840 +4706,20 @@ class Mission
 		};
 		class Item2
 		{
-			dataType="Layer";
-			name="VVarMachine";
-			class Entities
-			{
-				items=3;
-				class Item0
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=9;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7523.5,5.0014391,7420.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								name="sl_5";
-								description="Vanguard 1 Squad Leader@Vanguard 1";
-								isPlayable=1;
-							};
-							id=558;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7521.5,5.0014391,7421.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="tla_5";
-								description="Vanguard 1 Team Leader (Alpha)@Vanguard 1";
-								isPlayable=1;
-							};
-							id=559;
-							type="B_Soldier_TL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male03ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7519.5,5.0014391,7421.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="ara_5";
-								description="Vanguard 1 Autorifleman (Alpha)@Vanguard 1";
-								isPlayable=1;
-							};
-							id=560;
-							type="B_soldier_AR_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male09ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7517.5,5.0014391,7421.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="gla_5";
-								description="Vanguard 1 Grenadier (Alpha)@Vanguard 1";
-								isPlayable=1;
-							};
-							id=561;
-							type="B_Soldier_GL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7515.5,5.0014391,7421.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="rma_5";
-								description="Vanguard 1 Rifleman (Alpha)@Vanguard 1";
-								isPlayable=1;
-							};
-							id=562;
-							type="B_Soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7521.5,5.0014391,7419.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="tlb_5";
-								description="Vanguard 1 Team Leader (Bravo)@Vanguard 1";
-								isPlayable=1;
-							};
-							id=563;
-							type="B_Soldier_TL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7519.5,5.0014391,7419.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="arb_5";
-								description="Vanguard 1 Autorifleman (Bravo)@Vanguard 1";
-								isPlayable=1;
-							};
-							id=564;
-							type="B_soldier_AR_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male02ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.04;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7517.5,5.0014391,7419.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="glb_5";
-								description="Vanguard 1 Grenadier (Bravo)@Vanguard 1";
-								isPlayable=1;
-							};
-							id=565;
-							type="B_Soldier_GL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male02ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item8
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7515.5,5.0014391,7419.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								name="clsb_5";
-								description="Vanguard 1 Medic (Bravo)@Vanguard 1";
-								isPlayable=1;
-							};
-							id=566;
-							type="B_medic_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=557;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Vanguard 1";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=9;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7523.5,5.0014391,7416.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								name="sl_6";
-								description="Vanguard 2 Squad Leader@Vanguard 2";
-								isPlayable=1;
-							};
-							id=568;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7521.5,5.0014391,7417.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="tla_6";
-								description="Vanguard 2 Team Leader (Alpha)@Vanguard 2";
-								isPlayable=1;
-							};
-							id=569;
-							type="B_Soldier_TL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male03ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7519.5,5.0014391,7417.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="ara_6";
-								description="Vanguard 2 Autorifleman (Alpha)@Vanguard 2";
-								isPlayable=1;
-							};
-							id=570;
-							type="B_soldier_AR_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male09ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7517.5,5.0014391,7417.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="gla_6";
-								description="Vanguard 2 Grenadier (Alpha)@Vanguard 2";
-								isPlayable=1;
-							};
-							id=571;
-							type="B_Soldier_GL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7515.5,5.0014391,7417.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="rma_6";
-								description="Vanguard 2 Rifleman (Alpha)@Vanguard 2";
-								isPlayable=1;
-							};
-							id=572;
-							type="B_Soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7521.5,5.0014391,7415.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="tlb_6";
-								description="Vanguard 2 Team Leader (Bravo)@Vanguard 2";
-								isPlayable=1;
-							};
-							id=573;
-							type="B_Soldier_TL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7519.5,5.0014391,7415.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="arb_6";
-								description="Vanguard 2 Autorifleman (Bravo)@Vanguard 2";
-								isPlayable=1;
-							};
-							id=574;
-							type="B_soldier_AR_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male02ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.04;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7517.5,5.0014391,7415.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="glb_6";
-								description="Vanguard 2 Grenadier (Bravo)@Vanguard 2";
-								isPlayable=1;
-							};
-							id=575;
-							type="B_Soldier_GL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male02ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item8
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7515.5,5.0014391,7415.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								name="clsb_6";
-								description="Vanguard 2 Medic (Bravo)@Vanguard 2";
-								isPlayable=1;
-							};
-							id=576;
-							type="B_medic_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=567;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Vanguard 2";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item2
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=9;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7523.5,5.0014391,7412.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								name="sl_7";
-								description="Vanguard 3 Squad Leader@Vanguard 3";
-								isPlayable=1;
-							};
-							id=578;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male10ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7521.5,5.0014391,7413.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="tla_7";
-								description="Vanguard 3 Team Leader (Alpha)@Vanguard 3";
-								isPlayable=1;
-							};
-							id=579;
-							type="B_Soldier_TL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male03ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7519.5,5.0014391,7413.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="ara_7";
-								description="Vanguard 3 Autorifleman (Alpha)@Vanguard 3";
-								isPlayable=1;
-							};
-							id=580;
-							type="B_soldier_AR_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male09ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7517.5,5.0014391,7413.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="gla_7";
-								description="Vanguard 3 Grenadier (Alpha)@Vanguard 3";
-								isPlayable=1;
-							};
-							id=581;
-							type="B_Soldier_GL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7515.5,5.0014391,7413.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="rma_7";
-								description="Vanguard 3 Rifleman (Alpha)@Vanguard 3";
-								isPlayable=1;
-							};
-							id=582;
-							type="B_Soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7521.5,5.0014391,7411.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="tlb_7";
-								description="Vanguard 3 Team Leader (Bravo)@Vanguard 3";
-								isPlayable=1;
-							};
-							id=583;
-							type="B_Soldier_TL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7519.5,5.0014391,7411.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="arb_7";
-								description="Vanguard 3 Autorifleman (Bravo)@Vanguard 3";
-								isPlayable=1;
-							};
-							id=584;
-							type="B_soldier_AR_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male02ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.04;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7517.5,5.0014391,7411.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="glb_7";
-								description="Vanguard 3 Grenadier (Bravo)@Vanguard 3";
-								isPlayable=1;
-							};
-							id=585;
-							type="B_Soldier_GL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male02ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1.02;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item8
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={7515.5,5.0014391,7411.0498};
-								angles[]={0,1.5707964,0};
-							};
-							side="West";
-							flags=4;
-							class Attributes
-							{
-								name="clsb_7";
-								description="Vanguard 3 Medic (Bravo)@Vanguard 3";
-								isPlayable=1;
-							};
-							id=590;
-							type="B_medic_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male08ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=577;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Vanguard 3";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-			};
-			id=607;
-		};
-		class Item3
-		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7525.6543,6.9256029,7422.8828};
+				position[]={7533.0034,10.98218,7429.5308};
+				angles[]={0,0.28553632,0};
 			};
 			side="Empty";
-			flags=4;
+			flags=5;
 			class Attributes
 			{
 			};
-			id=615;
-			type="B_MH60L_gray_F";
+			id=623;
+			type="Land_LampHalogen_F";
+			atlOffset=4.7683716e-007;
 		};
 	};
 };

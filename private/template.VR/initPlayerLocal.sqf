@@ -25,6 +25,11 @@ if (hasInterface) then {
 		group _objectUnderCursor setVariable ["Vcm_Disable", false, true];
 		["Group Vcom Enabled: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
 	}] call Ares_fnc_RegisterCustomModule;
+	["AI Behaviour", "Look Here", {
+		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+		private _p = screenToWorld [0.5, 0.5];
+		[_objectUnderCursor, _p] remoteExec ["doWatch", _objectUnderCursor];
+	}] call Ares_fnc_RegisterCustomModule;
 	["AI Behaviour", "Dash to Waypoint", {
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 		private _g = group _objectUnderCursor;
