@@ -27,8 +27,10 @@ if (hasInterface) then {
 	}] call Ares_fnc_RegisterCustomModule;
 	["AI Behaviour", "Look Here", {
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-		private _p = screenToWorld [0.5, 0.5];
-		[_objectUnderCursor, _p] remoteExec ["doWatch", _objectUnderCursor];
+		[_objectUnderCursor, {
+			params ["_successful", "_unit", "_mousePosASL"];
+			[_unit, _mousePosASL] remoteExec ["doWatch", owner _unit]
+		}] call ace_zeus_fnc_getModuleDestination;
 	}] call Ares_fnc_RegisterCustomModule;
 	["AI Behaviour", "Dash to Waypoint", {
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
