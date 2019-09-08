@@ -1,4 +1,4 @@
-if (hasInterface) then {
+if hasInterface then {
 	//prevent ACE advanced fatigue force walk
 	_handle = [{
 		if (ace_advanced_fatigue_anreserve < 100) then { ace_advanced_fatigue_anreserve = 100; };

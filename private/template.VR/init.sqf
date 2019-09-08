@@ -13,8 +13,6 @@ _statement = {
 };
 _action = ["ToggleLight","Toggle Light","",_statement,{true}] call ace_interact_menu_fnc_createAction;
 [["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
-
-
 if isServer then {
 	//_curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"]; 
 	//_curator setVariable ["Addons", 3, true];

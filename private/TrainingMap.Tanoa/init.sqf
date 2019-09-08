@@ -1,5 +1,6 @@
 call TFT_fnc_prepPhaseInit; // Preparation phase init
-0=[] execVM "defaultLoadouts.sqf";
+
+
 nopop = true; // Keeps targets from poping up on their own after hit
 
 // Destroy bushes on firing range
@@ -13,11 +14,31 @@ nopop = true; // Keeps targets from poping up on their own after hit
 // hide helipad on main base in field
 ["baseHelipad",5] call TFT_fnc_mapDestroyer;
 
-if(isServer) then {
+
+// add line of sight ACE Actions
+_statement = {
+	[] call tft_fnc_toggleDoor
+};
+_action = ["ToggleDoor","Toggle Door","",_statement,{true}] call ace_interact_menu_fnc_createAction;
+[["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
+
+_statement = {
+	[] call tft_fnc_toggleLight
+};
+_action = ["ToggleLight","Toggle Light","",_statement,{true}] call ace_interact_menu_fnc_createAction;
+[["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
+
+if isServer then {
     // Add Zeus to logged in admin
-    _curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"]; 
-    _curator setVariable ["Addons", 3, true]; 
-    _curator setVariable ["Owner", "#adminLogged", true];
+	tft_zeus addCuratorEditableObjects [allUnits + vehicles, true];
+	if (!hasInterface) then {
+		tft_zeus setVariable ["Owner", "#adminLogged", true];
+		call compile preprocessFileLineNumbers "tft_init.sqf";
+	} else {
+		//Editor play in Multiplayer
+		player assignCurator tft_zeus;
+	};
+	[tft_zeus, ["CuratorObjectPlaced", {_this call tft_fnc_zeusSpawnAir}]] remoteExec ["addEventHandler", 0, true];
     
     // Create Tempor Bridge
     private ["_bridge", "_rail"];
@@ -54,7 +75,7 @@ if(isServer) then {
     if (_isLocal) then {
 		{
 			if ((uniform _x) isEqualTo "") then {
-				_x setUnitLoadout (getUnitLoadout (typeOf _x));
+				_x setUnitLoadout (typeOf _x);
 			};
 		} forEach units group _entity;
     };
