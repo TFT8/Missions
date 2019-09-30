@@ -5,22 +5,22 @@ if hasInterface then {
 	}, 1,[]] call CBA_fnc_addPerFrameHandler;
 	
 	//ares custom curator modules
-	["AI Systems", "Blacklist Group", {
+	["AI Systems", "ACEX HC Blacklist Group", {
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 		group _objectUnderCursor setVariable ["acex_headless_blacklist", true, true];
 		["Group Blacklisted: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
 	}] call Ares_fnc_RegisterCustomModule;
-	["AI Systems", "Unblacklist Group", {
+	["AI Systems", "ACEX HC Unblacklist Group", {
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 		group _objectUnderCursor setVariable ["acex_headless_blacklist", false, true];
 		["Group Unblacklisted: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
 	}] call Ares_fnc_RegisterCustomModule;
-	["AI Systems", "Disable Vcom for Group", {
+	["AI Systems", "Vcom Disable for Group", {
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 		group _objectUnderCursor setVariable ["Vcm_Disable", true, true];
 		["Group Vcom Disabled: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
 	}] call Ares_fnc_RegisterCustomModule;
-	["AI Systems", "Enable Vcom for Group", {
+	["AI Systems", "Vcom Enable for Group", {
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 		group _objectUnderCursor setVariable ["Vcm_Disable", false, true];
 		["Group Vcom Enabled: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
