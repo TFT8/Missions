@@ -25,6 +25,22 @@ if isServer then {
 		player assignCurator tft_zeus;
 	};
 	[tft_zeus, ["CuratorObjectPlaced", {_this call tft_fnc_zeusSpawnAir}]] remoteExec ["addEventHandler", 0, true];
+		
+	//player log
+	if isDedicated then {
+		tft_op_id = format ["%1%2", briefingName, "real_date" callExtension "GMT+"];
+		tft_ops_log = profileNamespace getVariable ["tft_ops_log", []];
+		tft_ops_log_index = tft_ops_log pushBack [tft_op_id, []];
+		
+		tft_op_player_list = [];
+		addMissionEventHandler ["PlayerConnected",{
+			params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+			tft_op_player_list pushBackUnique _name;
+			tft_ops_log set [tft_ops_log_index, [tft_op_id, tft_op_player_list]];
+			profileNamespace setVariable ["tft_ops_log", tft_ops_log];
+			saveProfileNamespace
+		}];
+	};
 };
 
 // fix for units losing their loadout when switching to Headless Client
