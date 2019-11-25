@@ -4,76 +4,89 @@ if hasInterface then {
 		if (ace_advanced_fatigue_anreserve < 100) then { ace_advanced_fatigue_anreserve = 100; };
 	}, 1,[]] call CBA_fnc_addPerFrameHandler;
 	
-	//ares custom curator modules
-	["ACEX Headless", "Blacklist Group", {
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-		group _objectUnderCursor setVariable ["acex_headless_blacklist", true, true];
-		["Group Blacklisted: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
-	}] call Ares_fnc_RegisterCustomModule;
-	["ACEX Headless", "Unblacklist Group", {
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-		group _objectUnderCursor setVariable ["acex_headless_blacklist", false, true];
-		["Group Unblacklisted: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
-	}] call Ares_fnc_RegisterCustomModule;
-	["VcomAI", "Disable Vcom for Group", {
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-		group _objectUnderCursor setVariable ["Vcm_Disable", true, true];
-		["Group Vcom Disabled: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
-	}] call Ares_fnc_RegisterCustomModule;
-	["VcomAI", "Enable Vcom for Group", {
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-		group _objectUnderCursor setVariable ["Vcm_Disable", false, true];
-		["Group Vcom Enabled: %1", group _objectUnderCursor] call Achilles_fnc_ShowZeusErrorMessage;
-	}] call Ares_fnc_RegisterCustomModule;
-	["AI Behaviour", "Look Here", {
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-		[_objectUnderCursor, {
-			params ["_successful", "_unit", "_mousePosASL"];
-			[_unit, _mousePosASL] remoteExec ["doWatch", owner _unit]
-		}] call ace_zeus_fnc_getModuleDestination;
-	}] call Ares_fnc_RegisterCustomModule;
-	["AI Behaviour", "Dash to Waypoint", {
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-		private _g = group _objectUnderCursor;
-		[[], [_g]] call Achilles_fnc_transferOwnership;
-		waitUntil {local _g};
-		_g setVariable ["Vcm_Disable", true, true];
-		_g setVariable ["acex_headless_blacklist", true, true];
-		_g allowFleeing 0;
-		_g setCombatMode "BLUE";
-		{
-			_x disableAI "TARGET";
-			_x disableAI "AUTOTARGET";
-			_x disableAI "FSM";
-			_x disableAI "WEAPONAIM";
-			_x disableAI "SUPPRESSION";
-			_x disableAI "COVER";
-			_x disableAI "AUTOCOMBAT";
-			_x setSpeedMode "FULL";
-			_x setSkill ["courage", 1];
-		} forEach units _g;
-		
-		private _cwp = waypoints _g select (currentWaypoint _g);
-		_cwp setWaypointStatements ["true", "private _g = group this; _g setCombatMode 'YELLOW'; { _x enableAI 'TARGET'; _x enableAI 'AUTOTARGET'; _x enableAI 'FSM'; _x enableAI 'WEAPONAIM'; _x enableAI 'SUPPRESSION'; _x enableAI 'COVER'; _x enableAI 'AUTOCOMBAT'; _x setSpeedMode 'AUTO';} forEach units _g;"];
-
-		["Group Dashing: %1", _g] call Achilles_fnc_ShowZeusErrorMessage;
-	}] call Ares_fnc_RegisterCustomModule;
-	["AI Behaviour", "Unpack Static Weapon", {
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-		private _g = group _objectUnderCursor;
-		_g allowFleeing 0;
-		[_g, getPos _objectUnderCursor, _objectUnderCursor getPos [500, getDir _objectUnderCursor]] call BIS_fnc_unpackStaticWeapon;
-		private _turrets = [];
-		["Unpacking Static: %1", _g] call Achilles_fnc_ShowZeusErrorMessage;
-		
-		waitUntil {
-			!(units _g select {_x != vehicle _x} isEqualTo [])
-		};
-		private _turret = vehicle ((units _g select {_x != vehicle _x}) select 0);
-		if (vectorUp _turret vectorDotProduct surfaceNormal getPos _turret < 0.99) then {
-			//hintSilent "Righting Turret";
-			_turret setPosASL ((getPosASL _turret) vectorAdd [0,0,0.1]);
-			_turret setVectorUp surfaceNormal getPos _turret;
-		};
-	}] call Ares_fnc_RegisterCustomModule;
+	private _customZeusModules = [
+		["Respawn", "Change Respawn Position", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			"respawn_west" setMarkerPos _position;
+			[objNull, format ["Marker respawn_west moved to: %1", _position]] call bis_fnc_showCuratorFeedbackMessage;
+		}],
+		["AI Systems", "ACEX HC Blacklist Group", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			group _objectUnderCursor setVariable ["acex_headless_blacklist", true, true];
+			[objNull, format ["Group Blacklisted: %1", group _objectUnderCursor]] call bis_fnc_showCuratorFeedbackMessage;
+		}],
+		["AI Systems", "ACEX HC Unblacklist Group", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			group _objectUnderCursor setVariable ["acex_headless_blacklist", false, true];
+			[objNull, format ["Group Unblacklisted: %1", group _objectUnderCursor]] call bis_fnc_showCuratorFeedbackMessage;
+		}],
+		["AI Systems", "Vcom Disable for Group", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			group _objectUnderCursor setVariable ["Vcm_Disable", true, true];
+			[objNull, format ["Group Vcom Disabled: %1", group _objectUnderCursor]] call bis_fnc_showCuratorFeedbackMessage;
+		}],
+		["AI Systems", "Vcom Enable for Group", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			group _objectUnderCursor setVariable ["Vcm_Disable", false, true];
+			[objNull, format ["Group Vcom Enabled: %1", group _objectUnderCursor]] call bis_fnc_showCuratorFeedbackMessage;
+		}],
+		["AI Behaviour", "Look Here", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			[_objectUnderCursor, {
+				params ["_successful", "_unit", "_mousePosASL"];
+				[_unit, _mousePosASL] remoteExec ["doWatch", owner _unit]
+			}] call ace_zeus_fnc_getModuleDestination;
+		}],
+		["AI Behaviour", "Disable AI: Path", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			[_objectUnderCursor, "Path"] remoteExec ["DisableAI", owner _objectUnderCursor];
+			[objNull, format ["Path AI Disabled: %1", _objectUnderCursor]] call bis_fnc_showCuratorFeedbackMessage;
+		}],
+		["AI Behaviour", "Enable AI: Path", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			[_objectUnderCursor, "Path"] remoteExec ["EnableAI", owner _objectUnderCursor];
+			[objNull, format ["Path AI Enabled: %1", _objectUnderCursor]] call bis_fnc_showCuratorFeedbackMessage;
+		}],
+		["AI Behaviour", "Unpack Static Weapon", {
+			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+			private _g = group _objectUnderCursor;
+			_g allowFleeing 0;
+			[_g, getPos _objectUnderCursor, _objectUnderCursor getPos [500, getDir _objectUnderCursor]] call BIS_fnc_unpackStaticWeapon;
+			private _xs = [];
+			[objNull, format ["Unpacking Static: %1", _g]] call bis_fnc_showCuratorFeedbackMessage;
+			
+			[_g] spawn {
+				params ["_g"];
+				private _time = diag_tickTime;
+				private _xs = units _g select {assignedVehicleRole _x isEqualTo ["Turret", [0]]} apply {vehicle _x};
+				private _newTurrets = [];
+				waitUntil {
+					sleep 0.1;
+					((diag_tickTime - _time) > 10) ||
+					{
+						_newTurrets = units _g select {assignedVehicleRole _x isEqualTo ["Turret", [0]]} apply {vehicle _x};
+						!(_xs isEqualTo _newTurrets)
+					}
+					
+				};
+				_newTurrets = _newTurrets - _xs;
+				_newTurrets apply {
+					//systemChat format ["Righting Turret %1", _x setVectorUp surfaceNormal getPos _x];
+					getPos _x params ["_posX", "_posY", "_posZ"];
+					_x setPos [_posX, _posY, 0.05];
+					_x setVectorUp surfaceNormal getPos _x;
+				};
+			};
+		}]
+	];
+	
+	//Achilles
+	if isClass (configfile >> "CfgPatches" >> "achilles_ui_f") then {
+		_customZeusModules apply {_x call Ares_fnc_RegisterCustomModule};
+	};
+	
+	//Zeus Enhanced
+	if isClass (configfile >> "CfgPatches" >> "zen_main") then {
+		_customZeusModules apply {_x call zen_custom_modules_fnc_register};
+	};
 };

@@ -1,5 +1,0 @@
-class CfgFunctions
-{
-	#include "DCONVS\functions.hpp"
-    #include "include\functions.hpp"
-};
