@@ -1,18 +1,5 @@
 call TFT_fnc_prepPhaseInit;
 
-
-// add line of sight ACE Actions
-_statement = {
-	[] call tft_fnc_toggleDoor
-};
-_action = ["ToggleDoor","Toggle Door","",_statement,{true}] call ace_interact_menu_fnc_createAction;
-[["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
-
-_statement = {
-	[] call tft_fnc_toggleLight
-};
-_action = ["ToggleLight","Toggle Light","",_statement,{true}] call ace_interact_menu_fnc_createAction;
-[["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
 if isServer then {
 	//_curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"]; 
 	//_curator setVariable ["Addons", 3, true];
@@ -24,7 +11,6 @@ if isServer then {
 		//Editor play in Multiplayer
 		player assignCurator tft_zeus;
 	};
-	[tft_zeus, ["CuratorObjectPlaced", {_this call tft_fnc_zeusSpawnAir}]] remoteExec ["addEventHandler", 0, true];
 		
 	//player log
 	if isDedicated then {
