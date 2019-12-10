@@ -17,8 +17,11 @@ class TFT	//tag
 		class toggleLight {
 			file  = "functions\toggleLight.sqf";
 		};
-		class zeusSpawnAir {
-			file  = "functions\zeusSpawnAir.sqf";
+		class zeusProjectile {
+			file  = "functions\zeusProjectile.sqf";
+		};
+		class unitProjectile {
+			file  = "functions\unitProjectile.sqf";
 		};
 	};
 };
