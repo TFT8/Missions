@@ -6,26 +6,10 @@ if isServer then {
 	tft_zeus addCuratorEditableObjects [allUnits + vehicles, true];
 	if (!hasInterface) then {
 		tft_zeus setVariable ["Owner", "#adminLogged", true];
-		call compile preprocessFileLineNumbers "tft_init.sqf";
+		execVM "tft_init.sqf";
 	} else {
 		//Editor play in Multiplayer
 		player assignCurator tft_zeus;
-	};
-		
-	//player log
-	if isDedicated then {
-		tft_op_id = format ["%1%2", briefingName, "real_date" callExtension "GMT+"];
-		tft_ops_log = profileNamespace getVariable ["tft_ops_log", []];
-		tft_ops_log_index = tft_ops_log pushBack [tft_op_id, []];
-		
-		tft_op_player_list = [];
-		addMissionEventHandler ["PlayerConnected",{
-			params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
-			tft_op_player_list pushBackUnique _name;
-			tft_ops_log set [tft_ops_log_index, [tft_op_id, tft_op_player_list]];
-			profileNamespace setVariable ["tft_ops_log", tft_ops_log];
-			saveProfileNamespace
-		}];
 	};
 };
 

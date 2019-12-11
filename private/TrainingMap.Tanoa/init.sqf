@@ -3,14 +3,6 @@ call TFT_fnc_prepPhaseInit; // Preparation phase init
 
 nopop = true; // Keeps targets from poping up on their own after hit
 
-// Destroy bushes on firing range
-["bushDestroyer1",10] call TFT_fnc_mapDestroyer;
-["bushDestroyer2",10] call TFT_fnc_mapDestroyer;
-["bushDestroyer3",25] call TFT_fnc_mapDestroyer;
-
-// Get rid of handrails on edge of bridge
-["guardRails",10] call TFT_fnc_mapDestroyer;
-
 // hide helipad on main base in field
 ["baseHelipad",5] call TFT_fnc_mapDestroyer;
 
@@ -19,7 +11,7 @@ if isServer then {
 	tft_zeus addCuratorEditableObjects [allUnits + vehicles, true];
 	if (!hasInterface) then {
 		tft_zeus setVariable ["Owner", "#adminLogged", true];
-		call compile preprocessFileLineNumbers "tft_init.sqf";
+		execVM "tft_init.sqf";
 	} else {
 		//Editor play in Multiplayer
 		player assignCurator tft_zeus;

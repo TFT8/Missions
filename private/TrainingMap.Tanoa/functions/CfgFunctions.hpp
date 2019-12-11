@@ -11,17 +11,5 @@ class TFT	//tag
 		class drawBuildingMarker {
 			file  = "functions\drawBuildingMarker.sqf";
 		};
-		class toggleDoor {
-			file  = "functions\toggleDoor.sqf";
-		};
-		class toggleLight {
-			file  = "functions\toggleLight.sqf";
-		};
-		class zeusProjectile {
-			file  = "functions\zeusProjectile.sqf";
-		};
-		class unitProjectile {
-			file  = "functions\unitProjectile.sqf";
-		};
 	};
 };

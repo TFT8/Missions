@@ -16,6 +16,7 @@ class TFT_training {
         class rifleTargets;
         class serviceVehicle;
         class setBrmLoadout;
+        class setBrmMags;
         class shedUnlock;
         class startTimer;
         class targetsUp;
