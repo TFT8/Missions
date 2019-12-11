@@ -16,5 +16,6 @@ params ["_target", "_groupName"];
 
 _group = missionNamespace getVariable [format["TFT_targets_%1", _groupName], []];
 _group pushBackUnique _target;
+_target addEventHandler ["HandleDamage", {0}];
 
 missionNamespace setVariable [format["TFT_targets_%1", _groupName], _group];

@@ -16,4 +16,7 @@ params ["_groupName", "_mode"];
 
 private _group = missionNamespace getVariable [format["TFT_targets_%1", _groupName], []];
 
-{ _x animate["terc", _mode]; } forEach _group;
+{
+	_x animate["terc", _mode];
+	_x allowDamage [true, false] select _mode;
+} forEach _group;

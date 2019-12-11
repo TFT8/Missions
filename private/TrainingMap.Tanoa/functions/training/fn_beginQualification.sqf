@@ -16,10 +16,13 @@
 params ["_lines", "_coef"];
 _totalHits = 40; // Maximum number of hits that unit can have on the course
 
+// reset hits counter
+missionNamespace setVariable [format["TFT_BRM_line%1", _i], 0, true];
+
 // --- setup hits counter
 for "_i" from 1 to _lines do {
     {
-        _eh = _x addMPEventHandler ["MPHit", format["missionNamespace setVariable ['TFT_BRM_line%1', (missionNamespace getVariable ['TFT_BRM_line%1', 0])+1];", _i]];
+        _eh = _x addMPEventHandler ["MPHit", format["missionNamespace setVariable ['TFT_BRM_line%1', (missionNamespace getVariable ['TFT_BRM_line%1', 0])+1, true];", _i]];
         _x setVariable ["TFT_BRM_eh", _eh];
     } forEach (missionNamespace getVariable [format["TFT_targets_line%1", _i], []]);
 };
@@ -110,7 +113,7 @@ sleep (10 * _coef);
 ["300m", 1] call TFT_fnc_toggleTargets;
 ["150m", 0] call TFT_fnc_toggleTargets;
 ["200m", 0] call TFT_fnc_toggleTargets;
-sleep (12 * _coef);
+sleep (9 * _coef);
 ["150m", 1] call TFT_fnc_toggleTargets;
 ["200m", 1] call TFT_fnc_toggleTargets;
 ["150m", 0] call TFT_fnc_toggleTargets;
@@ -170,7 +173,6 @@ hint parseText _final;
 
 // --- remove hits counter
 for "_i" from 1 to _lines do {
-    missionNamespace setVariable [format["TFT_BRM_line%1", _i], 0];
     {
         _x removeMPEventHandler ["MPHit", _x getVariable "TFT_BRM_eh"];
     } forEach (missionNamespace getVariable [format["TFT_targets_line%1", _i], []]);
