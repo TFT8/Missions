@@ -169,7 +169,9 @@ for "_i" from 1 to _lines do {
     _final = _final + format["Lane %1: <t size='1.1' color='#aaaaff'>%2</t><br/>", _i, missionNamespace getVariable [_line, 0]];
 };
 
-[parseText _final] remoteExec ["hint", 0];
+TFT_BRM_Final = _final;
+publicVariable "TFT_BRM_Final";
+[parseText TFT_BRM_Final] remoteExec ["hint", 0];
 
 // --- remove hits counter
 for "_i" from 1 to _lines do {
