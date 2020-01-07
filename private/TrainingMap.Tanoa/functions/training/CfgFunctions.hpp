@@ -18,6 +18,7 @@ class TFT_training {
         class setBrmLoadout;
         class setBrmMags;
         class shedUnlock;
+		class spawnMovingVehicle;
         class startTimer;
         class targetsUp;
         class teleport;
