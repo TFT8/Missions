@@ -31,8 +31,8 @@ if(!_found) then {
 
     {
         _x params ["_xName", "_xObject"];
-        _object addAction [format["<t color='#ffccaa'>Teleport to %1</t>", _xName], format["[_this select 1, %1] spawn TFT_fnc_teleport", getPos _xObject]];
-        _xObject addAction [format["<t color='#ffccaa'>Teleport to %1</t>", _name], format["[_this select 1, %1] spawn TFT_fnc_teleport", getPos  _object]];
+        _object addAction [format["<t color='#ffccaa'>Teleport to %1</t>", _xName], format["[_this select 1, %1, %2] spawn TFT_fnc_teleport", getPos _xObject, getDir _xObject]];
+        _xObject addAction [format["<t color='#ffccaa'>Teleport to %1</t>", _name], format["[_this select 1, %1, %2] spawn TFT_fnc_teleport", getPos _object, getDir _object]];
     } forEach TFT_teleportPoints;
 
     TFT_teleportPoints pushBack [_name, _object];
