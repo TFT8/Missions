@@ -13,8 +13,8 @@
  * [] call TFT_fnc_spawnMovingVehicle
  */
 
-if (isNil "AT_veh") then {AT_veh = objNull;};
-if !(AT_veh isEqualTo objNull) then {{AT_veh deleteVehicleCrew _x } forEach crew AT_veh; deleteVehicle AT_veh;};
+[] call TFT_fnc_deleteMovingVehicle;
+
 //private _posStart = markerPos "marker_start"; 
 private _posStart = [2218.04,10881.5,0];
 private _posEnd = markerPos "marker_end"; 
@@ -33,5 +33,5 @@ if (isNil "AT_spd") then {AT_spd = 50;};
 AT_veh limitSpeed AT_spd;
 //AT_veh forceSpeed (AT_spd / 3.6);
 private _waypoint = AT_grp addWaypoint [_posEnd, 1];
-_waypoint setWaypointStatements ["true", "{ AT_veh deleteVehicleCrew _x } forEach crew AT_veh; deleteVehicle AT_veh;"];
+_waypoint setWaypointStatements ["true", "[] call TFT_fnc_deleteMovingVehicle"];
 AT_veh setVelocityModelSpace [0,0,1];

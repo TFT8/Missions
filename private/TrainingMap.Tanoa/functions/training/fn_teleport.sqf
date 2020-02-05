@@ -13,7 +13,7 @@
  * [player, getPos flag] call TFT_fnc_teleport
  */
 
-params ["_teleportee", "_position", ["_direction", -1, 0]];
+params ["_teleportee", "_position", ["_direction", -1, [0]]];
 
 if(isNil "_teleportee" || {isNull _teleportee}) exitWith {};
 
