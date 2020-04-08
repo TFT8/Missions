@@ -1,7 +1,6 @@
-// player log
+//player log
 if isDedicated then {
     // log time, map, mission
-    // http://killzonekid.com/arma-extension-real_date-dll-v3-0/
     tft_op_id = format ["%1_%2_%3", "real_date" callExtension "GMT+", worldName, briefingName];
     tft_ops_log = profileNamespace getVariable ["tft_ops_log", []];
     tft_ops_log_index = tft_ops_log pushBack [tft_op_id, []];

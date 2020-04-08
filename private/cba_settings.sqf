@@ -1,9 +1,13 @@
+// A3AM
+force force a3am_common_landSpeed = 0;
+
+
 // ACE Advanced Ballistics
-force force ace_advanced_ballistics_ammoTemperatureEnabled = false;
-force force ace_advanced_ballistics_barrelLengthInfluenceEnabled = false;
+force force ace_advanced_ballistics_ammoTemperatureEnabled = true;
+force force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
 force force ace_advanced_ballistics_bulletTraceEnabled = false;
 force force ace_advanced_ballistics_enabled = false;
-force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = false;
+force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force force ace_advanced_ballistics_simulationInterval = 0.2;
 
 // ACE Advanced Fatigue
@@ -34,14 +38,14 @@ ace_arsenal_fontHeight = 4.5;
 // ACE Captives
 force force ace_captives_allowHandcuffOwnSide = true;
 force force ace_captives_allowSurrender = true;
-force force ace_captives_requireSurrender = 0;
-force force ace_captives_requireSurrenderAi = false;
+force force ace_captives_requireSurrender = 1;
+force force ace_captives_requireSurrenderAi = true;
 
 // ACE Common
 force ace_common_allowFadeMusic = true;
 force force ace_common_checkPBOsAction = 1;
 force force ace_common_checkPBOsCheckAll = true;
-force force ace_common_checkPBOsWhitelist = "['st_sthud_usermenu', '3denEnhanced', 'compositions_a3', 'CAU_ExtendedFunctionViewer', 'CAU_UserInputMenus', 'ZECCUP', 'warfxpe', 'blastcore_maincore', 'jsrs_soundmod_bullethits', 'jsrs_soundmod_environment', 'jsrs_soundmod_framework', 'jsrs_soundmod_sonic_cracks', 'blastcore_vep', 'jsrs_soundmod_helicopters', 'jsrs_soundmod_landvehicles', 'jsrs_soundmod_movement', 'jsrs_soundmod_weapons', 'jsrs_soundmod_explosions', 'sma_elcan_altzoom_c', 'sma_standardammo', 'jsrs_soundmod_specialist_military_arms_weapons', 'reducedhazemod', 'jsrs_soundmod_snd_air_vehicles', 'jsrs_soundmod_snd_environment', 'jsrs_soundmod_snd_land_vehicles', 'jsrs_soundmod_snd_movement', 'jsrs_soundmod_snd_warfare', 'jsrs_soundmod_snd_weapons', 'jsrs_soundmod_cfg_cup_weapons', 'jsrs_soundmod_cup_vehicles', 'jsrs_soundmod_rhs_usf_weapons', 'JSRS_Soundmod_Cfg_RHS_USF_Air_Vehicles', 'Zab_splendid_smoke', 'TER_Eden', 'jsrs_soundmod_snd_sea_vehicles', 'jsrs_soundmod_boats', 'jsrs_soundmod_complete_edition_soundfiles', 'jsrs_soundmod_complete_edition', 'jsrs_soundmod_cup_weapons', 'jsrs_soundmod_cfg_rhs_usf_weapons', 'JSRS_Soundmod_Cfg_RHS_USF_Vehicles','gcam','ArmaZeusCache','zen_main','zen_common','zen_context_menu','zen_dialog','zen_editor','zen_markers_tree','zen_music','zen_visibility','zen_vision','zen_ai','zen_attributes','zen_camera','zen_garage','zen_inventory','zen_modules','zen_remote_control','zen_area_markers','zen_context_actions','zen_custom_modules','zen_doors','achilles_data_f_ares', 'achilles_language_f', 'achilles_data_f_achilles', 'achilles_functions_f_ares', 'achilles_functions_f_achilles', 'achilles_modules_f_ares', 'achilles_settings_f', 'achilles_ui_f', 'achilles_modules_f_achilles', 'AchillesEffects','zen_editor_previews','zen_position_logics']";
+force force ace_common_checkPBOsWhitelist = "['st_sthud_usermenu', '3denEnhanced', 'compositions_a3', 'CAU_ExtendedFunctionViewer', 'CAU_UserInputMenus', 'ZECCUP', 'warfxpe', 'blastcore_maincore', 'jsrs_soundmod_bullethits', 'jsrs_soundmod_environment', 'jsrs_soundmod_framework', 'jsrs_soundmod_sonic_cracks', 'blastcore_vep', 'jsrs_soundmod_helicopters', 'jsrs_soundmod_landvehicles', 'jsrs_soundmod_movement', 'jsrs_soundmod_weapons', 'jsrs_soundmod_explosions', 'sma_elcan_altzoom_c', 'sma_standardammo', 'jsrs_soundmod_specialist_military_arms_weapons', 'reducedhazemod', 'jsrs_soundmod_snd_air_vehicles', 'jsrs_soundmod_snd_environment', 'jsrs_soundmod_snd_land_vehicles', 'jsrs_soundmod_snd_movement', 'jsrs_soundmod_snd_warfare', 'jsrs_soundmod_snd_weapons', 'jsrs_soundmod_cfg_cup_weapons', 'jsrs_soundmod_cup_vehicles', 'jsrs_soundmod_rhs_usf_weapons', 'JSRS_Soundmod_Cfg_RHS_USF_Air_Vehicles', 'Zab_splendid_smoke', 'TER_Eden', 'jsrs_soundmod_snd_sea_vehicles', 'jsrs_soundmod_boats', 'jsrs_soundmod_complete_edition_soundfiles', 'jsrs_soundmod_complete_edition', 'jsrs_soundmod_cup_weapons', 'jsrs_soundmod_cfg_rhs_usf_weapons', 'JSRS_Soundmod_Cfg_RHS_USF_Vehicles','gcam','ArmaZeusCache','achilles_data_f_ares', 'achilles_language_f', 'achilles_data_f_achilles', 'achilles_functions_f_ares', 'achilles_functions_f_achilles', 'achilles_modules_f_ares', 'achilles_settings_f', 'achilles_ui_f', 'achilles_modules_f_achilles', 'AchillesEffects','HeadRangePlus','VCOM_AI','lambs_danger','athena', 'UtesLowGrass', 'LowGrassChernarus', 'LowGrassChernarus_Summer', 'LowGrassBootcamp_acr', 'PLP_VTOLThrust', 'IBISS_Vfx_NVG', 'cw_9liners_and_notepad']";
 ace_common_displayTextColor = [0,0,0,0.1];
 ace_common_displayTextFontColor = [1,1,1,1];
 ace_common_settingFeedbackIcons = 1;
@@ -109,7 +113,7 @@ force ace_cargo_loadTimeCoefficient = 5;
 force force ace_cargo_paradropTimeCoefficent = 2.5;
 force force ace_rearm_level = 2;
 force force ace_rearm_supply = 1;
-force force ace_refuel_hoseLength = 15;
+force force ace_refuel_hoseLength = 30;
 force force ace_refuel_rate = 1.5;
 force force ace_repair_addSpareParts = true;
 force force ace_repair_autoShutOffEngineWhenStartingRepair = true;
@@ -226,11 +230,11 @@ ace_nametags_showVehicleCrewInfo = true;
 ace_nametags_tagSize = 1;
 
 // ACE Nightvision
-force force ace_nightvision_aimDownSightsBlur = 0.2;
+force force ace_nightvision_aimDownSightsBlur = 0.1;
 force force ace_nightvision_disableNVGsWithSights = false;
 force force ace_nightvision_effectScaling = 0.2;
 force force ace_nightvision_fogScaling = 0.2;
-force force ace_nightvision_noiseScaling = 0.2;
+force force ace_nightvision_noiseScaling = 0;
 force force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -377,7 +381,7 @@ force force ace_winddeflection_vehicleEnabled = true;
 
 // ACE Zeus
 force force ace_zeus_autoAddObjects = true;
-force ace_zeus_canCreateZeus = -1;
+force force ace_zeus_canCreateZeus = 0;
 force force ace_zeus_radioOrdnance = false;
 force force ace_zeus_remoteWind = false;
 force force ace_zeus_revealMines = 0;
@@ -525,15 +529,6 @@ Achilles_var_rhs_faction_usarmy_d = true;
 Achilles_var_rhs_faction_usarmy_wd = true;
 Achilles_var_rhs_faction_usmc = true;
 Achilles_var_rhs_faction_usn = true;
-Achilles_var_TALAG_B_DES = true;
-Achilles_var_TALAG_B_WDL = true;
-Achilles_var_TALAG_B_WNT = true;
-Achilles_var_TALAG_I_DES = true;
-Achilles_var_TALAG_I_WDL = true;
-Achilles_var_TALAG_I_WNT = true;
-Achilles_var_TALAG_O_DES = true;
-Achilles_var_TALAG_O_WDL = true;
-Achilles_var_TALAG_O_WNT = true;
 Achilles_var_TFRF = true;
 Achilles_var_tft8 = true;
 Achilles_var_Virtual_F = true;
@@ -771,22 +766,22 @@ force force GRAD_slingHelmet_additionalList = "";
 force force GRAD_slingHelmet_allowAll = true;
 
 // GRAD Trenches
-grad_trenches_functions_allowBigEnvelope = true;
-grad_trenches_functions_allowCamouflage = true;
-grad_trenches_functions_allowDigging = true;
-grad_trenches_functions_allowGigantEnvelope = true;
-grad_trenches_functions_allowShortEnvelope = true;
-grad_trenches_functions_allowSmallEnvelope = true;
-grad_trenches_functions_allowVehicleEnvelope = true;
-grad_trenches_functions_bigEnvelopeDigTime = 40;
-grad_trenches_functions_buildFatigueFactor = 1;
-grad_trenches_functions_camouflageRequireEntrenchmentTool = false;
-grad_trenches_functions_enableAutomaticFilePath = false;
-grad_trenches_functions_gigantEnvelopeDigTime = 90;
-grad_trenches_functions_shortEnvelopeDigTime = 20;
-grad_trenches_functions_smallEnvelopeDigTime = 30;
-grad_trenches_functions_stopBuildingAtFatigueMax = false;
-grad_trenches_functions_vehicleEnvelopeDigTime = 120;
+force force grad_trenches_functions_allowBigEnvelope = true;
+force force grad_trenches_functions_allowCamouflage = true;
+force force grad_trenches_functions_allowDigging = true;
+force force grad_trenches_functions_allowGigantEnvelope = true;
+force force grad_trenches_functions_allowShortEnvelope = true;
+force force grad_trenches_functions_allowSmallEnvelope = true;
+force force grad_trenches_functions_allowVehicleEnvelope = true;
+force force grad_trenches_functions_bigEnvelopeDigTime = 40;
+force force grad_trenches_functions_buildFatigueFactor = 1;
+force force grad_trenches_functions_camouflageRequireEntrenchmentTool = false;
+force force grad_trenches_functions_enableAutomaticFilePath = false;
+force force grad_trenches_functions_gigantEnvelopeDigTime = 90;
+force force grad_trenches_functions_shortEnvelopeDigTime = 20;
+force force grad_trenches_functions_smallEnvelopeDigTime = 30;
+force force grad_trenches_functions_stopBuildingAtFatigueMax = false;
+force force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 
 // NIArms
 force niarms_accswitch = true;
@@ -803,7 +798,7 @@ STHud_Settings_TextShadow = 1;
 
 // Tactical Weapon Swap Option
 Swap the gun quickly without an animation process. = true;
-force force You can wear another weapon in the state of a pistol. = false;
+force force You can wear another weapon in the state of a pistol. = true;
 
 // TFAR - clientside settings
 TFAR_default_radioVolume = 7;
