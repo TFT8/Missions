@@ -1,8 +1,5 @@
 call TFT_fnc_prepPhaseInit;
 
-_mrkr = getMarkerPos "respawn_west";
-"respawn_west" setMarkerPosLocal [_mrkr select 0, _mrkr select 1, 37];
-
 if isServer then {
 	//_curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"]; 
 	//_curator setVariable ["Addons", 3, true];
