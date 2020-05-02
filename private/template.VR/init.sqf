@@ -6,6 +6,7 @@ if isServer then {
 	tft_zeus addCuratorEditableObjects [allUnits + vehicles, true];
 	if (!hasInterface) then {
 		tft_zeus setVariable ["Owner", "#adminLogged", true];
+		execVM "tft_init.sqf";
 	} else {
 		//Editor play in Multiplayer
 		player assignCurator tft_zeus;
