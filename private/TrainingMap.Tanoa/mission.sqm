@@ -8,7 +8,7 @@ class EditorData
 	toggles=609;
 	class ItemIDProvider
 	{
-		nextID=5943;
+		nextID=5954;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6092;
+		nextID=6276;
 	};
 	class Camera
 	{
-		pos[]={2182.3699,17.875143,13402.461};
-		dir[]={-0.57517934,-0.3811537,0.72394341};
-		up[]={-0.23714076,0.9244771,0.29847482};
-		aside[]={0.78304219,9.0023968e-007,0.62214035};
+		pos[]={2340.4961,20.174934,13190.567};
+		dir[]={0.6536079,-0.68991983,0.31152266};
+		up[]={0.6227991,0.72384274,0.29684058};
+		aside[]={0.43031126,-2.8982613e-006,-0.90282381};
 	};
 };
 binarizationWanted=0;
@@ -171,13 +171,15 @@ addons[]=
 	"A3_Props_F_Enoch_Military_Equipment",
 	"A3_Structures_F_Bootcamp_Items_Electronics",
 	"acex_field_rations",
-	"A3_Props_F_Orange_Furniture"
+	"A3_Props_F_Orange_Furniture",
+	"vtx_MH60M",
+	"tft_h60"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=91;
+		items=93;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -753,6 +755,17 @@ class AddonsMetaData
 			name="ACEX - Field Rations";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
+		};
+		class Item91
+		{
+			className="vtx_MH60M";
+			name="vtx_MH60M";
+		};
+		class Item92
+		{
+			className="tft_h60";
+			name="tft_h60";
+			author="Ampersand";
 		};
 	};
 };
@@ -62100,7 +62113,7 @@ class Mission
 					name="Objects";
 					class Entities
 					{
-						items=31;
+						items=32;
 						class Item0
 						{
 							dataType="Object";
@@ -64318,9 +64331,256 @@ class Mission
 								nAttributes=3;
 							};
 						};
+						class Item31
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={2162.99,14.067998,13424.408};
+								angles[]={0,2.4768143,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								skill=0.60000002;
+								init="call{this addAction [""<t color='#89f3ff'>Enable SOAC Training</t>"", {player call TFT_fnc_addSOACActions}, nil, 51, true, true, """", ""_target distance _this < 8""];" \n "[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions;}";
+								disableSimulation=1;
+							};
+							id=5943;
+							type="Land_PaperBox_open_full_F";
+							atlOffset=2.9563904e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ENH_HoldAction";
+									expression="			_value params ['_name','_iconIdle','_iconProgress','_conditionShow','_conditionProgress','_codeStart','_codeProgress','_codeCompletion','_codeInterrupt','_duration','_priority','_showUnconscious','_showWindow'];			if (!is3DEN && {!(_name isEqualTo '')}) then			{				[					_this,					_name,					_iconIdle,					_iconProgress,					_conditionShow,					_conditionProgress,					compile _codeStart,					compile _codeProgress,					compile format ['%1 %2','[_this select 0,_this select 2] remoteExecCall [''removeAction'',0]; remoteExecCall ['''',_this select 0];',_codeCompletion],					compile _codeInterrupt,					nil,					_duration,					_priority,					true,					_showUnconscious,					_showWindow				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];			};";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=13;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="true";
+													};
+												};
+												class Item4
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="true";
+													};
+												};
+												class Item5
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="";
+													};
+												};
+												class Item6
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="";
+													};
+												};
+												class Item7
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="";
+													};
+												};
+												class Item8
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="";
+													};
+												};
+												class Item9
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=10;
+													};
+												};
+												class Item10
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=991;
+													};
+												};
+												class Item11
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item12
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
 					};
 					id=971;
-					atlOffset=-0.49187374;
+					atlOffset=-0.24093723;
 				};
 				class Item1
 				{
@@ -99253,7 +99513,7 @@ class Mission
 			type="rectangle";
 			colorName="ColorWEST";
 			b=3;
-			angle=57.235092;
+			angle=57.235073;
 			id=2813;
 			atlOffset=-11.04311;
 		};
@@ -100823,7 +101083,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="#adminLogged";
 						};
 					};
 				};
@@ -103455,12 +103715,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={2352.782,11.94129,13196.118};
+				position[]={2350.5229,11.908758,13197.224};
+				angles[]={6.2725215,0,0.016004669};
 			};
 			name="tft_zeus_1";
 			id=5049;
 			type="ModuleCurator_F";
-			atlOffset=9.5367432e-007;
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -157349,7 +157610,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this setObjectTexture [0,""images\soac\160thtv.jpg""];" \n "this addAction [""<t color='#89f3ff'>Enable SOAC Training</t>"", {player call TFT_fnc_addSOACActions}, nil, 51, true, true, """", ""_target distance _this < 8""];" \n "[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions;}";
+				init="call{this setObjectTexture [0,""images\soac\160thtv.jpg""];" \n "}";
 				disableSimulation=1;
 			};
 			id=5905;
@@ -160141,16 +160402,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2133.8274,15.394142,13344.383};
-				angles[]={-0,2.4609141,0};
+				position[]={2134.0532,15.394142,13344.493};
+				angles[]={0,2.4958208,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5941;
-			type="tft8_MH60M";
+			id=5951;
+			type="vtx_MH60M";
 		};
 	};
 	class Connections
@@ -160725,7 +160986,7 @@ class Mission
 			class Item56
 			{
 				linkID=56;
-				item0=5941;
+				item0=5951;
 				item1=1274;
 				class CustomData
 				{
