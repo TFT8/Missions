@@ -6,10 +6,4 @@ class TFT	//tag
 			file  = "functions\enableCamera.sqf";
 		};
 	};
-	class S3	//category
-	{
-		class drawBuildingMarker {
-			file  = "functions\drawBuildingMarker.sqf";
-		};
-	};
 };
