@@ -67,7 +67,7 @@ _insertChildren = {
     _actions pushBack [_action, [], _player]; // New action, it's children, and the action's target
 
     _childStatement = {
-		[_this select 2, {_this setDamage 0; _this setFuel 1; _this setVehicleAmmo 1;}] remoteExec ["spawn", vehicle _player];
+		[_this select 2, {_this setDamage 0; _this setFuel 1; _this setVehicleAmmo 1; crew _this apply {[_x, _x] call ace_medical_treatment_fnc_fullHeal}}] remoteExec ["spawn", vehicle _player];
 	};
     _action = ["Restore", "Restore", "", _childStatement, {true}, {}, vehicle _player] call ace_interact_menu_fnc_createAction;
     _actions pushBack [_action, [], _player]; // New action, it's children, and the action's target
