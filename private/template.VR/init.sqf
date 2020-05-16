@@ -1,4 +1,5 @@
 call TFT_fnc_prepPhaseInit;
+"respawn_west" setMarkerAlpha 0; //to hide the respawn marker on the map
 
 if isServer then {
 	//_curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"]; 
