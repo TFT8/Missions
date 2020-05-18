@@ -12,9 +12,14 @@ params ["_center","_radius"];
 
 private _group = createGroup west;
 private _unit = _group createUnit ["b_survivor_F", _center, [], 0, "NONE"];
+_unit setVariable ["acex_headless_blacklist", true];
+_unit setVariable ["Vcm_Disable", true];
 _unit disableAI "PATH";
 _unit disableAI "AUTOTARGET";
 _unit disableAI "AUTOCOMBAT";
+_unit disableAI "MOVE";
+_unit disableAI "FSM";
+_unit disableAI "ANIM";
 removeAllWeapons _unit;
 removeVest _unit;
 removeBackpack _unit;

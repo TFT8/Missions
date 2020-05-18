@@ -1,5 +1,5 @@
 call TFT_fnc_prepPhaseInit; // Preparation phase init
-
+"respawn_west" setMarkerAlpha 0; //to hide the respawn marker on the map
 
 nopop = true; // Keeps targets from poping up on their own after hit
 
