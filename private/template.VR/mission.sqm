@@ -8,18 +8,22 @@ class EditorData
 	toggles=549;
 	class ItemIDProvider
 	{
-		nextID=1604;
+		nextID=1605;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class LayerIndexProvider
 	{
-		nextID=319;
+		nextID=338;
 	};
 	class Camera
 	{
-		pos[]={7490.8301,25.745134,7432.3564};
-		dir[]={0.79853898,-0.60194671,-0.01626648};
-		up[]={0.60199648,0.79834086,-0.012259732};
-		aside[]={-0.020352131,-4.6738569e-007,-0.99982113};
+		pos[]={7498.2891,34.306374,7427.061};
+		dir[]={0.6038571,-0.79719979,-0.009885408};
+		up[]={0.79716539,0.60353994,-0.013046863};
+		aside[]={-0.016354971,-4.4482276e-006,-0.99989581};
 	};
 };
 binarizationWanted=0;
@@ -36,14 +40,13 @@ addons[]=
 	"A3_Characters_F",
 	"cfp_uniforms",
 	"tft8_faction",
-	"Desert",
-	"A3_Modules_F_Multiplayer"
+	"Desert"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=12;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -122,13 +125,6 @@ class AddonsMetaData
 		{
 			className="Desert";
 			name="Desert";
-		};
-		class Item12
-		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
 		};
 	};
 };
@@ -794,7 +790,7 @@ class Mission
 				class Item2
 				{
 					dataType="Marker";
-					position[]={7530.0786,5,7440.0625};
+					position[]={7529,5,7436};
 					name="west_hq";
 					type="b_hq";
 					id=155;
@@ -39811,114 +39807,11 @@ class Mission
 		};
 		class Item36
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={7524,5,7440};
-				angles[]={0,0.78539819,0};
-			};
+			dataType="Marker";
+			position[]={7524,5,7440.5};
 			name="respawn_west";
-			id=1602;
-			type="ModuleRespawnPosition_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleRespawnPosition_F_Marker";
-					expression="_this setVariable ['Marker',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="2";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleRespawnPosition_F_Name";
-					expression="_this setVariable ['Name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleRespawnPosition_F_Side";
-					expression="_this setVariable ['Side',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="1";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleRespawnPosition_F_ShowNotification";
-					expression="_this setVariable ['ShowNotification',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="0";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleRespawnPosition_F_Type";
-					expression="_this setVariable ['Type',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="0";
-						};
-					};
-				};
-				nAttributes=5;
-			};
+			type="Empty";
+			id=1604;
 		};
 	};
 };
