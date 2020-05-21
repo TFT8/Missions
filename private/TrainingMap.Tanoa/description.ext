@@ -1,4 +1,3 @@
-respawnOnStart = -1;
 
 #include "scripts\VVS\menu.h"
 #include "dialogs\defines.hpp"
