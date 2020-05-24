@@ -8,7 +8,7 @@ class EditorData
 	toggles=549;
 	class ItemIDProvider
 	{
-		nextID=1605;
+		nextID=1712;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=338;
+		nextID=376;
 	};
 	class Camera
 	{
-		pos[]={7498.2891,34.306374,7427.061};
-		dir[]={0.6038571,-0.79719979,-0.009885408};
-		up[]={0.79716539,0.60353994,-0.013046863};
-		aside[]={-0.016354971,-4.4482276e-006,-0.99989581};
+		pos[]={7489.5249,55.533226,7428.7051};
+		dir[]={0.53451324,-0.84515345,0.0069972011};
+		up[]={0.84520221,0.5343309,0.011064164};
+		aside[]={0.013089698,-4.0920895e-008,-0.99992883};
 	};
 };
 binarizationWanted=0;
@@ -480,7 +480,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=37;
+		items=38;
 		class Item0
 		{
 			dataType="Layer";
@@ -25162,6 +25162,756 @@ class Mission
 		};
 		class Item14
 		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7532,5,7432};
+			};
+			name="hc_1";
+			isPlayable=1;
+			id=905;
+			type="HeadlessClient_F";
+		};
+		class Item15
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7536,5,7432};
+			};
+			name="hc_2";
+			isPlayable=1;
+			id=906;
+			type="HeadlessClient_F";
+		};
+		class Item16
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7534,5,7432};
+			};
+			name="hc_3";
+			isPlayable=1;
+			id=907;
+			type="HeadlessClient_F";
+		};
+		class Item17
+		{
+			dataType="Layer";
+			name="242 BluAmmoCrates";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Layer";
+					name="Alpha Company";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Layer";
+							name="1PLT";
+							id=1046;
+							atlOffset=-5;
+						};
+					};
+					id=1045;
+					atlOffset=-5;
+				};
+			};
+			id=1044;
+			atlOffset=-5;
+		};
+		class Item18
+		{
+			dataType="Layer";
+			name="Systems";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Layer";
+					name="Zeus Modules";
+					id=1107;
+					atlOffset=-5;
+				};
+				class Item1
+				{
+					dataType="Layer";
+					name="ORBAT";
+					id=1109;
+					atlOffset=-5;
+				};
+			};
+			id=1106;
+			atlOffset=-5;
+		};
+		class Item19
+		{
+			dataType="Layer";
+			name="242 BluAmmoCratesDrones";
+			id=1111;
+			atlOffset=-5;
+		};
+		class Item20
+		{
+			dataType="Layer";
+			name="242 BluAmmoCrates_1";
+			id=1117;
+			atlOffset=-5;
+		};
+		class Item21
+		{
+			dataType="Layer";
+			name="242 BluAmmoCrates_2";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Layer";
+					name="Alpha Company_1";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Layer";
+							name="1PLT_1";
+							id=1383;
+							atlOffset=-5;
+						};
+					};
+					id=1382;
+					atlOffset=-5;
+				};
+			};
+			id=1381;
+			atlOffset=-5;
+		};
+		class Item22
+		{
+			dataType="Layer";
+			name="Systems_1";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Layer";
+					name="Zeus Modules_1";
+					id=1444;
+					atlOffset=-5;
+				};
+				class Item1
+				{
+					dataType="Layer";
+					name="ORBAT_1";
+					id=1446;
+					atlOffset=-5;
+				};
+			};
+			id=1443;
+			atlOffset=-5;
+		};
+		class Item23
+		{
+			dataType="Layer";
+			name="242 BluAmmoCratesDrones_1";
+			id=1454;
+			atlOffset=-5;
+		};
+		class Item24
+		{
+			dataType="Layer";
+			name="242 BluAmmoCrates_3";
+			id=1460;
+			atlOffset=-5;
+		};
+		class Item25
+		{
+			dataType="Layer";
+			name="242 BluAmmoCratesDrones_2";
+			id=1505;
+			atlOffset=-5;
+		};
+		class Item26
+		{
+			dataType="Layer";
+			name="242 BluAmmoCrates_4";
+			id=1509;
+			atlOffset=-5;
+		};
+		class Item27
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={7528.5,5,7407.5};
+			};
+			description="Use one of these codes to place in the ammobox for 242 base on the terrain:" \n "" \n "[[this],west,""242multi"",2, 1, 2, BluFactionMuzzle, blufactionbipod, 1, BluFactionFlares] spawn NS_BASE_FNC_Setcrate;" \n "" \n "[[this],west,""242woodland"",2, 1, 2, BluFactionMuzzle, blufactionbipod, 1, BluFactionFlares] spawn NS_BASE_FNC_Setcrate;" \n "" \n "[[this],west,""242arid"",2, 1, 2, BluFactionMuzzle, blufactionbipod, 1, BluFactionFlares] spawn NS_BASE_FNC_Setcrate;" \n "" \n "[[this],west,""242winter"",2, 1, 2, BluFactionMuzzle, blufactionbipod, 1, BluFactionFlares] spawn NS_BASE_FNC_Setcrate;";
+			id=1600;
+		};
+		class Item28
+		{
+			dataType="Marker";
+			position[]={7524,5,7440.5};
+			name="respawn_west";
+			type="Empty";
+			id=1604;
+		};
+		class Item29
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=26;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7524,5.0014391,7448.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						description="Senior Drill Sergeant@Scorpion";
+						isPlayable=1;
+					};
+					id=1606;
+					type="B_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7522,5.0014391,7448.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Drill Sergeant@Scorpion";
+						isPlayable=1;
+					};
+					id=1607;
+					type="B_Soldier_TL_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7522,5.0014391,7446.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Drill Sergeant@Scorpion";
+						isPlayable=1;
+					};
+					id=1609;
+					type="B_Soldier_TL_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7522,5.0014391,7450.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Drill Sergeant@Scorpion";
+						isPlayable=1;
+					};
+					id=1617;
+					type="B_Soldier_TL_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7522,5.0014391,7444.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Drill Sergeant@Scorpion";
+						isPlayable=1;
+					};
+					id=1619;
+					type="B_Soldier_TL_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7522,5.0014391,7452.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Drill Sergeant@Scorpion";
+						isPlayable=1;
+					};
+					id=1621;
+					type="B_Soldier_TL_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7520,5.0014391,7452.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1623;
+					type="B_Soldier_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7518,5.0014391,7452.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1625;
+					type="B_Soldier_F";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7516,5.0014391,7452.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1627;
+					type="B_Soldier_F";
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7514,5.0014391,7452.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1629;
+					type="B_Soldier_F";
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7512,5.0014391,7452.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1631;
+					type="B_Soldier_F";
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7520,5.0014391,7450.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1633;
+					type="B_Soldier_F";
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7518,5.0014391,7450.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1635;
+					type="B_Soldier_F";
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7516,5.0014391,7450.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1637;
+					type="B_Soldier_F";
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7514,5.0014391,7450.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1639;
+					type="B_Soldier_F";
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7512,5.0014391,7450.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1641;
+					type="B_Soldier_F";
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7520,5.0014391,7448.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1643;
+					type="B_Soldier_F";
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7518,5.0014391,7448.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1645;
+					type="B_Soldier_F";
+				};
+				class Item18
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7516,5.0014391,7448.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1647;
+					type="B_Soldier_F";
+				};
+				class Item19
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7514,5.0014391,7448.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1649;
+					type="B_Soldier_F";
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7512,5.0014391,7448.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1651;
+					type="B_Soldier_F";
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7520,5.0014391,7446.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1653;
+					type="B_Soldier_F";
+				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7518,5.0014391,7446.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1655;
+					type="B_Soldier_F";
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7516,5.0014391,7446.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1657;
+					type="B_Soldier_F";
+				};
+				class Item24
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7514,5.0014391,7446.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1659;
+					type="B_Soldier_F";
+				};
+				class Item25
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7512,5.0014391,7446.0498};
+						angles[]={0,1.5707964,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trainee@Scorpion";
+						isPlayable=1;
+					};
+					id=1661;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1605;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Scorpion";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item30
+		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -25184,7 +25934,7 @@ class Mission
 						description="PMC Squad Leader@PMC";
 						isPlayable=1;
 					};
-					id=851;
+					id=1663;
 					type="B_Soldier_SL_F";
 					class CustomAttributes
 					{
@@ -25526,7 +26276,7 @@ class Mission
 						description="PMC Team Leader (Alpha)@PMC";
 						isPlayable=1;
 					};
-					id=852;
+					id=1664;
 					type="B_Soldier_TL_F";
 					class CustomAttributes
 					{
@@ -25868,7 +26618,7 @@ class Mission
 						description="PMC Autorifleman (Alpha)@PMC";
 						isPlayable=1;
 					};
-					id=853;
+					id=1665;
 					type="B_soldier_AR_F";
 					class CustomAttributes
 					{
@@ -26210,7 +26960,7 @@ class Mission
 						description="PMC Grenadier (Alpha)@PMC";
 						isPlayable=1;
 					};
-					id=854;
+					id=1666;
 					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
@@ -26552,7 +27302,7 @@ class Mission
 						description="PMC AT Rifleman (Alpha)@PMC";
 						isPlayable=1;
 					};
-					id=855;
+					id=1667;
 					type="B_soldier_LAT_F";
 					class CustomAttributes
 					{
@@ -26894,7 +27644,7 @@ class Mission
 						description="PMC Rifleman (Alpha)@PMC";
 						isPlayable=1;
 					};
-					id=856;
+					id=1668;
 					type="B_Soldier_F";
 					class CustomAttributes
 					{
@@ -27236,7 +27986,7 @@ class Mission
 						description="PMC Team Leader (Bravo)@PMC";
 						isPlayable=1;
 					};
-					id=857;
+					id=1669;
 					type="B_Soldier_TL_F";
 					class CustomAttributes
 					{
@@ -27578,7 +28328,7 @@ class Mission
 						description="PMC Marksman (Bravo)@PMC";
 						isPlayable=1;
 					};
-					id=858;
+					id=1670;
 					type="B_soldier_M_F";
 					class CustomAttributes
 					{
@@ -27920,7 +28670,7 @@ class Mission
 						description="PMC Grenadier (Bravo)@PMC";
 						isPlayable=1;
 					};
-					id=859;
+					id=1671;
 					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
@@ -28262,7 +29012,7 @@ class Mission
 						description="PMC Medic (Bravo)@PMC";
 						isPlayable=1;
 					};
-					id=860;
+					id=1672;
 					type="B_medic_F";
 					class CustomAttributes
 					{
@@ -28623,7 +29373,7 @@ class Mission
 						description="PMC Rifleman (Bravo)@PMC";
 						isPlayable=1;
 					};
-					id=861;
+					id=1673;
 					type="B_Soldier_F";
 					class CustomAttributes
 					{
@@ -28954,7 +29704,7 @@ class Mission
 			{
 				name="squad_5";
 			};
-			id=850;
+			id=1662;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28972,7 +29722,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Vanguard";
+							value="PMC";
 						};
 					};
 				};
@@ -29057,111 +29807,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item15
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={7532,5,7432};
-			};
-			name="hc_1";
-			isPlayable=1;
-			id=905;
-			type="HeadlessClient_F";
-		};
-		class Item16
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={7536,5,7432};
-			};
-			name="hc_2";
-			isPlayable=1;
-			id=906;
-			type="HeadlessClient_F";
-		};
-		class Item17
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={7534,5,7432};
-			};
-			name="hc_3";
-			isPlayable=1;
-			id=907;
-			type="HeadlessClient_F";
-		};
-		class Item18
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="Alpha Company";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="1PLT";
-							id=1046;
-							atlOffset=-5;
-						};
-					};
-					id=1045;
-					atlOffset=-5;
-				};
-			};
-			id=1044;
-			atlOffset=-5;
-		};
-		class Item19
-		{
-			dataType="Layer";
-			name="Systems";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Layer";
-					name="Zeus Modules";
-					id=1107;
-					atlOffset=-5;
-				};
-				class Item1
-				{
-					dataType="Layer";
-					name="ORBAT";
-					id=1109;
-					atlOffset=-5;
-				};
-			};
-			id=1106;
-			atlOffset=-5;
-		};
-		class Item20
-		{
-			dataType="Layer";
-			name="242 BluAmmoCratesDrones";
-			id=1111;
-			atlOffset=-5;
-		};
-		class Item21
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates_1";
-			id=1117;
-			atlOffset=-5;
-		};
-		class Item22
+		class Item31
 		{
 			dataType="Group";
 			side="West";
@@ -29185,7 +29831,7 @@ class Mission
 						description="Company XO@Cerberus 6";
 						isPlayable=1;
 					};
-					id=1366;
+					id=1675;
 					type="B_officer_F";
 					class CustomAttributes
 					{
@@ -29527,7 +30173,7 @@ class Mission
 						description="Medic@Cerberus 6";
 						isPlayable=1;
 					};
-					id=1368;
+					id=1676;
 					type="B_medic_F";
 					class CustomAttributes
 					{
@@ -29888,7 +30534,7 @@ class Mission
 						description="Medic@Cerberus 6";
 						isPlayable=1;
 					};
-					id=1374;
+					id=1677;
 					type="B_medic_F";
 					class CustomAttributes
 					{
@@ -30249,7 +30895,7 @@ class Mission
 						description="Medic@Cerberus 6";
 						isPlayable=1;
 					};
-					id=1376;
+					id=1678;
 					type="B_medic_F";
 					class CustomAttributes
 					{
@@ -30610,7 +31256,7 @@ class Mission
 						description="Medic@Cerberus 6";
 						isPlayable=1;
 					};
-					id=1378;
+					id=1679;
 					type="B_medic_F";
 					class CustomAttributes
 					{
@@ -30960,7 +31606,7 @@ class Mission
 			{
 				name="platsquad_1";
 			};
-			id=1365;
+			id=1674;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -31063,7 +31709,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item23
+		class Item32
 		{
 			dataType="Group";
 			side="West";
@@ -31087,7 +31733,7 @@ class Mission
 						description="Section Leader@Cerberus 1";
 						isPlayable=1;
 					};
-					id=1380;
+					id=1681;
 					type="B_Soldier_SL_F";
 					class CustomAttributes
 					{
@@ -31429,7 +32075,7 @@ class Mission
 						description="Section Leader Assistant@Cerberus 1";
 						isPlayable=1;
 					};
-					id=1466;
+					id=1682;
 					type="B_Soldier_TL_F";
 					class CustomAttributes
 					{
@@ -31771,7 +32417,7 @@ class Mission
 						description="Autorifleman@Cerberus 1";
 						isPlayable=1;
 					};
-					id=1468;
+					id=1683;
 					type="B_soldier_AR_F";
 					class CustomAttributes
 					{
@@ -32113,7 +32759,7 @@ class Mission
 						description="Grenadier@Cerberus 1";
 						isPlayable=1;
 					};
-					id=1470;
+					id=1684;
 					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
@@ -32455,7 +33101,7 @@ class Mission
 						description="AT Rifleman@Cerberus 1";
 						isPlayable=1;
 					};
-					id=1472;
+					id=1685;
 					type="B_soldier_LAT_F";
 					class CustomAttributes
 					{
@@ -32797,7 +33443,7 @@ class Mission
 						description="AT Rifleman Assistant@Cerberus 1";
 						isPlayable=1;
 					};
-					id=1474;
+					id=1686;
 					type="B_Soldier_A_F";
 					class CustomAttributes
 					{
@@ -33062,7 +33708,7 @@ class Mission
 						description="Rifleman@Cerberus 1";
 						isPlayable=1;
 					};
-					id=1478;
+					id=1687;
 					type="B_Soldier_F";
 					class CustomAttributes
 					{
@@ -33393,7 +34039,7 @@ class Mission
 			{
 				name="squad_6";
 			};
-			id=1379;
+			id=1680;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33496,75 +34142,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item24
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates_2";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="Alpha Company_1";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="1PLT_1";
-							id=1383;
-							atlOffset=-5;
-						};
-					};
-					id=1382;
-					atlOffset=-5;
-				};
-			};
-			id=1381;
-			atlOffset=-5;
-		};
-		class Item25
-		{
-			dataType="Layer";
-			name="Systems_1";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Layer";
-					name="Zeus Modules_1";
-					id=1444;
-					atlOffset=-5;
-				};
-				class Item1
-				{
-					dataType="Layer";
-					name="ORBAT_1";
-					id=1446;
-					atlOffset=-5;
-				};
-			};
-			id=1443;
-			atlOffset=-5;
-		};
-		class Item26
-		{
-			dataType="Layer";
-			name="242 BluAmmoCratesDrones_1";
-			id=1454;
-			atlOffset=-5;
-		};
-		class Item27
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates_3";
-			id=1460;
-			atlOffset=-5;
-		};
-		class Item28
+		class Item33
 		{
 			dataType="Group";
 			side="West";
@@ -33588,7 +34166,7 @@ class Mission
 						description="Section Leader@Cerberus 2";
 						isPlayable=1;
 					};
-					id=1480;
+					id=1689;
 					type="B_Soldier_SL_F";
 					class CustomAttributes
 					{
@@ -33930,7 +34508,7 @@ class Mission
 						description="Section Leader Assistant@Cerberus 2";
 						isPlayable=1;
 					};
-					id=1481;
+					id=1690;
 					type="B_Soldier_TL_F";
 					class CustomAttributes
 					{
@@ -34272,7 +34850,7 @@ class Mission
 						description="Autorifleman@Cerberus 2";
 						isPlayable=1;
 					};
-					id=1482;
+					id=1691;
 					type="B_soldier_AR_F";
 					class CustomAttributes
 					{
@@ -34614,7 +35192,7 @@ class Mission
 						description="Grenadier@Cerberus 2";
 						isPlayable=1;
 					};
-					id=1483;
+					id=1692;
 					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
@@ -34956,7 +35534,7 @@ class Mission
 						description="AT Rifleman@Cerberus 2";
 						isPlayable=1;
 					};
-					id=1484;
+					id=1693;
 					type="B_soldier_LAT_F";
 					class CustomAttributes
 					{
@@ -35298,7 +35876,7 @@ class Mission
 						description="AT Rifleman Assistant@Cerberus 2";
 						isPlayable=1;
 					};
-					id=1485;
+					id=1694;
 					type="B_Soldier_A_F";
 					class CustomAttributes
 					{
@@ -35563,7 +36141,7 @@ class Mission
 						description="Rifleman@Cerberus 2";
 						isPlayable=1;
 					};
-					id=1486;
+					id=1695;
 					type="B_Soldier_F";
 					class CustomAttributes
 					{
@@ -35894,7 +36472,7 @@ class Mission
 			{
 				name="squad_7";
 			};
-			id=1479;
+			id=1688;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35997,7 +36575,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item29
+		class Item34
 		{
 			dataType="Group";
 			side="West";
@@ -36020,7 +36598,7 @@ class Mission
 						description="Commander@Ares 1";
 						isPlayable=1;
 					};
-					id=1488;
+					id=1697;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -36323,7 +36901,7 @@ class Mission
 						description="Gunner@Ares 1";
 						isPlayable=1;
 					};
-					id=1490;
+					id=1698;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -36626,7 +37204,7 @@ class Mission
 						description="Driver@Ares 1";
 						isPlayable=1;
 					};
-					id=1492;
+					id=1699;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -36918,7 +37496,7 @@ class Mission
 			{
 				name="ares_1";
 			};
-			id=1487;
+			id=1696;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36943,7 +37521,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item30
+		class Item35
 		{
 			dataType="Group";
 			side="West";
@@ -36966,7 +37544,7 @@ class Mission
 						description="Commander@Ares 2";
 						isPlayable=1;
 					};
-					id=1494;
+					id=1701;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -37269,7 +37847,7 @@ class Mission
 						description="Gunner@Ares 2";
 						isPlayable=1;
 					};
-					id=1495;
+					id=1702;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -37572,7 +38150,7 @@ class Mission
 						description="Driver@Ares 2";
 						isPlayable=1;
 					};
-					id=1496;
+					id=1703;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -37864,7 +38442,7 @@ class Mission
 			{
 				name="ares_2";
 			};
-			id=1493;
+			id=1700;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -37889,7 +38467,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item31
+		class Item36
 		{
 			dataType="Group";
 			side="West";
@@ -37912,7 +38490,7 @@ class Mission
 						description="Commander@Ares 3";
 						isPlayable=1;
 					};
-					id=1498;
+					id=1705;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -38215,7 +38793,7 @@ class Mission
 						description="Gunner@Ares 3";
 						isPlayable=1;
 					};
-					id=1499;
+					id=1706;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -38518,7 +39096,7 @@ class Mission
 						description="Driver@Ares 3";
 						isPlayable=1;
 					};
-					id=1500;
+					id=1707;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -38810,7 +39388,7 @@ class Mission
 			{
 				name="ares_3";
 			};
-			id=1497;
+			id=1704;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38835,7 +39413,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item32
+		class Item37
 		{
 			dataType="Group";
 			side="West";
@@ -38858,7 +39436,7 @@ class Mission
 						description="Commander@Typhon";
 						isPlayable=1;
 					};
-					id=1502;
+					id=1709;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -39161,7 +39739,7 @@ class Mission
 						description="Gunner@Typhon";
 						isPlayable=1;
 					};
-					id=1503;
+					id=1710;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -39464,7 +40042,7 @@ class Mission
 						description="Driver@Typhon";
 						isPlayable=1;
 					};
-					id=1504;
+					id=1711;
 					type="B_crew_F";
 					class CustomAttributes
 					{
@@ -39756,7 +40334,7 @@ class Mission
 			{
 				name="typh";
 			};
-			id=1501;
+			id=1708;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -39780,38 +40358,6 @@ class Mission
 				};
 				nAttributes=1;
 			};
-		};
-		class Item33
-		{
-			dataType="Layer";
-			name="242 BluAmmoCratesDrones_2";
-			id=1505;
-			atlOffset=-5;
-		};
-		class Item34
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates_4";
-			id=1509;
-			atlOffset=-5;
-		};
-		class Item35
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={7528.5,5,7407.5};
-			};
-			description="Use one of these codes to place in the ammobox for 242 base on the terrain:" \n "" \n "[[this],west,""242multi"",2, 1, 2, BluFactionMuzzle, blufactionbipod, 1, BluFactionFlares] spawn NS_BASE_FNC_Setcrate;" \n "" \n "[[this],west,""242woodland"",2, 1, 2, BluFactionMuzzle, blufactionbipod, 1, BluFactionFlares] spawn NS_BASE_FNC_Setcrate;" \n "" \n "[[this],west,""242arid"",2, 1, 2, BluFactionMuzzle, blufactionbipod, 1, BluFactionFlares] spawn NS_BASE_FNC_Setcrate;" \n "" \n "[[this],west,""242winter"",2, 1, 2, BluFactionMuzzle, blufactionbipod, 1, BluFactionFlares] spawn NS_BASE_FNC_Setcrate;";
-			id=1600;
-		};
-		class Item36
-		{
-			dataType="Marker";
-			position[]={7524,5,7440.5};
-			name="respawn_west";
-			type="Empty";
-			id=1604;
 		};
 	};
 };
