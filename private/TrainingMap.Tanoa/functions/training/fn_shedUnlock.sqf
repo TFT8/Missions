@@ -14,7 +14,7 @@
  */
 params ["_building", "_caller"];
 
-if(_caller in [cadre1, cadre2, cadre3, cadre4, cadre5, cadre6, cadre7, cadre8]) then {
+if(_caller in [sds, ds, ds_1, ds_2, ds_3, ds_4]) then {
     _building setVariable ['bis_disabled_Door_1', 0, false];
     hint "Shed Unlocked";
 } else {
