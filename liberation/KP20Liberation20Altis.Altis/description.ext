@@ -1,0 +1,48 @@
+respawn = 3;
+respawndelay = 5;
+respawnButton = 1;
+disabledAI = true;
+
+enableDebugConsole = 1;
+allowFunctionsLog = 0;
+unsafeCVL = 1;
+
+briefingName = "TFT8 Liberation: Altis";
+overviewText = "Original Authors: [GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+overviewPicture = "res\lib.paa";
+author = "[VVSS] Ferris, [TFT8] Ruiz, [TFT8] Milanes";
+onLoadName = "TFT8 Liberation: Altis";
+onLoadMission = "Original Authors: [GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+loadScreen = "res\lib.paa";
+
+joinUnassigned = 1;
+
+corpseManagerMode = 1;
+corpseLimit = 50;
+corpseRemovalMinTime = 600;
+corpseRemovalMaxTime = 3600;
+wreckManagerMode = 1;
+wreckLimit = 20;
+wreckRemovalMinTime = 1200;
+wreckRemovalMaxTime = 7200;
+minPlayerDistance = 1000;
+
+#include "GREUH\UI\GREUH_interface.hpp"
+#include "ui\liberation_interface.hpp"
+#include "ui\liberation_notifications.hpp"
+#include "ui\mission_params.hpp"
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title =	$STR_SORRY;
+		subtitle = "";
+		description = $STR_COMMANDER_NOT_AUTHORIZED;
+		pictureBackground = "";
+	};
+};
+class CfgFunctions
+{
+	#include "DCONVS\functions.hpp"
+};
