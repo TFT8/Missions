@@ -20,4 +20,5 @@ private _group = missionNamespace getVariable [format["TFT_targets_%1", _groupNa
 	_x animate["terc", _mode];
 	_x allowDamage ([true, false] select _mode);
 	_x setDamage 0;
+    _x setVariable ["TFT_BRM_Hit", false, true];
 } forEach _group;

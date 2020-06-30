@@ -21,10 +21,12 @@ _totalHits = 40; // Maximum number of hits that unit can have on the course
 for "_i" from 1 to _lines do {
 	// reset hits counter
 	missionNamespace setVariable [format["TFT_BRM_line%1", _i], 0, true];
+    /*
 	{
         _eh = _x addMPEventHandler ["MPHit", format["missionNamespace setVariable ['TFT_BRM_line%1', (missionNamespace getVariable ['TFT_BRM_line%1', 0])+1, true];", _i]];
         _x setVariable ["TFT_BRM_eh", _eh];
     } forEach (missionNamespace getVariable [format["TFT_targets_line%1", _i], []]);
+    */
 };
 
 // --- run qualification
@@ -174,8 +176,20 @@ publicVariable "TFT_BRM_Final";
 [parseText TFT_BRM_Final] remoteExec ["hint", 0];
 
 // --- remove hits counter
+/*
 for "_i" from 1 to _lines do {
     {
         _x removeMPEventHandler ["MPHit", _x getVariable "TFT_BRM_eh"];
     } forEach (missionNamespace getVariable [format["TFT_targets_line%1", _i], []]);
 };
+*/
+/*
+onEachFrame {
+    _final = format ["<t size='1.1' color='#aaaaaa'>Final score (out of %1):</t><br/>", 40]; 
+    for "_i" from 1 to 4 do { 
+        _line  = format ["TFT_BRM_line%1", _i]; 
+        _final = _final + format["Lane %1: <t size='1.1' color='#aaaaff'>%2</t><br/>", _i, missionNamespace getVariable [_line, 0]]; 
+    };
+    hintSilent (parseText _final);
+};
+*/
