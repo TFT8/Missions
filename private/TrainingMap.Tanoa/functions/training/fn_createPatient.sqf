@@ -1,4 +1,4 @@
-/* 
+/*
  * Description:
  * Creates AI with damage for medical training.
  *
@@ -8,27 +8,21 @@
  *
  * Example: [3, getMarkerPos "patientSpawn", 5]] call tft_fnc_createPatient;
  */
-params ["_center","_radius"];
+params [["_center",getMarkerPos "patientSpawn"],["_radius",0]];
 
-private _group = createGroup west;
+private _group = createGroup [west, true];
 private _unit = _group createUnit ["b_survivor_F", _center, [], 0, "NONE"];
-_unit setVariable ["acex_headless_blacklist", true];
-_unit setVariable ["Vcm_Disable", true];
+[_unit, true, 60] call ace_medical_fnc_setUnconscious;
+_unit setVariable ["acex_headless_blacklist", true, true];
 _unit disableAI "PATH";
-_unit disableAI "AUTOTARGET";
-_unit disableAI "AUTOCOMBAT";
-_unit disableAI "MOVE";
-_unit disableAI "FSM";
-_unit disableAI "ANIM";
-removeAllWeapons _unit;
-removeVest _unit;
-removeBackpack _unit;
-removeHeadgear _unit;
-{_x addCuratorEditableObjects [[_unit],false]} foreach allCurators;
+_unit setUnitLoadout [[],[],[],["U_B_CombatUniform_mcam_worn",[]],[],[],"","",[],["","","","","",""]];
 
-[
-    _unit,
-    0.4,
-    selectRandom ["head", "body", "hand_r", "hand_l", "leg_l", "leg_r"],
-    selectRandom ((configfile >> "ACE_Medical_Advanced" >> "Injuries" >> "damageTypes") call BIS_fnc_getCfgSubClasses)
-] call ace_medical_fnc_addDamageToUnit;
+private _count = floor random 5;
+for [{private _i = 0},{_i<=_count},{_i=_i+1}] do {
+  ["ace_medical_woundReceived", [
+      _unit,
+      selectRandom ["Body", "Head", "LeftArm", "RightArm", "LeftLeg", "RightLeg"],
+      0.4 + random 0.55,
+      _unit, "bullet", [1,1]], _unit
+  ] call CBA_fnc_targetEvent;
+};
