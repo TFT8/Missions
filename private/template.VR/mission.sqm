@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=490;
+		nextID=509;
 	};
 	class Camera
 	{
-		pos[]={7489.6577,26.260195,7419.936};
+		pos[]={7505.4111,26.178453,7420.9082};
 		dir[]={0.6593284,-0.75172132,0.019554051};
 		up[]={0.75159609,0.65924162,0.022290096};
 		aside[]={0.029646656,2.5140616e-007,-0.99963415};
@@ -36622,6 +36622,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="PMC";
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ENH_groupMarker";
 					expression="			if (!is3DEN && {!(_value isEqualTo ['','','',true])}) then			{				[_this,_value] spawn				{					params ['_group','_value'];					_value params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_%1',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['%1 (%2)',groupId _group, count units _group];							};						};					};				};			};";
 					class Value
@@ -36698,7 +36717,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item37
@@ -38505,6 +38524,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Cerberus 6";
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ENH_groupMarker";
 					expression="			if (!is3DEN && {!(_value isEqualTo ['','','',true])}) then			{				[_this,_value] spawn				{					params ['_group','_value'];					_value params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_%1',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['%1 (%2)',groupId _group, count units _group];							};						};					};				};			};";
 					class Value
@@ -38581,7 +38619,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item38
@@ -40919,6 +40957,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Cerberus 1";
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ENH_groupMarker";
 					expression="			if (!is3DEN && {!(_value isEqualTo ['','','',true])}) then			{				[_this,_value] spawn				{					params ['_group','_value'];					_value params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_%1',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['%1 (%2)',groupId _group, count units _group];							};						};					};				};			};";
 					class Value
@@ -40995,7 +41052,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item39
@@ -43333,6 +43390,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Cerberus 2";
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ENH_groupMarker";
 					expression="			if (!is3DEN && {!(_value isEqualTo ['','','',true])}) then			{				[_this,_value] spawn				{					params ['_group','_value'];					_value params ['_type','_color','_text','_showGroupSize'];					private _leader = leader _group;					private _marker = createMarker					[						format ['ENH_GroupMarker_%1',str floor random 10e5],						_leader					];					_marker setMarkerType _type;					_marker setMarkerColor _color;					_marker setMarkerText _text;					while {true} do					{						sleep 1;						if (units _group isEqualTo []) exitWith {deleteMarker _marker};						if (_group getVariable ['ENH_GroupMarker_Update',true]) then						{							_marker setMarkerPos _leader;							if (_showGroupSize) then							{								_marker setMarkerText format ['%1 (%2)',groupId _group, count units _group];							};						};					};				};			};";
 					class Value
@@ -43409,7 +43485,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item40
@@ -44334,6 +44410,29 @@ class Mission
 				name="ares_3";
 			};
 			id=1868;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Ares 1";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item41
 		{
@@ -45257,6 +45356,29 @@ class Mission
 				name="ares_4";
 			};
 			id=1872;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Ares 2";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item42
 		{
@@ -46180,6 +46302,29 @@ class Mission
 				name="ares_5";
 			};
 			id=1876;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Ares 3";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item43
 		{
@@ -47103,6 +47248,29 @@ class Mission
 				name="typh";
 			};
 			id=1880;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Typhon";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

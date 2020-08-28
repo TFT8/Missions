@@ -1,10 +1,10 @@
-respawnOnStart = 0;
+// respawnOnStart = 0;
 class CfgFunctions
 {
 	#include "include\functions.hpp"
 };
-
-class CfgORBAT {
+class CfgORBAT
+{
 	class TFT8
 	{
 		id = 8;		// Unit ID
