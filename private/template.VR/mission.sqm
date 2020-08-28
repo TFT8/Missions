@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=509;
+		nextID=528;
 	};
 	class Camera
 	{
-		pos[]={7505.4111,26.178453,7420.9082};
-		dir[]={0.6593284,-0.75172132,0.019554051};
-		up[]={0.75159609,0.65924162,0.022290096};
-		aside[]={0.029646656,2.5140616e-007,-0.99963415};
+		pos[]={7501.2759,42.745171,7436.959};
+		dir[]={0.53319037,-0.84598392,0.014986494};
+		up[]={0.84581524,0.53293568,0.023773018};
+		aside[]={0.028098382,2.4265228e-007,-0.99968642};
 	};
 };
 binarizationWanted=0;
@@ -32822,6 +32822,29 @@ class Mission
 				name="train_squad";
 			};
 			id=1807;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Scorpion";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item36
 		{
