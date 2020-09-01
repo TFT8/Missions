@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8744;
+		nextID=8793;
 	};
 	class Camera
 	{
-		pos[]={2275.6858,16.204437,13235.383};
-		dir[]={-0.56190568,-0.42156157,-0.71187693};
-		up[]={-0.26125368,0.90674359,-0.33098719};
-		aside[]={-0.78502971,-1.7709099e-006,0.61963439};
+		pos[]={2299.5366,18.793732,13198.745};
+		dir[]={-0.4434413,-0.39560628,0.80442464};
+		up[]={-0.19104446,0.91835749,0.34655887};
+		aside[]={0.87585104,-1.0785297e-006,0.48282269};
 	};
 };
 binarizationWanted=0;
@@ -82137,7 +82137,7 @@ class Mission
 												};
 												class value
 												{
-													items=1640;
+													items=1646;
 													class Item0
 													{
 														class data
@@ -105098,6 +105098,90 @@ class Mission
 															value="rhsusf_50Rnd_762x51_m82_blank";
 														};
 													};
+													class Item1640
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_hgu56p_visor_Raider";
+														};
+													};
+													class Item1641
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_hgu56p_visor_mask_Raider";
+														};
+													};
+													class Item1642
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_hgu56p_visor_Smoke";
+														};
+													};
+													class Item1643
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_hgu56p_visor_mask_Smoke";
+														};
+													};
+													class Item1644
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_hgu56p_visor_Swiss";
+														};
+													};
+													class Item1645
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_hgu56p_visor_mask_Swiss";
+														};
+													};
 												};
 											};
 										};
@@ -105147,7 +105231,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={2321.4036,12.801516,13203.711};
-						angles[]={6.2805324,0.9338209,6.2778616};
+						angles[]={6.2805324,0.93382096,6.2778621};
 					};
 					side="Empty";
 					flags=4;
@@ -105400,7 +105484,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 								};
 							};
 						};
@@ -127992,19 +128076,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2260.2708,13.726227,13226.892};
-				angles[]={0,0.94247818,6.2820935};
+				position[]={2260.271,13.726251,13226.892};
+				angles[]={0,0.94247776,6.2820859};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
+				init="call{this addAction [""<t color='#89f3ff'>Collin's Stash</t>"", {[ ""Open"", [ true ] ] call BIS_fnc_arsenal;}, nil, 51, true, true, """", ""_target distance _this < 2""];}";
 				disableSimulation=1;
 			};
 			id=5840;
 			type="Land_PCSet_01_mouse_F";
-			atlOffset=0.0049791336;
+			atlOffset=0.0050029755;
 			class CustomAttributes
 			{
 				class Attribute0
