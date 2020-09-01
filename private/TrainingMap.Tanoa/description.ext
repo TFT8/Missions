@@ -7,7 +7,6 @@ class CfgFunctions
 {
 	#include "DCONVS\functions.hpp"
     #include "functions\training\CfgFunctions.hpp"
-    #include "functions\CfgFunctions.hpp"
     #include "scripts\VVS\Functions.h"
 };
 
