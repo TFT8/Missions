@@ -45,7 +45,7 @@ force force ace_captives_requireSurrenderAi = true;
 force ace_common_allowFadeMusic = true;
 force force ace_common_checkPBOsAction = 1;
 force force ace_common_checkPBOsCheckAll = true;
-force force ace_common_checkPBOsWhitelist = "['st_sthud_usermenu', '3denEnhanced', 'compositions_a3', 'CAU_ExtendedFunctionViewer', 'CAU_UserInputMenus', 'ZECCUP', 'warfxpe', 'blastcore_maincore', 'jsrs_soundmod_bullethits', 'jsrs_soundmod_environment', 'jsrs_soundmod_framework', 'jsrs_soundmod_sonic_cracks', 'blastcore_vep', 'jsrs_soundmod_helicopters', 'jsrs_soundmod_landvehicles', 'jsrs_soundmod_movement', 'jsrs_soundmod_weapons', 'jsrs_soundmod_explosions', 'sma_elcan_altzoom_c', 'sma_standardammo', 'jsrs_soundmod_specialist_military_arms_weapons', 'reducedhazemod', 'jsrs_soundmod_snd_air_vehicles', 'jsrs_soundmod_snd_environment', 'jsrs_soundmod_snd_land_vehicles', 'jsrs_soundmod_snd_movement', 'jsrs_soundmod_snd_warfare', 'jsrs_soundmod_snd_weapons', 'jsrs_soundmod_cfg_cup_weapons', 'jsrs_soundmod_cup_vehicles', 'jsrs_soundmod_rhs_usf_weapons', 'JSRS_Soundmod_Cfg_RHS_USF_Air_Vehicles', 'Zab_splendid_smoke', 'TER_Eden', 'jsrs_soundmod_snd_sea_vehicles', 'jsrs_soundmod_boats', 'jsrs_soundmod_complete_edition_soundfiles', 'jsrs_soundmod_complete_edition', 'jsrs_soundmod_cup_weapons', 'jsrs_soundmod_cfg_rhs_usf_weapons', 'JSRS_Soundmod_Cfg_RHS_USF_Vehicles','gcam','ArmaZeusCache','achilles_data_f_ares', 'achilles_language_f', 'achilles_data_f_achilles', 'achilles_functions_f_ares', 'achilles_functions_f_achilles', 'achilles_modules_f_ares', 'achilles_settings_f', 'achilles_ui_f', 'achilles_modules_f_achilles', 'AchillesEffects','HeadRangePlus','VCOM_AI','lambs_danger','athena', 'UtesLowGrass', 'LowGrassChernarus', 'LowGrassChernarus_Summer', 'LowGrassBootcamp_acr', 'PLP_VTOLThrust', 'IBISS_Vfx_NVG', 'cw_9liners_and_notepad', 'bhc_map_contour', 'DFS_3rdPerson','tft_server', 'ANZ_ExtendedGrassMod_CUP', 'ANZ_HeliDustEfxMod', 'ANZ_ExtendedGrassMod', 'ANZ_WeatherCloudsMod', 'ANZ_MissileEfxMod', 'ANZ_ExtendedViewdistanceandShadowsMod', 'zen_loadout', 'cfp_glasses']";
+force force ace_common_checkPBOsWhitelist = "['3denEnhanced', 'compositions_a3', 'CAU_ExtendedFunctionViewer', 'CAU_UserInputMenus', 'ZECCUP', 'warfxpe', 'blastcore_maincore', 'jsrs_soundmod_bullethits', 'jsrs_soundmod_environment', 'jsrs_soundmod_framework', 'jsrs_soundmod_sonic_cracks', 'blastcore_vep', 'jsrs_soundmod_helicopters', 'jsrs_soundmod_landvehicles', 'jsrs_soundmod_movement', 'jsrs_soundmod_weapons', 'jsrs_soundmod_explosions', 'sma_elcan_altzoom_c', 'sma_standardammo', 'jsrs_soundmod_specialist_military_arms_weapons', 'reducedhazemod', 'jsrs_soundmod_snd_air_vehicles', 'jsrs_soundmod_snd_environment', 'jsrs_soundmod_snd_land_vehicles', 'jsrs_soundmod_snd_movement', 'jsrs_soundmod_snd_warfare', 'jsrs_soundmod_snd_weapons', 'jsrs_soundmod_cfg_cup_weapons', 'jsrs_soundmod_cup_vehicles', 'jsrs_soundmod_rhs_usf_weapons', 'JSRS_Soundmod_Cfg_RHS_USF_Air_Vehicles', 'Zab_splendid_smoke', 'TER_Eden', 'jsrs_soundmod_snd_sea_vehicles', 'jsrs_soundmod_boats', 'jsrs_soundmod_complete_edition_soundfiles', 'jsrs_soundmod_complete_edition', 'jsrs_soundmod_cup_weapons', 'jsrs_soundmod_cfg_rhs_usf_weapons', 'JSRS_Soundmod_Cfg_RHS_USF_Vehicles','gcam','ArmaZeusCache','achilles_data_f_ares', 'achilles_language_f', 'achilles_data_f_achilles', 'achilles_functions_f_ares', 'achilles_functions_f_achilles', 'achilles_modules_f_ares', 'achilles_settings_f', 'achilles_ui_f', 'achilles_modules_f_achilles', 'AchillesEffects','HeadRangePlus','VCOM_AI','lambs_danger','athena', 'UtesLowGrass', 'LowGrassChernarus', 'LowGrassChernarus_Summer', 'LowGrassBootcamp_acr', 'PLP_VTOLThrust', 'IBISS_Vfx_NVG', 'cw_9liners_and_notepad', 'bhc_map_contour', 'DFS_3rdPerson','tft_server', 'ANZ_ExtendedGrassMod_CUP', 'ANZ_HeliDustEfxMod', 'ANZ_ExtendedGrassMod', 'ANZ_WeatherCloudsMod', 'ANZ_MissileEfxMod', 'ANZ_ExtendedViewdistanceandShadowsMod', 'zen_loadout', 'cfp_glasses', 'L_Align_Align_main', 'L_Align_Align_sys', 'data_f_flare', 'fare_AWL', 'fxp_adat', 'fxp_Arty82mm', 'fxp_Arty155mm', 'fxp_ArtyCanFired', 'fxp_ArtySmokShell', 'fxp_BombClust', 'fxp_BombGBU12', 'fxp_CannonFired', 'fxp_GrenadeSmoke', 'fxp_HitEfe', 'fxp_LauncherExp', 'fxp_LauncherSmo', 'fxp_MisRocSmo', 'fxp_RPGthru', 'fxp_VehCar', 'fxp_VehCarAmmo', 'fxp_VehCarFuel', 'fxp_VehExpEffect', 'fxp_VehExpEffectBig', 'fxp_VehExpEffectSmall', 'fxp_VehHeli', 'fxp_VehPlane', 'fxp_VehTank', 'fxp_VehTankWhe', 'L_Immerse_Immerse_main', 'L_Immerse_Immerse_sys', 'VCOM_AI','PY3_Pythia','Pythia_Sample_Patches']";
 ace_common_displayTextColor = [0,0,0,0.1];
 ace_common_displayTextFontColor = [1,1,1,1];
 ace_common_settingFeedbackIcons = 1;
@@ -133,7 +133,7 @@ force force ace_magazinerepack_timePerBeltLink = 8;
 force force ace_magazinerepack_timePerMagazine = 2;
 
 // ACE Map
-force force ace_map_BFT_Enabled = true;
+ace_map_BFT_Enabled = true;
 force force ace_map_BFT_HideAiGroups = true;
 force force ace_map_BFT_Interval = 0.5;
 force force ace_map_BFT_ShowPlayerNames = false;
@@ -630,7 +630,7 @@ force force TFAR_setting_defaultFrequencies_lr_independent = "";
 force force TFAR_setting_defaultFrequencies_lr_west = "71,72,73,74,75,76,77,78,79";
 force force TFAR_setting_defaultFrequencies_sr_east = "";
 force force TFAR_setting_defaultFrequencies_sr_independent = "";
-force force TFAR_setting_defaultFrequencies_sr_west = "61,62,63,64,65,66,67,68,69";
+force force TFAR_setting_defaultFrequencies_sr_west = "61.1,62,63,64,65,66,67,68,69";
 force force TFAR_setting_DefaultRadio_Airborne_east = "TFAR_mr6000l";
 force force TFAR_setting_DefaultRadio_Airborne_Independent = "TFAR_anarc164";
 force force TFAR_setting_DefaultRadio_Airborne_West = "TFAR_anarc210";
@@ -659,3 +659,11 @@ Fat_Lurch_Markers = true;
 Fat_Lurch_Measure = true;
 force force Fat_Lurch_ShowNorth = false;
 Fat_Lurch_ShowTarget = true;
+
+// Tactical Weapon Swap Option
+force force STR_SWAP_CBA_FAST_INFO = false;
+force force STR_SWAP_CBA_WEAPON_INFO = false;
+
+// Tactical Position Ready
+force force STR_READY_CBA_INFOAUTO = false;
+
