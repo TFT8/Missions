@@ -8,7 +8,7 @@ class EditorData
 	toggles=549;
 	class ItemIDProvider
 	{
-		nextID=2108;
+		nextID=2109;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4729.5591,374.70197,10170.33};
-		dir[]={-0.34035006,-0.75117886,0.56570816};
-		up[]={-0.38726026,0.66006911,0.64367783};
-		aside[]={0.856929,-4.270114e-007,0.51556057};
+		pos[]={4727.4155,377.92963,10165.113};
+		dir[]={-0.32853597,-0.61093384,0.72041446};
+		up[]={-0.25351295,0.79163241,0.55590034};
+		aside[]={0.90992785,-4.0442683e-007,0.41496283};
 	};
 };
 binarizationWanted=0;
@@ -187,6 +187,210 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="ENH_dynamicSkill";
+			expression="if (!is3DEN && {_value # 0 && {isServer}}) then			{				_value params				[					'_enable',					'_skillMinBLUFOR',					'_skillAimMinBLUFOR',					'_skillMaxBLUFOR',					'_skillAimMaxBlUFOR',					'_skillMinOPFOR',					'_skillAimMinOPFOR',					'_skillMaxOPFOR',					'_skillAimMaxOPFOR',					'_skillMinINDFOR',					'_skillAimMinINDFOR',					'_skillMaxINDFOR',					'_skillAimMaxINDFOR'				];				[					true,					[						[WEST,_skillMinBLUFOR,_skillAimMinBLUFOR,_skillMaxBLUFOR,_skillAimMaxBlUFOR],						[EAST,_skillMinOPFOR,_skillAimMinOPFOR,_skillMaxOPFOR,_skillAimMaxOPFOR],						[INDEPENDENT,_skillMinINDFOR,_skillAimMinINDFOR,_skillMaxINDFOR,_skillAimMaxINDFOR]					]				] call BIS_fnc_EXP_camp_dynamicAISkill;			}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=13;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item5
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item6
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item7
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item8
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item9
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item10
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item11
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item12
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -221,7 +425,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		nAttributes=2;
 	};
 	class Category1
 	{
@@ -253,7 +457,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Airborne School";
-		overviewText="TFT8_MISSION_TEMPLATE";
+		overviewText="Overall training to perform requirements to pass Airborne Qualifications.";
 		timeOfChanges=1800.0002;
 		startWeather=0;
 		startWind=0.1;
@@ -840,7 +1044,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="#adminLogged";
+									value="76561198127422492";
 								};
 							};
 						};
@@ -1281,12 +1485,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={387.5,661.78448,15372};
-				angles[]={0.14159982,0,0.17052783};
+				position[]={387.5,661.78455,15372};
+				angles[]={0.14159855,0,0.17053612};
 			};
 			name="orbat_TFT8";
 			id=1821;
 			type="ModuleStrategicMapORBAT_F";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32622,7 +32827,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="200";
+							value="100";
 						};
 					};
 				};
@@ -32717,7 +32922,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="60";
+							value="30";
 						};
 					};
 				};
