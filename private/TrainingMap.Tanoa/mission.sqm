@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8842;
+		nextID=8891;
 	};
 	class Camera
 	{
-		pos[]={2340.7603,18.793732,13189.203};
-		dir[]={0.68020415,-0.57903439,0.44976351};
-		up[]={0.48306119,0.81523556,0.31941196};
-		aside[]={0.55161977,-2.3799948e-006,-0.83423662};
+		pos[]={2367.2258,82.488785,13123.145};
+		dir[]={-0.4403578,-0.66869634,0.59930521};
+		up[]={-0.39597744,0.74346054,0.53890347};
+		aside[]={0.80593324,-1.8047867e-006,0.59218711};
 	};
 };
 binarizationWanted=0;
@@ -46768,8 +46768,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={2355.1404,16.606804,13133.037};
-								angles[]={0,3.3161256,0};
+								position[]={2462.9053,25.970602,13109.613};
+								angles[]={6.2166171,3.3161256,0.2330218};
 							};
 							side="Empty";
 							flags=4;
@@ -46779,7 +46779,6 @@ class Mission
 							};
 							id=6181;
 							type="tft8_flag";
-							atlOffset=-9.5367432e-007;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -48031,7 +48030,7 @@ class Mission
 						};
 					};
 					id=971;
-					atlOffset=-0.0035028458;
+					atlOffset=0.0010690689;
 				};
 				class Item1
 				{
@@ -52927,19 +52926,20 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={2286.8782,13.736668,13241.269};
-										angles[]={0,3.3423758,6.2820935};
+										position[]={2286.8779,13.736831,13241.269};
+										angles[]={0,3.3423753,6.2820859};
 									};
 									side="Empty";
 									flags=4;
 									class Attributes
 									{
-										init="call{this addAction [""<t color='#89f3ff'>ACE Arsenal</t>"", {[box_base, player] call ace_arsenal_fnc_openBox;}, nil, 51, true, true, """", ""_target distance _this < 5""];" \n "" \n "[this, [""Preparation"", ""Spectator""]] call TFT_fnc_addActions;" \n "" \n "this addAction [""<t color='#89f3ff'>Enable SOAC Training</t>"", {player call TFT_fnc_addSOACActions}, nil, 0, true, true, """", ""_target distance _this < 8""];}";
+										init="call{this addAction [""<t color='#89f3ff'>ACE Arsenal</t>"", {[box_base, player] call ace_arsenal_fnc_openBox;}, nil, 51, true, true, """", ""_target distance _this < 5""];" \n "" \n "[this, [""Preparation"", ""Spectator""]] call TFT_fnc_addActions;" \n "" \n "this addAction [""<t color='#89f3ff'>Enable SOAC Training</t>"", {player call TFT_fnc_addSOACActions}, nil, 0, true, true, """", ""_target distance _this < 5""];}";
 										name="box_3";
 										disableSimulation=1;
 									};
 									id=6469;
 									type="B_supplyCrate_F";
+									atlOffset=0.00016307831;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -53180,7 +53180,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+													value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 												};
 											};
 										};
@@ -53591,7 +53591,7 @@ class Mission
 								};
 							};
 							id=974;
-							atlOffset=-0.3352623;
+							atlOffset=-0.33522129;
 						};
 						class Item2
 						{
@@ -62668,7 +62668,7 @@ class Mission
 						};
 					};
 					id=972;
-					atlOffset=0.74151134;
+					atlOffset=0.74151611;
 				};
 				class Item2
 				{
@@ -82102,7 +82102,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 								};
 							};
 						};
@@ -82137,7 +82137,7 @@ class Mission
 												};
 												class value
 												{
-													items=1646;
+													items=1673;
 													class Item0
 													{
 														class data
@@ -105182,6 +105182,384 @@ class Mission
 															value="tft8_hgu56p_visor_mask_Swiss";
 														};
 													};
+													class Item1646
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_lbt6094_ocp_556";
+														};
+													};
+													class Item1647
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_lbt6094c_ocp_assault";
+														};
+													};
+													class Item1648
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_jpc_3_ocp";
+														};
+													};
+													class Item1649
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_jpc_2_ocp";
+														};
+													};
+													class Item1650
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="tft8_jpc_ocp";
+														};
+													};
+													class Item1651
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_STD_FG_woodland";
+														};
+													};
+													class Item1652
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_STD_FG_black";
+														};
+													};
+													class Item1653
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_STD_FG";
+														};
+													};
+													class Item1654
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_STD_AFG_black";
+														};
+													};
+													class Item1655
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_STD_AFG_woodland";
+														};
+													};
+													class Item1656
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_STD_AFG";
+														};
+													};
+													class Item1657
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_CQC_woodland";
+														};
+													};
+													class Item1658
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_CQC_SFG_woodland";
+														};
+													};
+													class Item1659
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_CQC_FG_woodland";
+														};
+													};
+													class Item1660
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_CQC_FG_black";
+														};
+													};
+													class Item1661
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_CQC_AFG_woodland";
+														};
+													};
+													class Item1662
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_CQC_AFG_black";
+														};
+													};
+													class Item1663
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Mk17_CQC_AFG";
+														};
+													};
+													class Item1664
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="rhs_weap_m14_socom";
+														};
+													};
+													class Item1665
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_hgun_M17_Coyote";
+														};
+													};
+													class Item1666
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_21Rnd_9x19_M17_Coyote";
+														};
+													};
+													class Item1667
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_17Rnd_9x19_M17_Coyote";
+														};
+													};
+													class Item1668
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_Colt727";
+														};
+													};
+													class Item1669
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_M4A1_SOMMOD_black";
+														};
+													};
+													class Item1670
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_M4A1_SOMMOD_Grip_black";
+														};
+													};
+													class Item1671
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_M4A1_SOMMOD_tan";
+														};
+													};
+													class Item1672
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="CUP_arifle_M4A1_SOMMOD_Grip_tan";
+														};
+													};
 												};
 											};
 										};
@@ -107226,7 +107604,7 @@ class Mission
 			};
 			id=5366;
 			type="CUP_B_UAZ_METIS_ACR";
-			atlOffset=0.00024795532;
+			atlOffset=-0.34296417;
 		};
 		class Item73
 		{
