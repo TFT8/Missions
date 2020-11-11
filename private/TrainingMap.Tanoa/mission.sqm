@@ -8,7 +8,7 @@ class EditorData
 	toggles=1633;
 	class ItemIDProvider
 	{
-		nextID=6644;
+		nextID=6646;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9038;
+		nextID=9136;
 	};
 	class Camera
 	{
-		pos[]={2291.751,27.654152,13209.203};
-		dir[]={0.54850054,-0.34543216,-0.76161647};
-		up[]={0.20195399,0.93834478,-0.28042001};
-		aside[]={-0.81154066,-2.0954758e-008,-0.58446169};
+		pos[]={2280.4229,29.886583,13222.566};
+		dir[]={0.59626871,-0.49873874,-0.62926018};
+		up[]={0.34311324,0.86664408,-0.36209634};
+		aside[]={-0.72594219,-7.6927245e-007,-0.68789297};
 	};
 };
 binarizationWanted=0;
@@ -6262,7 +6262,7 @@ class CustomAttributes
 																	};
 																	class value
 																	{
-																		items=15;
+																		items=12;
 																		class Item0
 																		{
 																			class data
@@ -6378,7 +6378,7 @@ class CustomAttributes
 																									"STRING"
 																								};
 																							};
-																							value="ACE_packingBandage";
+																							value="ACE_quikclot";
 																						};
 																					};
 																					class Item1
@@ -6392,7 +6392,7 @@ class CustomAttributes
 																									"SCALAR"
 																								};
 																							};
-																							value=6;
+																							value=4;
 																						};
 																					};
 																				};
@@ -6423,7 +6423,7 @@ class CustomAttributes
 																									"STRING"
 																								};
 																							};
-																							value="ACE_quikclot";
+																							value="ACE_packingBandage";
 																						};
 																					};
 																					class Item1
@@ -6437,148 +6437,13 @@ class CustomAttributes
 																									"SCALAR"
 																								};
 																							};
-																							value=4;
+																							value=6;
 																						};
 																					};
 																				};
 																			};
 																		};
 																		class Item4
-																		{
-																			class data
-																			{
-																				class type
-																				{
-																					type[]=
-																					{
-																						"ARRAY"
-																					};
-																				};
-																				class value
-																				{
-																					items=2;
-																					class Item0
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"STRING"
-																								};
-																							};
-																							value="ACE_EarPlugs";
-																						};
-																					};
-																					class Item1
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"SCALAR"
-																								};
-																							};
-																							value=1;
-																						};
-																					};
-																				};
-																			};
-																		};
-																		class Item5
-																		{
-																			class data
-																			{
-																				class type
-																				{
-																					type[]=
-																					{
-																						"ARRAY"
-																					};
-																				};
-																				class value
-																				{
-																					items=2;
-																					class Item0
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"STRING"
-																								};
-																							};
-																							value="ACE_epinephrine";
-																						};
-																					};
-																					class Item1
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"SCALAR"
-																								};
-																							};
-																							value=2;
-																						};
-																					};
-																				};
-																			};
-																		};
-																		class Item6
-																		{
-																			class data
-																			{
-																				class type
-																				{
-																					type[]=
-																					{
-																						"ARRAY"
-																					};
-																				};
-																				class value
-																				{
-																					items=2;
-																					class Item0
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"STRING"
-																								};
-																							};
-																							value="ACE_IR_Strobe_Item";
-																						};
-																					};
-																					class Item1
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"SCALAR"
-																								};
-																							};
-																							value=1;
-																						};
-																					};
-																				};
-																			};
-																		};
-																		class Item7
 																		{
 																			class data
 																			{
@@ -6623,7 +6488,52 @@ class CustomAttributes
 																				};
 																			};
 																		};
-																		class Item8
+																		class Item5
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_EarPlugs";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item6
 																		{
 																			class data
 																			{
@@ -6668,52 +6578,7 @@ class CustomAttributes
 																				};
 																			};
 																		};
-																		class Item9
-																		{
-																			class data
-																			{
-																				class type
-																				{
-																					type[]=
-																					{
-																						"ARRAY"
-																					};
-																				};
-																				class value
-																				{
-																					items=2;
-																					class Item0
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"STRING"
-																								};
-																							};
-																							value="ACE_morphine";
-																						};
-																					};
-																					class Item1
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"SCALAR"
-																								};
-																							};
-																							value=2;
-																						};
-																					};
-																				};
-																			};
-																		};
-																		class Item10
+																		class Item7
 																		{
 																			class data
 																			{
@@ -6758,7 +6623,7 @@ class CustomAttributes
 																				};
 																			};
 																		};
-																		class Item11
+																		class Item8
 																		{
 																			class data
 																			{
@@ -6783,7 +6648,7 @@ class CustomAttributes
 																									"STRING"
 																								};
 																							};
-																							value="ACE_Flashlight_XL50";
+																							value="ACE_morphine";
 																						};
 																					};
 																					class Item1
@@ -6797,13 +6662,13 @@ class CustomAttributes
 																									"SCALAR"
 																								};
 																							};
-																							value=1;
+																							value=2;
 																						};
 																					};
 																				};
 																			};
 																		};
-																		class Item12
+																		class Item9
 																		{
 																			class data
 																			{
@@ -6828,7 +6693,7 @@ class CustomAttributes
 																									"STRING"
 																								};
 																							};
-																							value="ACE_salineIV_500";
+																							value="ACE_epinephrine";
 																						};
 																					};
 																					class Item1
@@ -6842,58 +6707,13 @@ class CustomAttributes
 																									"SCALAR"
 																								};
 																							};
-																							value=1;
+																							value=2;
 																						};
 																					};
 																				};
 																			};
 																		};
-																		class Item13
-																		{
-																			class data
-																			{
-																				class type
-																				{
-																					type[]=
-																					{
-																						"ARRAY"
-																					};
-																				};
-																				class value
-																				{
-																					items=2;
-																					class Item0
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"STRING"
-																								};
-																							};
-																							value="ACE_tourniquet";
-																						};
-																					};
-																					class Item1
-																					{
-																						class data
-																						{
-																							class type
-																							{
-																								type[]=
-																								{
-																									"SCALAR"
-																								};
-																							};
-																							value=4;
-																						};
-																					};
-																				};
-																			};
-																		};
-																		class Item14
+																		class Item10
 																		{
 																			class data
 																			{
@@ -6919,6 +6739,51 @@ class CustomAttributes
 																								};
 																							};
 																							value="ACE_splint";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=4;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item11
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_tourniquet";
 																						};
 																					};
 																					class Item1
@@ -6981,7 +6846,7 @@ class CustomAttributes
 																"STRING"
 															};
 														};
-														value="Patrol_cap";
+														value="Patrol_cap_ocp";
 													};
 												};
 												class Item7
@@ -7023,7 +6888,7 @@ class CustomAttributes
 																			"STRING"
 																		};
 																	};
-																	value="Binocular";
+																	value="rhsusf_bino_m24";
 																};
 															};
 															class Item1
