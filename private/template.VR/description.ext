@@ -46,7 +46,9 @@ class CfgORBAT
                 type = "Infantry";
                 size = "Squad";
                 side = "West";
-                commander = "Bushman";
+				text = "Spartan 1-1"; // Custom text and short text, can still use some rguments when defined:
+				textShort = "Spartan 1-1";
+                commander = "Jhai";
                 commanderRank = "Sergeant"; // Rank of unit commander (by default selected based on unit size)
                 tags[] = {"BLUFOR", "TFT8","Spartan"};
             };
@@ -55,6 +57,8 @@ class CfgORBAT
                 type = "Infantry";
                 size = "Squad";
                 side = "West";
+				text = "Spartan 1-2"; // Custom text and short text, can still use some rguments when defined:
+				textShort = "Spartan 1-2";
                 commander = "Bloyd";
                 commanderRank = "Sergeant"; // Rank of unit commander (by default selected based on unit size)
                 tags[] = {"BLUFOR", "TFT8","Spartan"};
@@ -79,7 +83,7 @@ class CfgORBAT
 			side = "West";
             text = "Razor Detachment"; // Custom text and short text, can still use some rguments when defined:
             textShort = "Razor";
-            description = "Joint Special Operations Air Detachment - Razor";
+            description = "Mixed Helicopter Company/160th SOAR, 40th Combat Aviation Brigade (Razor)";
 			commander = "Collins";
             commanderRank = "Lieutenant"; // Rank of unit commander (by default selected based on unit size)
 			tags[] = {"BLUFOR", "TFT8","Razor"};

@@ -178,7 +178,7 @@ force force ace_medical_ivFlowRate = 1;
 force force ace_medical_limping = 0;
 force force ace_medical_painCoefficient = 1;
 force force ace_medical_playerDamageThreshold = 0.8;
-force force ace_medical_spontaneousWakeUpChance = 0.10;
+force force ace_medical_spontaneousWakeUpChance = 1.00;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2;
 force force ace_medical_statemachine_AIUnconsciousness = true;
 force force ace_medical_statemachine_cardiacArrestTime = 300;
@@ -188,9 +188,9 @@ force force ace_medical_treatment_advancedBandages = 2;
 force force ace_medical_treatment_advancedDiagnose = true;
 force force ace_medical_treatment_advancedMedication = true;
 force ace_medical_treatment_allowLitterCreation = true;
-force force ace_medical_treatment_allowSelfIV = 0;
+force force ace_medical_treatment_allowSelfIV = 1;
 force force ace_medical_treatment_allowSelfPAK = 1;
-force force ace_medical_treatment_allowSelfStitch = 0;
+force force ace_medical_treatment_allowSelfStitch = 1;
 force force ace_medical_treatment_allowSharedEquipment = 0;
 force force ace_medical_treatment_clearTraumaAfterBandage = false;
 force force ace_medical_treatment_consumePAK = 0;
@@ -259,7 +259,7 @@ force force ace_finger_maxRange = 5.49614;
 // ACE Pylons
 force ace_pylons_enabledForZeus = true;
 force ace_pylons_enabledFromAmmoTrucks = true;
-force force ace_pylons_rearmNewPylons = false;
+force force ace_pylons_rearmNewPylons = true;
 force force ace_pylons_requireEngineer = false;
 force force ace_pylons_requireToolkit = true;
 force force ace_pylons_searchDistance = 15;
@@ -439,12 +439,19 @@ force adv_aceCPR_enable = true;
 force adv_aceCPR_maxTime = 1200;
 force adv_aceCPR_useLocation_AED = 0;
 
+
 // ADV - ACE Splint
 force adv_aceSplint_enable = true;
 force adv_aceSplint_reopenChance_medic = 0;
 force adv_aceSplint_reopenChance_regular = 30;
 force adv_aceSplint_reopenTime = 600;
 force adv_aceSplint_reuseChance = 80;
+
+// AI
+force cfp_autoEquipNVG = true;
+
+// BettIR
+force force BettIR_ViewDistance = 2000;
 
 // Boxloader
 force boxloader_allrepair_height = 5;
@@ -630,7 +637,7 @@ force force TFAR_setting_defaultFrequencies_lr_independent = "";
 force force TFAR_setting_defaultFrequencies_lr_west = "71,72,73,74,75,76,77,78,79";
 force force TFAR_setting_defaultFrequencies_sr_east = "";
 force force TFAR_setting_defaultFrequencies_sr_independent = "";
-force force TFAR_setting_defaultFrequencies_sr_west = "61.1,62,63,64,65,66,67,68,69";
+force force TFAR_setting_defaultFrequencies_sr_west = "61,62,63,64,65,66,67,68,69";
 force force TFAR_setting_DefaultRadio_Airborne_east = "TFAR_mr6000l";
 force force TFAR_setting_DefaultRadio_Airborne_Independent = "TFAR_anarc164";
 force force TFAR_setting_DefaultRadio_Airborne_West = "TFAR_anarc210";
