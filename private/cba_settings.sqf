@@ -544,6 +544,102 @@ force CF_BAI_suppression_spotTime = 0.5;
 // CUP
 CUP_Vehicles_PreventBarrelClip = true;
 
+// DUI - Squad Radar - Indicators
+force diwako_dui_indicators_crew_range_enabled = true;
+diwako_dui_indicators_fov_scale = true;
+diwako_dui_indicators_icon_buddy = true;
+diwako_dui_indicators_icon_leader = true;
+diwako_dui_indicators_icon_medic = true;
+diwako_dui_indicators_range = 20;
+diwako_dui_indicators_range_crew = 300;
+diwako_dui_indicators_range_scale = true;
+diwako_dui_indicators_show = true;
+diwako_dui_indicators_size = 1;
+diwako_dui_indicators_style = "standard";
+diwako_dui_indicators_useACENametagsRange = true;
+
+// DUI - Squad Radar - Main
+diwako_dui_ace_hide_interaction = true;
+diwako_dui_colors = "standard";
+diwako_dui_font = "RobotoCondensed";
+diwako_dui_icon_style = "standard";
+diwako_dui_main_hide_ui_by_default = false;
+diwako_dui_main_squadBlue = [0,0,1,1];
+diwako_dui_main_squadGreen = [0,1,0,1];
+diwako_dui_main_squadMain = [1,1,1,1];
+diwako_dui_main_squadRed = [1,0,0,1];
+diwako_dui_main_squadYellow = [1,1,0,1];
+diwako_dui_main_trackingColor = [0.93,0.26,0.93,1];
+diwako_dui_reset_ui_pos = false;
+
+// DUI - Squad Radar - Nametags
+diwako_dui_nametags_deadColor = [0.2,0.2,0.2,1];
+diwako_dui_nametags_deadRenderDistance = 3.5;
+diwako_dui_nametags_drawRank = true;
+diwako_dui_nametags_enabled = true;
+diwako_dui_nametags_enableFOVBoost = true;
+diwako_dui_nametags_enableOcclusion = true;
+diwako_dui_nametags_fadeInTime = 0.05;
+diwako_dui_nametags_fadeOutTime = 0.5;
+diwako_dui_nametags_fontGroup = "RobotoCondensedLight";
+diwako_dui_nametags_fontGroupNameSize = 8;
+diwako_dui_nametags_fontName = "RobotoCondensed";
+diwako_dui_nametags_fontNameSize = 10;
+diwako_dui_nametags_groupColor = [1,1,1,1];
+diwako_dui_nametags_groupFontShadow = 1;
+diwako_dui_nametags_groupNameOtherGroupColor = [0.6,0.85,0.6,1];
+diwako_dui_nametags_nameFontShadow = 1;
+diwako_dui_nametags_nameOtherGroupColor = [0.2,1,0,1];
+diwako_dui_nametags_renderDistance = 40;
+diwako_dui_nametags_showUnconAsDead = true;
+diwako_dui_nametags_useSideIsFriendly = true;
+
+// DUI - Squad Radar - Radar
+diwako_dui_compass_hide_alone_group = true;
+diwako_dui_compass_hide_blip_alone_group = true;
+diwako_dui_compass_icon_scale = 1;
+diwako_dui_compass_opacity = 1;
+diwako_dui_compass_style = ["\z\diwako_dui\addons\radar\UI\compass_styles\bi\compass_limited.paa","\z\diwako_dui\addons\radar\UI\compass_styles\bi\compass.paa"];
+diwako_dui_compassRange = 25;
+diwako_dui_compassRefreshrate = 0;
+diwako_dui_dir_showMildot = false;
+diwako_dui_dir_size = 1.25;
+diwako_dui_distanceWarning = 3;
+diwako_dui_enable_compass = true;
+diwako_dui_enable_compass_dir = 2;
+diwako_dui_enable_occlusion = true;
+diwako_dui_enable_occlusion_cone = 360;
+diwako_dui_hudScaling = 1;
+diwako_dui_namelist = true;
+diwako_dui_namelist_bg = 0;
+diwako_dui_namelist_only_buddy_icon = false;
+diwako_dui_namelist_size = 1;
+diwako_dui_namelist_text_shadow = 2;
+diwako_dui_namelist_width = 215;
+diwako_dui_radar_ace_finger = true;
+force diwako_dui_radar_ace_medic = true;
+diwako_dui_radar_compassRangeCrew = 500;
+diwako_dui_radar_dir_padding = 10;
+diwako_dui_radar_group_by_vehicle = true;
+diwako_dui_radar_icon_opacity = 1;
+diwako_dui_radar_icon_opacity_no_player = true;
+diwako_dui_radar_icon_scale_crew = 6;
+diwako_dui_radar_leadingZeroes = true;
+diwako_dui_radar_namelist_hideWhenLeader = false;
+diwako_dui_radar_namelist_vertical_spacing = 1;
+diwako_dui_radar_occlusion_fade_in_time = 1;
+diwako_dui_radar_occlusion_fade_time = 10;
+diwako_dui_radar_pointer_color = [1,0.5,0,1];
+diwako_dui_radar_pointer_style = "arrowhead";
+diwako_dui_radar_show_cardinal_points = true;
+diwako_dui_radar_showSpeaking = true;
+diwako_dui_radar_showSpeaking_radioOnly = false;
+diwako_dui_radar_showSpeaking_replaceIcon = true;
+force diwako_dui_radar_sortType = "fireteam";
+force diwako_dui_radar_sqlFirst = true;
+force diwako_dui_radar_vehicleCompassEnabled = false;
+diwako_dui_use_layout_editor = false;
+
 // dzn MG Tripod
 dzn_MG_Tripod_DeployedAimCoef = 0.1;
 dzn_MG_Tripod_DeployedRecoilCoef = 0.1;
@@ -584,7 +680,7 @@ force force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 force niarms_accswitch = true;
 force niarms_magSwitch = true;
 
-// STUI Settings
+/* STUI Settings
 STHud_Settings_ColourBlindMode = "Normal";
 STHud_Settings_Font = "PuristaSemibold";
 STHud_Settings_HUDMode = 3;
@@ -592,6 +688,7 @@ STHud_Settings_Occlusion = true;
 STHud_Settings_RemoveDeadViaProximity = true;
 STHud_Settings_SquadBar = false;
 STHud_Settings_TextShadow = 1;
+*/
 
 // Tactical Weapon Swap Option
 Swap the gun quickly without an animation process. = true;
