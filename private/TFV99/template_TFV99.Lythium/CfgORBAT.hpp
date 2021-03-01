@@ -61,10 +61,11 @@ class CfgORBAT
                     side = "West";
                     text = "Spartan 1-1"; // Custom text and short text, can still use some rguments when defined:
                     textShort = "Spartan 1-1";
-                    commander = "Jhai";
+                    commander = "McCormack";
                     commanderRank = "Sergeant"; // Rank of unit commander (by default selected based on unit size)
                     tags[] = {"BLUFOR", "TFT8","Spartan"};
                 };
+                /*
                 class Spartan_1_2 {
                     id = 2;
                     type = "Infantry";
@@ -76,7 +77,9 @@ class CfgORBAT
                     commanderRank = "Sergeant"; // Rank of unit commander (by default selected based on unit size)
                     tags[] = {"BLUFOR", "TFT8","Spartan"};
                 };
+                */
             };
+            /*
             class Scorpion {
                 id = 1;
                 type = "Infantry";
@@ -89,6 +92,7 @@ class CfgORBAT
                 commanderRank = "Sergeant"; // Rank of unit commander (by default selected based on unit size)
                 tags[] = {"BLUFOR", "TFT8","Scorpion"};
             };
+            */
             class Razor	{
                 id = 1;
                 type = "Helicopter";
