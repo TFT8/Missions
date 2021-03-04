@@ -473,7 +473,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="TFV99 Joint Op Template v1";
+		briefingName="TFV99 Joint Op Template v2";
 		overviewText="TFT8-TFV99 Joint Op Template";
 		timeOfChanges=1800.0002;
 		startWeather=0;
