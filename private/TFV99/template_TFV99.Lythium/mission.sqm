@@ -12,11 +12,11 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2455;
+		nextID=2469;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=15;
 	};
 	class LayerIndexProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11842.015,45.347286,2325.8103};
-		dir[]={-0.68497354,-0.53087968,-0.49916121};
-		up[]={-0.42908633,0.84739697,-0.31268868};
-		aside[]={-0.58899933,-6.4854976e-007,0.80825686};
+		pos[]={18423.836,97.548248,7784.5361};
+		dir[]={-0.36665896,-0.27076012,0.89008605};
+		up[]={-0.10312901,0.96264476,0.2503517};
+		aside[]={0.92462403,-8.1490725e-010,0.38088685};
 	};
 };
 binarizationWanted=0;
@@ -513,7 +513,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=24;
+		items=38;
 		class Item0
 		{
 			dataType="Layer";
@@ -18292,6 +18292,168 @@ class Mission
 			};
 			id=2454;
 			type="vtx_uh60M";
+		};
+		class Item24
+		{
+			dataType="Marker";
+			position[]={8995.7129,467.28799,10212.616};
+			name="marker_1";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorWEST";
+			fillName="FDiagonal";
+			a=57.762955;
+			b=10320.56;
+			id=2455;
+			atlOffset=272.78394;
+		};
+		class Item25
+		{
+			dataType="Marker";
+			position[]={8880.582,434.71387,10211.542};
+			name="marker_2";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorEAST";
+			fillName="BDiagonal";
+			a=57.763;
+			b=10320.56;
+			id=2456;
+			atlOffset=272.78363;
+		};
+		class Item26
+		{
+			dataType="Marker";
+			position[]={15998.896,396.56104,16231.38};
+			name="marker_3";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorWEST";
+			fillName="Horizontal";
+			a=57.763;
+			b=6017.271;
+			angle=219.03532;
+			id=2457;
+			atlOffset=192.95189;
+		};
+		class Item27
+		{
+			dataType="Marker";
+			position[]={16216.725,430.83008,16298.068};
+			name="marker_4";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorEAST";
+			fillName="Vertical";
+			a=57.763;
+			b=6017.271;
+			angle=219.03532;
+			id=2458;
+			atlOffset=174.67972;
+		};
+		class Item28
+		{
+			dataType="Marker";
+			position[]={17138.943,194.50134,7992.8408};
+			name="marker_5";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorWEST";
+			fillName="Horizontal";
+			a=57.763;
+			b=6017.271;
+			angle=126.17372;
+			id=2459;
+			atlOffset=135.56944;
+		};
+		class Item29
+		{
+			dataType="Marker";
+			position[]={17206.033,214.83961,8086.4121};
+			name="marker_6";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorEAST";
+			fillName="Vertical";
+			a=57.763;
+			b=6017.271;
+			angle=126.17372;
+			id=2460;
+			atlOffset=144.35448;
+		};
+		class Item30
+		{
+			dataType="Marker";
+			position[]={5262.5439,296.918,10788.025};
+			name="marker_7";
+			type="b_installation";
+			colorName="ColorBlack";
+			id=2461;
+			atlOffset=0.00042724609;
+		};
+		class Item31
+		{
+			dataType="Marker";
+			position[]={15791.197,29.036026,5584.8252};
+			name="marker_8";
+			type="b_installation";
+			id=2462;
+		};
+		class Item32
+		{
+			dataType="Marker";
+			position[]={9685.333,143.256,11344.649};
+			name="marker_9";
+			type="b_installation";
+			id=2463;
+			atlOffset=-9.1552734e-005;
+		};
+		class Item33
+		{
+			dataType="Marker";
+			position[]={13972.732,19.827061,3404.8315};
+			name="marker_10";
+			type="b_installation";
+			id=2464;
+		};
+		class Item34
+		{
+			dataType="Marker";
+			position[]={10935.548,42.025444,7563.2949};
+			name="marker_11";
+			type="b_installation";
+			id=2465;
+		};
+		class Item35
+		{
+			dataType="Marker";
+			position[]={9953.5566,113.67516,9235.8643};
+			name="marker_12";
+			type="b_installation";
+			id=2466;
+		};
+		class Item36
+		{
+			dataType="Marker";
+			position[]={13745.971,85.764847,9313.7021};
+			name="marker_13";
+			type="b_installation";
+			id=2467;
+		};
+		class Item37
+		{
+			dataType="Marker";
+			position[]={17494.617,84.385002,10038.37};
+			name="marker_14";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorEAST";
+			fillName="Border";
+			a=2470.3291;
+			b=1179.819;
+			drawBorder=1;
+			id=2468;
+			atlOffset=53.072693;
 		};
 	};
 };
