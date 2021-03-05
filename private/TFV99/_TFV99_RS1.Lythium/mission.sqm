@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2818;
+		nextID=2845;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=792;
+		nextID=800;
 	};
 	class Camera
 	{
-		pos[]={20244.035,172.66913,10415.836};
-		dir[]={-0.89368755,-0.38527754,-0.23000282};
-		up[]={-0.37311977,0.92279673,-0.096027471};
-		aside[]={-0.24924354,-2.203742e-007,0.96844739};
+		pos[]={11920.869,59.060276,2139.6875};
+		dir[]={-0.35495791,-0.47170398,0.80715746};
+		up[]={-0.18988803,0.88175607,0.4317961};
+		aside[]={0.91539639,1.6170088e-007,0.40255758};
 	};
 };
 binarizationWanted=0;
@@ -77,7 +77,8 @@ addons[]=
 	"A3_Structures_F_Civ_Market",
 	"A3_Structures_F_Households_House_Small01",
 	"A3_Structures_F_Civ_Constructions",
-	"A3_Structures_F_Mil_BagFence"
+	"A3_Structures_F_Mil_BagFence",
+	"A3_Modules_F_Intel"
 };
 class AddonsMetaData
 {
@@ -543,7 +544,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=72;
+		items=80;
 		class Item0
 		{
 			dataType="Layer";
@@ -18362,7 +18363,7 @@ class Mission
 			fillName="Horizontal";
 			a=57.763;
 			b=6017.271;
-			angle=219.03526;
+			angle=219.03522;
 			id=2457;
 			atlOffset=192.95189;
 		};
@@ -18377,7 +18378,7 @@ class Mission
 			fillName="Vertical";
 			a=57.763;
 			b=6017.271;
-			angle=219.03526;
+			angle=219.03522;
 			id=2458;
 			atlOffset=174.67972;
 		};
@@ -18660,7 +18661,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={17262.494,61.38966,9742.3848};
-				angles[]={-0,1.8124785,0};
+				angles[]={0,1.8124785,0};
 			};
 			side="East";
 			flags=2;
@@ -18684,7 +18685,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={17262.471,59.745632,9742.209};
-						angles[]={-0,1.8124785,0};
+						angles[]={0,1.8124785,0};
 					};
 					side="East";
 					flags=6;
@@ -18798,7 +18799,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={17244.932,59.26926,9733.3662};
-						angles[]={-0,3.49016,0};
+						angles[]={0,3.49016,0};
 					};
 					side="East";
 					flags=6;
@@ -18891,7 +18892,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={17244.697,60.89922,9733.1094};
-				angles[]={-0,3.49016,0};
+				angles[]={0,3.49016,0};
 			};
 			side="East";
 			flags=2;
@@ -19831,7 +19832,7 @@ class Mission
 			name="marker_17";
 			type="mil_arrow";
 			colorName="ColorEAST";
-			angle=212.44162;
+			angle=212.44157;
 			id=2786;
 			atlOffset=0.00015258789;
 		};
@@ -20686,6 +20687,647 @@ class Mission
 				formation="LINE";
 			};
 			id=2815;
+		};
+		class Item72
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11927.485,26.203594,2171.801};
+				angles[]={0.023719024,0,0};
+			};
+			id=2837;
+			type="ModuleCreateDiaryRecord_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCreateDiaryRecord_F_PresetTitle";
+					expression="_this setVariable ['PresetTitle',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Signal";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCreateDiaryRecord_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCreateDiaryRecord_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Short Range<br/>" \n "CH1 61 MHz Spartan platoon net<br/> " \n "CH2 62 MHz Scorpion<br/> " \n "CH4 64 MHz Viper/Taipan/Mamba<br/> " \n "CH5 65 MHz Cobra<br/> " \n "CH7 67 MHz Razor<br/>" \n "<br/> " \n "Long Range<br/> " \n "CH1 71 MHz Convoy/Ground-to-Ground<br/>  " \n "CH2 72 MHz HQ-Ground-Air<br/>  " \n "CH3 73 MHz Air Traffic<br/> ";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCreateDiaryRecord_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCreateDiaryRecord_F_Subject";
+					expression="_this setVariable ['Subject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item73
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11920.296,25.858677,2198.373};
+				angles[]={0.0029499636,0,6.2816033};
+			};
+			id=2838;
+			type="ModuleCreateDiaryRecord_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCreateDiaryRecord_F_PresetTitle";
+					expression="_this setVariable ['PresetTitle',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Execution";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCreateDiaryRecord_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Support";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCreateDiaryRecord_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCreateDiaryRecord_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCreateDiaryRecord_F_Subject";
+					expression="_this setVariable ['Subject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item74
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11921.086,25.85006,2219.666};
+			};
+			id=2839;
+			type="ModuleCreateDiaryRecord_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCreateDiaryRecord_F_PresetTitle";
+					expression="_this setVariable ['PresetTitle',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Execution";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCreateDiaryRecord_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCreateDiaryRecord_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="<br/>";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCreateDiaryRecord_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCreateDiaryRecord_F_Subject";
+					expression="_this setVariable ['Subject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item75
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11917.294,25.046576,2256.2419};
+			};
+			id=2840;
+			type="ModuleCreateDiaryRecord_F";
+			atlOffset=-0.1950016;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCreateDiaryRecord_F_PresetTitle";
+					expression="_this setVariable ['PresetTitle',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Mission";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCreateDiaryRecord_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCreateDiaryRecord_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="OBJECTIVE 1: JTF will conduct sweep and clear in AO to secure intel. <br/>" \n "<br/> " \n "OBJECTIVE 2: Strike Force will conduct a daring plan to free the hostages. " \n "";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCreateDiaryRecord_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCreateDiaryRecord_F_Subject";
+					expression="_this setVariable ['Subject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item76
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11913.538,25.083939,2276.9192};
+				angles[]={0.010529277,0,0.00069053395};
+			};
+			id=2841;
+			type="ModuleCreateDiaryRecord_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCreateDiaryRecord_F_PresetTitle";
+					expression="_this setVariable ['PresetTitle',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Situation";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCreateDiaryRecord_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Civilian";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCreateDiaryRecord_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Civilians are present in settlements, home under curfew.";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCreateDiaryRecord_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCreateDiaryRecord_F_Subject";
+					expression="_this setVariable ['Subject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item77
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11919.951,24.968048,2299.0071};
+				angles[]={0.00083775807,0,0.0012391838};
+			};
+			id=2842;
+			type="ModuleCreateDiaryRecord_F";
+			atlOffset=1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCreateDiaryRecord_F_PresetTitle";
+					expression="_this setVariable ['PresetTitle',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Situation";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCreateDiaryRecord_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Friendly";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCreateDiaryRecord_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Joint Task Force <br/>" \n "TFT8 <br/>" \n " Spartan - 1 Ranger squad <br/>" \n "Razor - 2 full aircrews <br/>" \n "<br/>" \n "TFV99 <br/>" \n "SF Groups: Mamba T aipan (5 each) <br/>" \n "Armored infantry group: Cobra-Alpha, Cobra-Echo, Cobra Romeo (8 each) <br/>" \n "KLU - 3 pilots <br/>" \n "Recruits in training (4P) <br/>" \n "<br/>";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCreateDiaryRecord_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCreateDiaryRecord_F_Subject";
+					expression="_this setVariable ['Subject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item78
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11920.813,24.862587,2328.687};
+				angles[]={0.0023911009,0,0.0077492618};
+			};
+			id=2843;
+			type="ModuleCreateDiaryRecord_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCreateDiaryRecord_F_PresetTitle";
+					expression="_this setVariable ['PresetTitle',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Situation";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCreateDiaryRecord_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Enemy";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCreateDiaryRecord_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Composition, Disposition, Strength <br/>" \n "~40 infantry IVO Razbula <br/>" \n "~40 infantry in mountains north of Razbula <br/>" \n "~40 infantry IVO Zarath <br/>" \n "<br/>" \n "Equipment <br/>" \n "Emplaced weapons: HMGs, SPGs, mortars <br/>" \n "MANPADS and ATGMs not expected <br/>" \n "Technicals, may have unmaintained armoured vehicles <br/>" \n "There have been 2 IED attacks in the past month, both on the KalaeNoowi-Kinduf MSR. <br/>" \n "<br/>" \n "Expected Course of Action <br/>" \n "Take flanking hill top defensive positions <br/>" \n "Attempt to reinforce or retreat north via Zeko Valley or north east via Anyakar. <br/>" \n "<br/>";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCreateDiaryRecord_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCreateDiaryRecord_F_Subject";
+					expression="_this setVariable ['Subject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item79
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11922.758,24.587057,2358.823};
+				angles[]={0.0029670598,0,0.0074351025};
+			};
+			id=2844;
+			type="ModuleCreateDiaryRecord_F";
+			atlOffset=1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCreateDiaryRecord_F_PresetTitle";
+					expression="_this setVariable ['PresetTitle',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Situation";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCreateDiaryRecord_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCreateDiaryRecord_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="A number of Dutch technicians were kidnapped in one of these attacks. They were here in this area to build schools. When a regular American army unit heard about this, they tried to save the Dutch. A number of them were taken prisoner.  <br/>" \n " <br/> " \n "The insurgent cell instrumental to the attacks is currently located IVO Razbula in eastern Lythium, still in possession of personal effects of hostages and other intel linked to the attacks. The Joint Task Force will sweep the AO for the aforementioned items and potential insurgents.  <br/>" \n "  <br/>" \n "A heli-borne strike team and an extraction convoy will stand ready to secure the hostages if they are found. " \n " <br/>" \n "";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCreateDiaryRecord_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCreateDiaryRecord_F_Subject";
+					expression="_this setVariable ['Subject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 };
