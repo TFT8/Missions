@@ -58,36 +58,38 @@ if isServer then {
 } count (allUnits - switchableUnits - playableUnits);
 
 if (hasInterface) then {
-    player addEventHandler ["Take", {
-        params ["_unit", "_container", "_item"];
-        if (_item in [
-            "MobilePhone",
-            "SmartPhone",
-            "FlashDisk",
-            "Laptop_Closed",
-            "Wallet_ID",
-            "UMI_Land_Camcorder_F",
-            "UMI_Land_Camera_F",
-            "UMI_Land_Tablet_F"
-        ]) then {
-            private _itemName = getText (configFile >> "CfgMagazines" >> _item >> "displayName");
-            if (_itemName == "") then {
-                _itemName = getText (configFile >> "CfgWeapons" >> _item >> "displayName");
+    if (player getVariable ["tft_intelEH", -1] == -1) then {
+        player setVariable ["tft_intelEH", player addEventHandler ["Take", {
+            params ["_unit", "_container", "_item"];
+            if (_item in [
+                "MobilePhone",
+                "SmartPhone",
+                "FlashDisk",
+                "Laptop_Closed",
+                "Wallet_ID",
+                "UMI_Land_Camcorder_F",
+                "UMI_Land_Camera_F",
+                "UMI_Land_Tablet_F"
+            ]) then {
+                private _itemName = getText (configFile >> "CfgMagazines" >> _item >> "displayName");
+                if (_itemName == "") then {
+                    _itemName = getText (configFile >> "CfgWeapons" >> _item >> "displayName");
+                };
+                private _description = format ["%1 collected by %2 in %3", _itemName, name _unit, mapGridPosition _container];
+                [
+                    true, // owner
+                    [netId _container, "task_intel"], // [taskID, parent taskID]
+                    [_description, _itemName, ""], // Task description in the format ["description", "title", "marker"] 
+                    getPos _container, // destination
+                    "SUCCEEDED", // state
+                    -1, // priority
+                    false, // showNotification
+                    "", // type
+                    false // visibleIn3D
+                ] call BIS_fnc_taskCreate;
             };
-            private _description = format ["%1 collected by %2 in %3", _itemName, name _unit, mapGridPosition _container];
-            [
-                true, // owner
-                [netId _container, "task_intel"], // [taskID, parent taskID]
-                [_description, _itemName, ""], // Task description in the format ["description", "title", "marker"] 
-                getPos _container, // destination
-                "SUCCEEDED", // state
-                -1, // priority
-                false, // showNotification
-                "", // type
-                false // visibleIn3D
-            ] call BIS_fnc_taskCreate;
-        };
-    }];
+        }], true];
+    };
 };
 
 
