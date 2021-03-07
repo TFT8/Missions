@@ -1,11 +1,9 @@
-/*
 class TFT	//tag
 {
-	class S6	//category
+	class S3	//category
 	{
-		class enableCamera {
-			file  = "functions\enableCamera.sqf";
+		class setIntel {
+			file  = "functions\setIntel.sqf";
 		};
 	};
 };
-*/
