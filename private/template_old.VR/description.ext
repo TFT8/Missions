@@ -1,5 +1,0 @@
-// respawnOnStart = 0;
-class CfgFunctions
-{
-	#include "include\functions.hpp"
-};
