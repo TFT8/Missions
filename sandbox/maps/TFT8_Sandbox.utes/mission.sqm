@@ -42898,7 +42898,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="missionConfigFile >> ""CfgORBAT"" >> ""TFT8""";
+							value="configFile >> ""CfgORBAT"" >> ""TFT8""";
 						};
 					};
 				};

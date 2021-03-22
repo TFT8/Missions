@@ -12022,7 +12022,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="missionConfigFile >> ""CfgORBAT"" >> ""JTFSahara""";
+									value="configFile >> ""CfgORBAT"" >> ""JTFSahara""";
 								};
 							};
 						};
