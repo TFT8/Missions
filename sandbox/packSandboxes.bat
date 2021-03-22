@@ -1,38 +1,26 @@
 @echo off
 
-SET FileBank="Path\To\FileBank.exe"
-SET DataDir="Path\To\Sandbox\Content\Folder\From\Git"
-SET MissionsFolder="Path\To\Where\Sandbox\Maps\Are"
-SET OutputDir="Path\Where\Pbos\Should\Go"
+::https://mikero.bytex.digital/Downloads
+SET PathMakePbo="C:\Program Files (x86)\Mikero\DePboTools\bin\MakePbo.exe"
+
+::copyToClipboard ((("true" configClasses (configFile >> "CfgWorldList")) apply {configName _x}) joinString " ")
+SET SandBoxMaps=(Stratis kerama Catalina Altis intro sara saralite utes sara_dbe1 fallujah chernarus chernarus_summer porto takistan zargabad reshmaan Caribou Mountains_ACR Woodland_ACR Bootcamp_ACR Desert_E ProvingGrounds_PMC Shapur_BAF mbg_celle2 VR bozcaada isladuala3 lingor3 Tanoa Chernarus_Winter dingor lythium Malden WL_Rosche tem_kujari vt7 Enoch)
 
 :: _________________________________________________________
 
 echo [[ Welcome to TFTSandbox packing tool ]]
 echo|set /p=--- Checking input data:
 
-IF NOT EXIST %FileBank% (
-    echo Error: FileBank not found!
+IF NOT EXIST "sandbox.VR" (
+    echo Error: Template folder sandbox.VR not found!
     echo.
     echo Press "ENTER" to exit
     PAUSE
     EXIT
 )
-IF NOT EXIST %DataDir% (
-    echo Error: Could not find data directory!
-    echo.
-    echo Press "ENTER" to exit
-    PAUSE
-    EXIT
-)
-IF NOT EXIST %MissionsFolder% (
-    echo Error: Could not find missions folder!
-    echo.
-    echo Press "ENTER" to exit
-    PAUSE
-    EXIT
-)
-IF NOT EXIST %OutputDir% (
-    echo Error: Output directory does not exist
+
+IF NOT EXIST %PathMakePbo% (
+    echo Error: MakePbo not found!
     echo.
     echo Press "ENTER" to exit
     PAUSE
@@ -42,35 +30,12 @@ IF NOT EXIST %OutputDir% (
 echo  OK
 echo.
 
-SET Overwrite=/-Y
-SET OverwriteDisp=n
-SET /p OverwriteDisp="Overwrite files if necessary? [y/N] "
-IF %OverwriteDisp% == y SET Overwrite=/Y
-
-echo --- Moving files and folders ---
-echo     (Except of mission.sqm)
-echo.
-
-SET AnythingToDo=no
-FOR /d %%d IN (%MissionsFolder%\TFTSandbox.*) DO (
-    SET AnythingToDo=yes
-    ROBOCOPY %DataDir% "%%d" /S /XF mission.sqm
-)
-IF %AnythingToDo% == no (
-    echo No TFTSandbox folders found in %MissionsFolder%. Aborting
-    echo.
-    echo Press "ENTER" to exit
-    PAUSE
-    EXIT
-)
-
 echo.
 echo|set /p=--- Packing missions...
 
-FOR /d %%d IN (%MissionsFolder%\TFTSandbox.*) DO (
-    %FileBank% -dst %OutputDir% "%%d"
+FOR %%m IN %SandBoxMaps% DO (
+    %PathMakePbo% -B -P sandbox.VR TFT8_Sandbox.%%m
 )
 
-echo  DONE
-echo Press "ENTER" to exit
+echo DONE
 PAUSE

@@ -1,12 +1,9 @@
 call TFT_fnc_prepPhaseInit;
 
 if isServer then {
-	//_curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"]; 
-	//_curator setVariable ["Addons", 3, true];
 	tft_zeus addCuratorEditableObjects [allUnits + vehicles, true];
 	if (!hasInterface) then {
 		tft_zeus setVariable ["Owner", "#adminLogged", true];
-		
 	} else {
 		//Editor play in Multiplayer
 		player assignCurator tft_zeus;

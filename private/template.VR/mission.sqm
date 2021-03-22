@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=800;
+		nextID=828;
 	};
 	class Camera
 	{
-		pos[]={7497.6714,28.188332,7433.6084};
-		dir[]={0.77023834,-0.63787138,0.0023267001};
-		up[]={0.63798714,0.77003604,0.0019271845};
-		aside[]={0.0030208086,-5.093417e-007,-1.0000628};
+		pos[]={7508.6777,28.188332,7425.873};
+		dir[]={0.70949095,-0.68957198,0.14583041};
+		up[]={0.67555362,0.72410905,0.13885486};
+		aside[]={0.20134692,-4.8615038e-007,-0.97958922};
 	};
 };
 binarizationWanted=0;
@@ -40,7 +40,6 @@ addons[]=
 	"A3_Ui_F",
 	"tft_supplies",
 	"A3_Modules_F_Curator_Curator",
-	"A3_Structures_F_Heli_Items_Electronics",
 	"A3_Structures_F_Civ_Lamps",
 	"tft8_faction",
 	"A3_Characters_F",
@@ -52,7 +51,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=12;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -96,44 +95,37 @@ class AddonsMetaData
 		};
 		class Item6
 		{
-			className="A3_Structures_F_Heli";
-			name="Arma 3 Helicopters - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item7
-		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item7
 		{
 			className="tft8_faction";
 			name="tft8_faction";
 			author="Ferris";
 		};
-		class Item9
+		class Item8
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item9
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item10
 		{
 			className="Desert";
 			name="Desert";
 		};
-		class Item12
+		class Item11
 		{
 			className="cfp_uniforms";
 			name="cfp_uniforms";
@@ -385,7 +377,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=27;
+		items=11;
 		class Item0
 		{
 			dataType="Layer";
@@ -718,24 +710,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7533.7222,5.7648749,7434.0942};
-						angles[]={0,2.1594224,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						init="call{this addAction [""<t color='#89f3ff'>Enable Camera</t>"", {[] call tft_fnc_enableCamera}, nil, 6, true, true, """", ""_target distance _this < 5""];}";
-						name="S6_Camera";
-					};
-					id=625;
-					type="Land_GamingSet_01_camera_F";
-				};
-				class Item8
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={7532,10.98218,7430};
 						angles[]={0,0.023736924,0};
 					};
@@ -748,27 +722,27 @@ class Mission
 					type="Land_LampHalogen_F";
 					atlOffset=4.7683716e-007;
 				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7530,8.9768047,7432.5};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{""respawn_west"" setMarkerPos (ASLToAGL getPosASL this);}";
+					};
+					id=733;
+					type="tft8_flag";
+				};
 			};
 			id=242;
-			atlOffset=0.18221188;
+			atlOffset=0.091105938;
 		};
 		class Item1
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7530,8.9768047,7432.5};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="call{""respawn_west"" setMarkerPos (ASLToAGL getPosASL this);}";
-			};
-			id=733;
-			type="tft8_flag";
-		};
-		class Item2
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -780,7 +754,7 @@ class Mission
 			id=905;
 			type="HeadlessClient_F";
 		};
-		class Item3
+		class Item2
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -792,7 +766,7 @@ class Mission
 			id=906;
 			type="HeadlessClient_F";
 		};
-		class Item4
+		class Item3
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -804,157 +778,7 @@ class Mission
 			id=907;
 			type="HeadlessClient_F";
 		};
-		class Item5
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="Alpha Company";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="1PLT";
-							id=1046;
-							atlOffset=-5;
-						};
-					};
-					id=1045;
-					atlOffset=-5;
-				};
-			};
-			id=1044;
-			atlOffset=-5;
-		};
-		class Item6
-		{
-			dataType="Layer";
-			name="Systems";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Layer";
-					name="Zeus Modules";
-					id=1107;
-					atlOffset=-5;
-				};
-				class Item1
-				{
-					dataType="Layer";
-					name="ORBAT";
-					id=1109;
-					atlOffset=-5;
-				};
-			};
-			id=1106;
-			atlOffset=-5;
-		};
-		class Item7
-		{
-			dataType="Layer";
-			name="242 BluAmmoCratesDrones";
-			id=1111;
-			atlOffset=-5;
-		};
-		class Item8
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates_1";
-			id=1117;
-			atlOffset=-5;
-		};
-		class Item9
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates_2";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="Alpha Company_1";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="1PLT_1";
-							id=1383;
-							atlOffset=-5;
-						};
-					};
-					id=1382;
-					atlOffset=-5;
-				};
-			};
-			id=1381;
-			atlOffset=-5;
-		};
-		class Item10
-		{
-			dataType="Layer";
-			name="Systems_1";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Layer";
-					name="Zeus Modules_1";
-					id=1444;
-					atlOffset=-5;
-				};
-				class Item1
-				{
-					dataType="Layer";
-					name="ORBAT_1";
-					id=1446;
-					atlOffset=-5;
-				};
-			};
-			id=1443;
-			atlOffset=-5;
-		};
-		class Item11
-		{
-			dataType="Layer";
-			name="242 BluAmmoCratesDrones_1";
-			id=1454;
-			atlOffset=-5;
-		};
-		class Item12
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates_3";
-			id=1460;
-			atlOffset=-5;
-		};
-		class Item13
-		{
-			dataType="Layer";
-			name="242 BluAmmoCratesDrones_2";
-			id=1505;
-			atlOffset=-5;
-		};
-		class Item14
-		{
-			dataType="Layer";
-			name="242 BluAmmoCrates_4";
-			id=1509;
-			atlOffset=-5;
-		};
-		class Item15
+		class Item4
 		{
 			dataType="Marker";
 			position[]={7524,5,7440.5};
@@ -962,7 +786,7 @@ class Mission
 			type="Empty";
 			id=1604;
 		};
-		class Item16
+		class Item5
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1029,7 +853,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item17
+		class Item6
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -1040,7 +864,7 @@ class Mission
 			description="You can move the respawn position anywhere, even on top of ships." \n "Note: You can move the respawn position in Zeus under Modules > Respawn > Change Respawn Position.";
 			id=1714;
 		};
-		class Item18
+		class Item7
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -1051,57 +875,7 @@ class Mission
 			description="Place them in open fields for Spartan or Razor to haul.";
 			id=2008;
 		};
-		class Item19
-		{
-			dataType="Layer";
-			name="PMC";
-			id=2065;
-			atlOffset=-5;
-		};
-		class Item20
-		{
-			dataType="Layer";
-			name="Template Assets";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Marker";
-					position[]={7544.2852,5,7427.0591};
-					name="respawn_west_1";
-					type="Empty";
-					id=2086;
-				};
-				class Item1
-				{
-					dataType="Layer";
-					name="TFT8_1";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Marker";
-							position[]={7549.2852,5,7422.5591};
-							name="west_hq_1";
-							type="b_hq";
-							id=2076;
-						};
-					};
-					id=2073;
-				};
-			};
-			id=2087;
-		};
-		class Item21
-		{
-			dataType="Layer";
-			name="Nightstalkers";
-			id=2126;
-			atlOffset=-5;
-		};
-		class Item22
+		class Item8
 		{
 			dataType="Layer";
 			name="Spartan";
@@ -7223,21 +6997,7 @@ class Mission
 			};
 			id=2184;
 		};
-		class Item23
-		{
-			dataType="Layer";
-			name="Razor";
-			id=2278;
-			atlOffset=-5;
-		};
-		class Item24
-		{
-			dataType="Layer";
-			name="Scorpion";
-			id=2306;
-			atlOffset=-5;
-		};
-		class Item25
+		class Item9
 		{
 			dataType="Layer";
 			name="Scorpion";
@@ -8552,7 +8312,7 @@ class Mission
 			};
 			id=2347;
 		};
-		class Item26
+		class Item10
 		{
 			dataType="Layer";
 			name="Razor";
