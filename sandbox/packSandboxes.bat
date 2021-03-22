@@ -34,7 +34,7 @@ echo.
 echo|set /p=--- Packing missions...
 
 FOR %%m IN %SandBoxMaps% DO (
-    %PathMakePbo% -B -P sandbox.VR TFT8_Sandbox.%%m
+    %PathMakePbo% -B -P sandbox.VR Sandbox.%%m
 )
 
 echo DONE
