@@ -26,7 +26,7 @@ class FR_callForFire {
         };
         class FR_cffPic: RscPicture {
             idc = 1200;
-            text = "images\status\fireCheatSheet.jpg";
+            text = "images\status\fcs.jpg";
             x = 0.5 * safezoneW + safezoneX;
             y = 0.177947 * safezoneH + safezoneY;
             w = 0.252217 * safezoneW;

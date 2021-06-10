@@ -26,7 +26,7 @@ _down = "BRM";
     [_x, 0] call TFT_fnc_toggleTargets;
     format["Lane %1", _forEachIndex+1] remoteExec ["hint", _participants];
     sleep 3;
-} forEach ["line1", "line2", "line3", "line4","line5","line6","line7","line8","line9"];
+} forEach ["line1", "line2", "line3", "line4"];
 
 "Lane identification complete" remoteExec ["hint", _participants];
 ["BRM", 0] call TFT_fnc_toggleTargets;
