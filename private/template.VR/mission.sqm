@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=4473;
+		nextID=4476;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1091;
+		nextID=1106;
 	};
 	class Camera
 	{
-		pos[]={7507.1699,41.455421,7428.4639};
-		dir[]={0.457946,-0.88903439,-0.0044938708};
-		up[]={0.88901347,0.45781061,-0.0087239295};
-		aside[]={-0.0098134317,1.2657893e-008,-1.0000042};
+		pos[]={7487.6743,33.357819,7428.5986};
+		dir[]={0.73017114,-0.68275982,0.029097874};
+		up[]={0.68229085,0.73058188,0.027189892};
+		aside[]={0.039822739,-1.990993e-007,-0.99928063};
 	};
 };
 binarizationWanted=0;
-sourceName="template_2021";
+sourceName="template";
 addons[]=
 {
 	"A3_Structures_F_Mil_Cargo",
@@ -529,7 +529,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=8;
 		class Item0
 		{
 			dataType="Layer";
@@ -8605,49 +8605,13 @@ class Mission
 			name="TFT8 System";
 			class Entities
 			{
-				items=8;
+				items=5;
 				class Item0
 				{
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={7532,5,7432};
-					};
-					name="hc_1";
-					isPlayable=1;
-					id=905;
-					type="HeadlessClient_F";
-				};
-				class Item1
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7536,5,7432};
-					};
-					name="hc_2";
-					isPlayable=1;
-					id=906;
-					type="HeadlessClient_F";
-				};
-				class Item2
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7534,5,7432};
-					};
-					name="hc_3";
-					isPlayable=1;
-					id=907;
-					type="HeadlessClient_F";
-				};
-				class Item3
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7537,5,7446};
+						position[]={8152,5,8160};
 					};
 					name="orbat_TFT8";
 					id=1712;
@@ -8733,7 +8697,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item4
+				class Item1
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8824,7 +8788,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item5
+				class Item2
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -8915,7 +8879,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item6
+				class Item3
 				{
 					dataType="Marker";
 					position[]={7524,5,7438.5};
@@ -8923,7 +8887,7 @@ class Mission
 					type="Empty";
 					id=1604;
 				};
-				class Item7
+				class Item4
 				{
 					dataType="Marker";
 					position[]={7529,5,7436};
@@ -8933,6 +8897,42 @@ class Mission
 				};
 			};
 			id=2553;
+		};
+		class Item5
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7533.4761,5,7431.8989};
+			};
+			name="hc_1";
+			isPlayable=1;
+			id=4473;
+			type="HeadlessClient_F";
+		};
+		class Item6
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7532.332,5,7431.8394};
+			};
+			name="hc_2";
+			isPlayable=1;
+			id=4474;
+			type="HeadlessClient_F";
+		};
+		class Item7
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7531.1465,5,7431.7974};
+			};
+			name="hc_3";
+			isPlayable=1;
+			id=4475;
+			type="HeadlessClient_F";
 		};
 	};
 };
