@@ -1,4 +1,9 @@
-version=53;
+version=54;
 name="Template Units";
 author="TFT8";
 category="EdSubcat_Camping";
+requiredAddons[]=
+{
+	"A3_Characters_F",
+	"cfp_uniforms"
+};

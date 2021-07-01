@@ -1,0 +1,301 @@
+version=54;
+center[]={557.5,32,537};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="Outlaw";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={0,0.0014381409,0.049987793};
+							angles[]={0,4.712389,0};
+						};
+						side="West";
+						flags=7;
+						class Attributes
+						{
+							skill=1;
+							name="ol";
+							description="Mission Maker@Outlaw";
+							isPlayer=1;
+						};
+						id=1329;
+						type="B_Soldier_A_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ENH_unitTraits_camouflage";
+								expression="_this setUnitTrait ['CamouflageCoef', _value]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.1;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ENH_unitTraits_audibleCoef";
+								expression="_this setUnitTrait ['AudibleCoef', _value]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.1;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ENH_unitTraits_engineer";
+								expression="_this setUnitTrait ['Engineer', _value]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=1;
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_isEngineer";
+								expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=2;
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="ENH_unitTrait_UAVHacker";
+								expression="_this setUnitTrait ['UAVHacker', _value]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=1;
+									};
+								};
+							};
+							class Attribute5
+							{
+								property="ace_isEOD";
+								expression="_this setVariable ['ACE_isEOD', _value, true]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=1;
+									};
+								};
+							};
+							class Attribute6
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.97000003;
+									};
+								};
+							};
+							class Attribute7
+							{
+								property="ENH_unitTraits_loadCoef";
+								expression="_this setUnitTrait ['LoadCoef', _value]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.1;
+									};
+								};
+							};
+							class Attribute8
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male12ENG";
+									};
+								};
+							};
+							class Attribute9
+							{
+								property="ENH_unitTrait_explosiveSpecialist";
+								expression="_this setUnitTrait ['ExplosiveSpecialist', _value]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=1;
+									};
+								};
+							};
+							class Attribute10
+							{
+								property="ENH_unitTraits_medic";
+								expression="_this setUnitTrait ['Medic', _value]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=1;
+									};
+								};
+							};
+							class Attribute11
+							{
+								property="ace_advanced_fatigue_performanceFactor";
+								expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=2;
+									};
+								};
+							};
+							class Attribute12
+							{
+								property="ace_isMedic";
+								expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=2;
+									};
+								};
+							};
+							nAttributes=13;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=1328;
+			};
+		};
+		id=1330;
+		atlOffset=-18.405624;
+	};
+};

@@ -1,0 +1,416 @@
+version=54;
+center[]={540.5,31.889997,531.64288};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="Spartan";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=6;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={0,0.036439896,0.90710449};
+						};
+						side="West";
+						flags=7;
+						class Attributes
+						{
+							name="pl";
+							description="Platoon Leader (1-6)@Spartan 1";
+							isPlayable=1;
+						};
+						id=1333;
+						type="B_officer_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male03ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=1.03;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-2,0.047691345,0.90710449};
+						};
+						side="West";
+						flags=5;
+						class Attributes
+						{
+							name="ps";
+							description="Platoon Sergeant (1-7)@Spartan 1";
+							isPlayable=1;
+						};
+						id=1334;
+						type="B_Soldier_SL_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male03ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=1.04;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={2,0.021438599,0.90710449};
+						};
+						side="West";
+						flags=5;
+						class Attributes
+						{
+							name="pcls";
+							description="Platoon Medic (1M)@Spartan 1";
+							isPlayable=1;
+						};
+						id=1335;
+						type="B_medic_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male05ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.99000001;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={0,0.0089416504,-1.0928955};
+						};
+						side="West";
+						flags=5;
+						class Attributes
+						{
+							name="prto";
+							description="Platoon RTO (1R)@Spartan 1";
+							isPlayable=1;
+						};
+						id=1336;
+						type="B_recon_JTAC_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male04ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.99000001;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+					class Item4
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-2,0.008939743,-1.0928955};
+						};
+						side="West";
+						flags=5;
+						class Attributes
+						{
+							name="pjtac";
+							description="Platoon JTAC@Spartan 1";
+							isPlayable=1;
+						};
+						id=1337;
+						type="B_recon_JTAC_F";
+						atlOffset=-1.9073486e-006;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male04ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.99000001;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+					class Item5
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={2,0.0014381409,-1.0928955};
+						};
+						side="West";
+						flags=5;
+						class Attributes
+						{
+							name="rm";
+							description="Platoon Rifleman@Spartan 1";
+							isPlayable=1;
+						};
+						id=1338;
+						type="B_Soldier_F";
+						atlOffset=-1.9073486e-006;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male01ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=1.05;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+					name="phq";
+				};
+				id=1332;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="groupID";
+						expression="[_this, _value] call CBA_fnc_setCallsign";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Spartan 1";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+		};
+		id=1373;
+		atlOffset=-4.0056267;
+	};
+};
