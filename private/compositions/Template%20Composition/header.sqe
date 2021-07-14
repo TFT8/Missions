@@ -16,9 +16,10 @@ requiredAddons[]=
 	"ace_repair",
 	"tft_supplies",
 	"A3_Weapons_F_Ammoboxes",
-	"A3_Characters_F",
-	"cfp_uniforms",
 	"A3_Modules_F_StrategicMap",
 	"A3_Modules_F_Curator_Curator",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Characters_F",
+	"cfp_uniforms",
+	"ace_explosives"
 };

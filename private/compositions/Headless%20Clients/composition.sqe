@@ -1,0 +1,53 @@
+version=54;
+center[]={5371.4321,81.587097,12532.408};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="Headless Clients";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={1.2836914,0.18432617,1.0478516};
+				};
+				name="hc_1";
+				isPlayable=1;
+				id=1055;
+				type="HeadlessClient_F";
+			};
+			class Item1
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={0.099609375,0.090637207,0.040039063};
+				};
+				name="hc_2";
+				isPlayable=1;
+				id=1058;
+				type="HeadlessClient_F";
+			};
+			class Item2
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-1.1523438,0,-0.90625};
+				};
+				name="hc_3";
+				isPlayable=1;
+				id=1059;
+				type="HeadlessClient_F";
+			};
+		};
+		id=1060;
+		atlOffset=7.6293945e-006;
+	};
+};

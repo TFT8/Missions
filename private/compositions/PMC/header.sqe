@@ -4,5 +4,6 @@ author="TFT8";
 category="EdSubcat_Camping";
 requiredAddons[]=
 {
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"ace_explosives"
 };

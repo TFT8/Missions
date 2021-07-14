@@ -4,19 +4,19 @@ author="TFT8";
 category="EdSubcat_Camping";
 requiredAddons[]=
 {
-	"A3_Structures_F_Mil_Cargo",
-	"A3_Structures_F_Heli_Items_Electronics",
-	"A3_Structures_F_Civ_Lamps",
-	"tft8_faction",
-	"Desert",
+	"A3_Modules_F_StrategicMap",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Ui_F",
 	"A3_Supplies_F_Heli_Slingload",
 	"ace_rearm",
 	"ace_cargo",
 	"ace_refuel",
 	"ace_repair",
+	"Desert",
 	"tft_supplies",
 	"A3_Weapons_F_Ammoboxes",
-	"A3_Modules_F_StrategicMap",
-	"A3_Modules_F_Curator_Curator",
-	"A3_Ui_F"
+	"A3_Structures_F_Mil_Cargo",
+	"A3_Structures_F_Heli_Items_Electronics",
+	"A3_Structures_F_Civ_Lamps",
+	"tft8_faction"
 };

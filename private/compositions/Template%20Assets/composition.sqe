@@ -1,9 +1,501 @@
 version=54;
-center[]={7528.8291,5,7439.9785};
+center[]={7528.9077,5,7439.8472};
 class items
 {
 	items=3;
 	class Item0
+	{
+		dataType="Layer";
+		name="TFT8 System";
+		class Entities
+		{
+			items=5;
+			class Item0
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={5.0922852,0,4.152832};
+				};
+				name="orbat_TFT8";
+				id=1712;
+				type="ModuleStrategicMapORBAT_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleStrategicMapORBAT_F_Path";
+						expression="_this setVariable ['Path',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="configFile >> ""CfgORBAT"" >> ""TFT8""";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleStrategicMapORBAT_F_Tags";
+						expression="_this setVariable ['Tags',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleStrategicMapORBAT_F_Parent";
+						expression="_this setVariable ['Parent',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleStrategicMapORBAT_F_Tiers";
+						expression="_this setVariable ['Tiers',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item1
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={6.6264648,0,-5.8540039};
+				};
+				name="tft_zeus_1";
+				id=2475;
+				type="ModuleCurator_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="ol";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=3;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item2
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={6.5922852,0,-6.847168};
+				};
+				name="tft_zeus";
+				id=620;
+				type="ModuleCurator_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="#adminLogged";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=3;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item3
+			{
+				dataType="Marker";
+				position[]={-4.9077148,0,-1.347168};
+				name="respawn_west";
+				type="Empty";
+				id=1604;
+			};
+			class Item4
+			{
+				dataType="Marker";
+				position[]={0.092285156,0,-3.847168};
+				name="west_hq";
+				type="b_hq";
+				id=155;
+			};
+		};
+		id=2553;
+	};
+	class Item1
+	{
+		dataType="Layer";
+		name="TFT8 Assets";
+		class Entities
+		{
+			items=9;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-10.407715,1.3620372,13.652832};
+					angles[]={0,3.1415927,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=2439;
+				type="B_Slingload_01_Ammo_F";
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-7.9077148,1.3624501,13.652832};
+					angles[]={0,3.1415927,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=2440;
+				type="B_Slingload_01_Fuel_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-5.4077148,1.3605165,13.652832};
+					angles[]={0,3.1415927,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=2441;
+				type="B_Slingload_01_Repair_F";
+			};
+			class Item3
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={-7.9077148,0,13.152832};
+					angles[]={0,3.1415927,0};
+				};
+				title="TFT8's Vehicle/Supply Depot";
+				description="Slingloadable service/supply crates  for TFT8's Platoons to use.";
+				id=2454;
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.092285156,0.28405476,0.15283203};
+					angles[]={0,1.5707964,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=255;
+				type="Box_TFT8_Ammo_F";
+			};
+			class Item5
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.5922852,0.89242268,0.15283203};
+					angles[]={0,1.5707964,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=253;
+				type="TFT_supplyCrate_F";
+			};
+			class Item6
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.5922852,0.89242268,0.15283203};
+					angles[]={0,1.5707964,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=254;
+				type="TFT_supplyCrate_Adv_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="[[[[""ACE_VMH3""],[2]],[[""Laserbatteries"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag""],[5,5,5,5]],[[""Laserdesignator_03"",""ACE_bodyBag"",""ACE_DefusalKit"",""ACE_EarPlugs"",""ACE_EntrenchingTool"",""ItemGPS"",""ACE_M26_Clacker"",""ACE_SpottingScope"",""ACE_Tripod"",""ACE_wirecutter"",""ToolKit"",""tfw_rf3080Item""],[2,20,4,4,5,4,2,1,1,4,1,1]],[[""tft8_assaultpack_ocp"",""tft8_kitbag_ocp"",""tft8_rt1523g_ocp""],[2,2,2]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item7
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.40771484,0.89242268,-6.847168};
+					angles[]={0,4.7386389,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+					init="call{[this, [""Arsenal"", ""Preparation"", ""Callsigns"", ""Spectator""]] call TFT_fnc_addActions;" \n "[this, true] call ace_arsenal_fnc_initBox;}";
+					name="box";
+				};
+				id=112;
+				type="B_supplyCrate_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item8
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={2.0922852,0,0.15283203};
+				};
+				title="Supplies (NOT ARSENALS)";
+				description="Place them in open fields for Spartan or Razor to haul.";
+				id=2008;
+			};
+		};
+		id=2472;
+	};
+	class Item2
 	{
 		dataType="Layer";
 		name="TFT8 Objects";
@@ -15,7 +507,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.1708984,0.69999981,-3.9785156};
+					position[]={1.0922852,0.69999981,-3.847168};
 					angles[]={0,1.5728383,0};
 				};
 				side="Empty";
@@ -273,7 +765,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.8930664,0.76487494,-5.8842773};
+					position[]={4.8144531,0.76487494,-5.7529297};
 					angles[]={0,2.1594224,0};
 				};
 				side="Empty";
@@ -291,7 +783,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.1708984,5.9821796,-9.9785156};
+					position[]={3.0922852,5.9821796,-9.847168};
 					angles[]={0,0.023736924,0};
 				};
 				side="Empty";
@@ -308,7 +800,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.1708984,3.9768047,-7.4785156};
+					position[]={1.0922852,3.9768047,-7.347168};
 				};
 				side="Empty";
 				flags=5;
@@ -324,7 +816,7 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={1.1708984,0,-7.4785156};
+					position[]={1.0922852,0,-7.347168};
 				};
 				title="Placeable respawn position";
 				description="You can move the respawn position anywhere, even on top of ships." \n "Note: You can move the respawn position in Zeus under Modules > Respawn > Change Respawn Position.";
@@ -333,497 +825,5 @@ class items
 		};
 		id=242;
 		atlOffset=0.045553207;
-	};
-	class Item1
-	{
-		dataType="Layer";
-		name="TFT8 Assets";
-		class Entities
-		{
-			items=9;
-			class Item0
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={-10.329102,1.3620372,13.521484};
-					angles[]={0,3.1415927,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-				};
-				id=2439;
-				type="B_Slingload_01_Ammo_F";
-			};
-			class Item1
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={-7.8291016,1.3624501,13.521484};
-					angles[]={0,3.1415927,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-				};
-				id=2440;
-				type="B_Slingload_01_Fuel_F";
-			};
-			class Item2
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={-5.3291016,1.3605165,13.521484};
-					angles[]={0,3.1415927,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-				};
-				id=2441;
-				type="B_Slingload_01_Repair_F";
-			};
-			class Item3
-			{
-				dataType="Comment";
-				class PositionInfo
-				{
-					position[]={-7.8291016,0,13.021484};
-					angles[]={0,3.1415927,0};
-				};
-				title="TFT8's Vehicle/Supply Depot";
-				description="Slingloadable service/supply crates  for TFT8's Platoons to use.";
-				id=2454;
-			};
-			class Item4
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={0.17089844,0.28405476,0.021484375};
-					angles[]={0,1.5707964,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-				};
-				id=255;
-				type="Box_TFT8_Ammo_F";
-			};
-			class Item5
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={1.6708984,0.89242268,0.021484375};
-					angles[]={0,1.5707964,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-				};
-				id=253;
-				type="TFT_supplyCrate_F";
-			};
-			class Item6
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={3.6708984,0.89242268,0.021484375};
-					angles[]={0,1.5707964,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-				};
-				id=254;
-				type="TFT_supplyCrate_Adv_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="ammoBox";
-						expression="[_this,_value] call bis_fnc_initAmmoBox;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="[[[[""ACE_VMH3""],[2]],[[""Laserbatteries"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag""],[5,5,5,5]],[[""Laserdesignator_03"",""ACE_bodyBag"",""ACE_DefusalKit"",""ACE_EarPlugs"",""ACE_EntrenchingTool"",""ItemGPS"",""ACE_M26_Clacker"",""ACE_SpottingScope"",""ACE_Tripod"",""ACE_wirecutter"",""ToolKit"",""tfw_rf3080Item""],[2,20,4,4,5,4,2,1,1,4,1,1]],[[""tft8_assaultpack_ocp"",""tft8_kitbag_ocp"",""tft8_rt1523g_ocp""],[2,2,2]]],false]";
-							};
-						};
-					};
-					nAttributes=1;
-				};
-			};
-			class Item7
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={-0.32910156,0.89242268,-6.9785156};
-					angles[]={0,4.7386389,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-					init="call{[this, [""Arsenal"", ""Preparation"", ""Callsigns"", ""Spectator""]] call TFT_fnc_addActions;" \n "[this, true] call ace_arsenal_fnc_initBox;}";
-					name="box";
-				};
-				id=112;
-				type="B_supplyCrate_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="ammoBox";
-						expression="[_this,_value] call bis_fnc_initAmmoBox;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-							};
-						};
-					};
-					nAttributes=1;
-				};
-			};
-			class Item8
-			{
-				dataType="Comment";
-				class PositionInfo
-				{
-					position[]={2.1708984,0,0.021484375};
-				};
-				title="Supplies (NOT ARSENALS)";
-				description="Place them in open fields for Spartan or Razor to haul.";
-				id=2008;
-			};
-		};
-		id=2472;
-	};
-	class Item2
-	{
-		dataType="Layer";
-		name="TFT8 System";
-		class Entities
-		{
-			items=5;
-			class Item0
-			{
-				dataType="Logic";
-				class PositionInfo
-				{
-					position[]={3.6708984,0,6.5214844};
-				};
-				name="orbat_TFT8";
-				id=1712;
-				type="ModuleStrategicMapORBAT_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="ModuleStrategicMapORBAT_F_Path";
-						expression="_this setVariable ['Path',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="configFile >> ""CfgORBAT"" >> ""TFT8""";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="ModuleStrategicMapORBAT_F_Tags";
-						expression="_this setVariable ['Tags',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="";
-							};
-						};
-					};
-					class Attribute2
-					{
-						property="ModuleStrategicMapORBAT_F_Parent";
-						expression="_this setVariable ['Parent',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="";
-							};
-						};
-					};
-					class Attribute3
-					{
-						property="ModuleStrategicMapORBAT_F_Tiers";
-						expression="_this setVariable ['Tiers',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="";
-							};
-						};
-					};
-					nAttributes=4;
-				};
-			};
-			class Item1
-			{
-				dataType="Logic";
-				class PositionInfo
-				{
-					position[]={6.7050781,0,-5.9853516};
-				};
-				name="tft_zeus_1";
-				id=2475;
-				type="ModuleCurator_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="ModuleCurator_F_Owner";
-						expression="_this setVariable ['Owner',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="ol";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="ModuleCurator_F_Forced";
-						expression="_this setVariable ['Forced',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0;
-							};
-						};
-					};
-					class Attribute2
-					{
-						property="ModuleCurator_F_Name";
-						expression="_this setVariable ['Name',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="";
-							};
-						};
-					};
-					class Attribute3
-					{
-						property="ModuleCurator_F_Addons";
-						expression="_this setVariable ['Addons',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=3;
-							};
-						};
-					};
-					nAttributes=4;
-				};
-			};
-			class Item2
-			{
-				dataType="Logic";
-				class PositionInfo
-				{
-					position[]={6.6708984,0,-6.9785156};
-				};
-				name="tft_zeus";
-				id=620;
-				type="ModuleCurator_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="ModuleCurator_F_Owner";
-						expression="_this setVariable ['Owner',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="#adminLogged";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="ModuleCurator_F_Forced";
-						expression="_this setVariable ['Forced',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0;
-							};
-						};
-					};
-					class Attribute2
-					{
-						property="ModuleCurator_F_Name";
-						expression="_this setVariable ['Name',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="";
-							};
-						};
-					};
-					class Attribute3
-					{
-						property="ModuleCurator_F_Addons";
-						expression="_this setVariable ['Addons',_value,true];";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=3;
-							};
-						};
-					};
-					nAttributes=4;
-				};
-			};
-			class Item3
-			{
-				dataType="Marker";
-				position[]={-4.8291016,0,-1.4785156};
-				name="respawn_west";
-				type="Empty";
-				id=1604;
-			};
-			class Item4
-			{
-				dataType="Marker";
-				position[]={0.17089844,0,-3.9785156};
-				name="west_hq";
-				type="b_hq";
-				id=155;
-			};
-		};
-		id=2553;
 	};
 };

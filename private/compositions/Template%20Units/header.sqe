@@ -5,5 +5,6 @@ category="EdSubcat_Camping";
 requiredAddons[]=
 {
 	"A3_Characters_F",
-	"cfp_uniforms"
+	"cfp_uniforms",
+	"ace_explosives"
 };
